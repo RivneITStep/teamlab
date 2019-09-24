@@ -1,0 +1,27 @@
+/* Custom Bootstrap */
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css";
+
+/* Font-awesome */
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+/* Custom */
+@import "partials/colors";
+@import "partials/buttons";
+@import "partials/fonts";
+@import "partials/taxonomies";
+@import "partials/mixins";
+
+/* Views */
+@import "views/head";
+@import "views/main";
+@import "views/footer";
+@import "views/about-body";
+@import "views/news-body";
+@import "views/profile-body";
+@import "views/faq-body";
+@import "views/projects-body";
+@import "views/login-body";
+
+
+
+
