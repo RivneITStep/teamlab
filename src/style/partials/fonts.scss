@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'fontawesomeregular';
+  font-family: 'fontawesomeRegular';
   src: url('../fonts/font-awesome/fontawesome-webfont.eot');
   src: url('../fonts/font-awesome/fontawesome-webfont.eot') format('embedded-opentype'),
        url('../fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'),
@@ -23,6 +23,7 @@
 
 }
 
+<<<<<<< HEAD
 @font-face {
   font-family: 'poppinsExtraBold';
   src: url('../fonts/Poppins-ExtraBold/poppins-extrabold-webfont.eot');
@@ -61,6 +62,9 @@
   font-style: normal;
 
 }
+=======
+$font-awesome: 'fontawesomeRegular';
+>>>>>>> d50f80efb59b76179c866ce22d8114d8afd465af
 
 
 @font-face {
