@@ -1,19 +1,19 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const bcrypt = require('bcryptjs');
-const { check, validationResult } = require('express-validator');
+const bcrypt = require("bcryptjs");
+const { check, validationResult } = require("express-validator");
 
-const User = require('../../models/User');
+const User = require("../../models/User");
 
 // Register user
 router.post(
-  '/',
+  "/",
   [
-    check('name', 'Name is required')
+    check("name", "Name is required")
       .not()
       .isEmpty(),
-    check('email', 'Not valid email').isEmail(),
-    check('password', 'Password must be 6 or more characters').isLength({
+    check("email", "Not valid email").isEmail(),
+    check("password", "Password must be 6 or more characters").isLength({
       min: 6
     })
   ],
@@ -31,7 +31,7 @@ router.post(
       if (user) {
         return res
           .status(400)
-          .json({ errors: [{ msg: 'User already exists' }] });
+          .json({ errors: [{ msg: "User already exists" }] });
       }
 
       user = new User({
@@ -44,12 +44,17 @@ router.post(
 
       user.password = await bcrypt.hash(password, salt);
 
-      await user.save();
+      await user
+        .save()
+        .then(() => {
+          res.redirect("/api/auth");
+        })
+        .catch(err => console.log(err));
 
-      res.send('User saved');
+      // res.send('User saved');
     } catch (error) {
       console.error(error.message);
-      res.status(500).send('Server error');
+      res.status(500).send("Server error");
     }
   }
 );
