@@ -9,6 +9,12 @@
 @import "partials/buttons";
 @import "partials/fonts";
 
+/*taxonomies*/
+@import "taxonomies/forms.scss";
+@import "taxonomies/lists.scss";
+@import "taxonomies/main-taxomon.scss";
+@import "taxonomies/texts.scss";
+
 /* Views */
 @import "views/head";
 @import "views/main";
