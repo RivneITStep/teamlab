@@ -23,7 +23,6 @@
 
 }
 
-<<<<<<< HEAD
 @font-face {
   font-family: 'poppinsExtraBold';
   src: url('../fonts/Poppins-ExtraBold/poppins-extrabold-webfont.eot');
@@ -62,9 +61,6 @@
   font-style: normal;
 
 }
-=======
-$font-awesome: 'fontawesomeRegular';
->>>>>>> d50f80efb59b76179c866ce22d8114d8afd465af
 
 
 @font-face {
@@ -119,11 +115,11 @@ $font-awesome: 'fontawesomeRegular';
 
 
 $font-awesome: 'fontawesomeregular';
-$font-awesome: 'poppinsBold';
-$font-awesome: 'poppinsExtraBold';
-$font-awesome: 'poppinsExtraLight';
-$font-awesome: 'poppinsLight';
-$font-awesome: 'poppinsMedium';
-$font-awesome: 'poppinsRegular';
-$font-awesome: 'poppinsSemiBold';
-$font-awesome: 'poppinsThin';
+$font-bold: 'poppinsBold';
+$font-extraBold: 'poppinsExtraBold';
+$font-extraLight: 'poppinsExtraLight';
+$font-light: 'poppinsLight';
+$font-medium: 'poppinsMedium';
+$font-regular: 'poppinsRegular';
+$font-semiBold: 'poppinsSemiBold';
+$font-thin: 'poppinsThin';
