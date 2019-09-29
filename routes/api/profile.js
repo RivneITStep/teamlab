@@ -40,7 +40,6 @@ let git='';
     } else {
       var mainimage = 'default.png';
     }
-  //>>>>>>>>>>>>>>>>>>>>>>>git check______________________________
   let url = "https://api.github.com/users/" + githubusername + "/repos?client_id=796391a0b2d47394dbbf&client_secret=f9d5019a949e1e545cd049e0817e03b20fa55c56";
   var git_response = await fetch(url);
   var git_data = await git_response.json(); 
@@ -125,9 +124,6 @@ router.post('/show',
             res.status(500).send('Server error');
         }
      
-        // let url = "https://api.github.com/users/" + githubusername + "/repos?client_id=796391a0b2d47394dbbf&client_secret=f9d5019a949e1e545cd049e0817e03b20fa55c56";
-        // var git_response = await fetch(url);
-        // var git_data = await git_response.json();
   });
 
 

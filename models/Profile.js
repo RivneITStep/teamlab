@@ -12,7 +12,8 @@ const ProfileSchema = new mongoose.Schema({
         required: true
     }],
     githubusername: {
-        type: String
+        type: String,
+        required: true
     },
     experience: [{
         position: {
