@@ -9,6 +9,13 @@
 @import "partials/buttons";
 @import "partials/fonts";
 
+/* Mixins */
+@import "mixins/border.scss";
+@import "mixins/button.scss";
+@import "mixins/font.scss";
+@import "mixins/links.scss";
+@import "mixins/overlay.scss";
+
 /* Views */
 @import "views/head";
 @import "views/main";
