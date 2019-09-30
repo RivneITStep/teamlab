@@ -5,11 +5,12 @@ const { check, validationResult } = require("express-validator");
 
 const User = require("../../models/User");
 
-// Register user
+
 router.post(
   "/",
   [
     check("name", "Name is required")
+
       .not()
       .isEmpty(),
     check("email", "Not valid email").isEmail(),
