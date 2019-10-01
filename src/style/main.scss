@@ -9,11 +9,22 @@
 @import "partials/buttons";
 @import "partials/fonts";
 
+
 /*taxonomies*/
 @import "taxonomies/forms.scss";
-@import "taxonomies/lists.scss";
+@import "taxonomies/lists-head.scss";
+@import "taxonomies/lists-footer.scss";
 @import "taxonomies/main-taxomon.scss";
 @import "taxonomies/texts.scss";
+@import "taxonomies/link.scss";
+
+/* Mixins */
+@import "mixins/border.scss";
+@import "mixins/button.scss";
+@import "mixins/font.scss";
+@import "mixins/links.scss";
+@import "mixins/overlay.scss";
+
 
 /* Views */
 @import "views/head";

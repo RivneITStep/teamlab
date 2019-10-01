@@ -1,41 +1,38 @@
+
 h1{
-    font-size: 24px;
-    color: #e9612a;
-    font-weight: 700;
+    @include font (36px,$font-bold,normal,normal);
+    color: $font-color-primary-1;
     text-transform: uppercase;
     
 }
 h2{
-    font-size: 23px;
-    color: silver;
-    font-weight: 600;
-    text-transform: uppercase;
-   
+    @include font (30px,$font-semiBold,normal,normal);
+    color: $font-color-primary-3;
+    
 }
 h3{
-    font-size: 22px;
-    color: #86513c;
-    font-weight: 500;
-    text-transform: uppercase;
+    @include font(24px,$font-semiBold,normal,normal);
+    color:$font-color-primary-3;
+   
     
 }
-h4{font-size: 21px;
-    color: #2ad9e9;
-    font-weight: 400;
-    text-transform: uppercase;
-    
+h4{
+    @include font(18px,$font-semiBold,normal,normal);
+    color: $font-color-primary-1;
 }
+
 h5{
-    font-size: 20px;
-    color: #e92a3a;
-    font-weight: 300;
-    text-transform: uppercase;
+    @include font(16px,$font-semiBold,normal,normal);
+    color: $font-color-primary-3;
+    
     
 }
-p{
-    font-size: 14px;
-    color: #5bc860;
-    font-weight: 400;
-    text-transform: uppercase;
+h6{
+    @include font(14px,$font-semiBold,normal,normal);
+    color: $font-color-primary-3;
+}
+
+p{ @include font (14px,$font-regular,normal,normal);
+    color: $font-color-primary-2;
     
 }
