@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fontawesomeRegular';
-  src: url('//src/fonts/font-awesome/fontawesome-webfont.eot');
+  src: url('../fonts/font-awesome/fontawesome-webfont.eot');
   src: url('../fonts/font-awesome/fontawesome-webfont.eot') format('embedded-opentype'),
        url('../fonts/font-awesome/fontawesome-webfont.woff2') format('woff2'),
        url('../fonts/font-awesome/fontawesome-webfont.woff') format('woff'),
@@ -126,7 +126,7 @@
 }
 
 
-$font-awesome: 'fontawesomeregular';
+$font-awesome: 'fontawesomeRegular';
 $font-linearIcons: 'fontLineariconsRegular';
 $font-bold: 'poppinsBold';
 $font-extraBold: 'poppinsExtraBold';

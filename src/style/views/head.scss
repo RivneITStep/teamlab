@@ -3,6 +3,7 @@
     @include font(12px, $font-regular, normal, none);
   
     a{
+      font: $font-awesome;
       color: $font-color-primary-1;
       text-decoration: none;
     }
