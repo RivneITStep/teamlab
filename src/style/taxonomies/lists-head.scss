@@ -1,7 +1,8 @@
 @import "partials/colors";
 @import "mixins/font";
 @import "partials/fonts";
-ul{
+
+ul .main nav{
     float: right;
    
     li{
@@ -9,11 +10,10 @@ ul{
         list-style: none;
         text-transform: uppercase;
         a{
-            @include font(12px,$font-medium,500,none);
-            color:$font-color-primary-1;
+            @include font(12px, $font-medium, $font-color-primary-1);
             text-decoration: none;  
         &:hover{
-            color:$font-color-primary-hover;
+           color:$font-color-primary-hover;
            cursor: pointer;
            transition-duration: 0.5s;
         }

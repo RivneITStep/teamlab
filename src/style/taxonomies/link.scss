@@ -1,7 +1,6 @@
 
 a{
-    @include font(14px, $font-regular,normal,normal);
-    color:$font-color-primary-3;
+    @include font(14px, $font-regular, $font-color-primary-3);
     text-decoration: none;
     &:hover{
        color:$font-color-primary-hover;

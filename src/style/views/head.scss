@@ -1,15 +1,23 @@
 .header-top{
     background: $bg-color-primary-1;
-    @include font(12px, $font-regular, normal, none);
-  
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .text{
+    @include font(12px, $font-regular, $font-color-primary-1);
+  }
+
     a{
-      font: $font-awesome;
-      color: $font-color-primary-1;
+      @include font(12px, $font-awesome, $font-color-primary-1);
       text-decoration: none;
     }
+    
     ul li{
       display:inline-block;
-      margin-left: 15px;
+      margin-right: 15px;
+      list-style: none;
     }
   
   
@@ -19,7 +27,7 @@
         margin-right:10px;
       }
       a:hover{
-                 color: $font-color-primary-1;
+        color: $font-color-primary-hover;
         }
       }
     
@@ -30,15 +38,18 @@
         justify-content: flex-end;
       a{
           margin-right:10px;
-        .lnr{
-          display:none;
-          font-weight:700;
-        }
+          i{
+            color: $font-color-primary-1;
+            margin-right:5px;
+          }
+          i:hover{
+            color: $font-color-primary-hover;
+            }
       }
     
-      @media(max-width:480px){
+      @media(max-width:780px){
         a{
-          .lnr{
+          i{
             display:inline-block;
           }
           .text{
