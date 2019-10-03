@@ -1,3 +1,4 @@
 {
-  "mongoURL": "mongodb+srv://sbuser:sbuserqwert@cluster0-yx4gj.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURL": "mongodb+srv://sbuser:sbuserqwert@cluster0-yx4gj.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "teamlabtoken"
 }
