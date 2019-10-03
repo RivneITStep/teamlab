@@ -1,23 +1,24 @@
 /*BG Colors*/
-$bg-color-primary-1: #04091e;
-$bg-color-primary-2: #777777;
+$bg-color-primary-1: #04091E;
+$bg-color-primary-2: #2B7A78;
 $bg-color-primary-3: #ffffff;
 $bg-color-primary-4: #f9f9ff;
-$bg-color-primary-5: #f7631b;
-
+$bg-color-primary-5: #FF652F;
+$bg-color-primary-6: #3AAFA9;
 
 /*Text Colors*/
 $font-color-primary-1: #ffffff;
 $font-color-primary-2: #777777;
 $font-color-primary-3: #222222;
-$font-color-primary-hover: #f7631b;
+$font-color-primary-hover: #FF652F;
+$font-color-nav-hover: #04091E;
 
 
 /*Buttons Colors*/
-$bg-color-btn-1: #f7631b;
+$bg-color-btn-1: #FF652F;
 $color-btn-1: #ffffff;
 $bg-color-btn-1-hover: #ffffff;
-$color-btn-1-hover: #f7631b;
+$color-btn-1-hover: #FF652F;
 $bg-color-btn-2: #ffffff;
 $color-btn-2: #222222;
 $bg-color-btn-2-hover: #222222;
@@ -27,3 +28,5 @@ $color-btn-round: #222222;
 $bg-color-btn-round-hover: #f7631b;
 $color-btn-round-hover: #ffffff;
 
+/*Border color main-nav*/
+$border-color-main-nav: #f7631b;
