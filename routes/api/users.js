@@ -2,21 +2,25 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
+const jwt = require("jsonwebtoken");
+const config = require("config");
+const auth = require("../../middleware/auth");
 
 const User = require("../../models/User");
-
 
 router.post(
   "/",
   [
-    check("name", "Name is required")
-
-      .not()
-      .isEmpty(),
-    check("email", "Not valid email").isEmail(),
-    check("password", "Password must be 6 or more characters").isLength({
-      min: 6
-    })
+    auth,
+    [
+      check("name", "Name is required")
+        .not()
+        .isEmpty(),
+      check("email", "Not valid email").isEmail(),
+      check("password", "Password must be 6 or more characters").isLength({
+        min: 6
+      })
+    ]
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -45,14 +49,27 @@ router.post(
 
       user.password = await bcrypt.hash(password, salt);
 
-      await user
-        .save()
-        .then(() => {
-          res.redirect("/api/auth");
-        })
-        .catch(err => console.log(err));
+      await user.save();
+      // .then(() => {
+      //   res.redirect("/api/auth");
+      // })
+      // .catch(err => console.log(err));
 
-      // res.send('User saved');
+      const payload = {
+        user: {
+          id: user.id
+        }
+      };
+
+      jwt.sign(
+        payload,
+        config.get("jwtSecret"),
+        { expiresIn: 3600000 },
+        (err, token) => {
+          if (err) throw err;
+          res.json({ token });
+        }
+      );
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Server error");
