@@ -1,0 +1,75 @@
+@import"mixins/font.scss";
+@import"colors.scss";
+@import"mixins/button";
+@import"fonts";
+
+.btnGStart{
+    @include btn( $bg-color-btn-1, 10px 15px, none, uppercase, inline-block, 30px);
+    @include font(14px,$font-semiBold, $color-btn-1);
+    &:hover{
+        background:$bg-color-btn-1-hover ;
+        color: $color-btn-1-hover;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+    }
+}
+
+/*button -text- apply for the post*/
+.btn-whiteBlack{
+    @include btn( $bg-color-btn-2, 10px 15px, none, uppercase, inline-block, 30px);
+    @include font(14px,$font-medium, $color-btn-2);
+    &:hover{
+        background:$bg-color-btn-2-hover ;
+        color: $color-btn-2-hover;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+    }
+}
+
+.btn-orangWhite{
+    @include btn( $bg-color-btn-1, 10px 15px, none, uppercase, inline-block, 30px);
+    @include font(14px,$font-semiBold, $color-btn-1);
+    &:hover{
+        background:$bg-color-btn-1-hover;
+        color: $color-btn-1-hover;
+        border:1px solid $color-btn-1-hover ;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+}
+}
+/*in blog-home first btn*/
+.btn-viewMor{
+    @include btn( $bg-color-btn-2, 10px 15px, none, uppercase, inline-block, 30px);
+    @include font(14px,$font-semiBold, $color-btn-2);
+    &:hover{
+        background: none;
+        color: $color-btn-1;
+        border:1px solid $color-btn-2-hover ;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+    }
+}
+/*in blog-home*/
+.btn-viewWhiteOrange{
+    @include btn( $bg-color-btn-2, 10px 15px, none,none, inline-block, 30px);
+    @include font(14px,$font-semiBold, $color-btn-2);
+    &:hover{
+        background:$bg-color-btn-1 ;
+        color: $color-btn-1;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+}
+}
+
+/*in blog-home*/
+.btn-blogOHmeTage{
+    @include btn( $bg-color-btn-2, 10px 15px, none, none, inline-block, 30px);
+    @include font(14px,$font-light, $font-color-primary-2);
+    &:hover{
+        background:$bg-color-btn-1 ;
+        color: $color-btn-1;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+}
+}
+
