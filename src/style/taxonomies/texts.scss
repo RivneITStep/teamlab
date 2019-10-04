@@ -1,3 +1,6 @@
+@import "partials/colors";
+@import "mixins/font";
+@import "partials/fonts";
 
 h1{
     @include font (36px, $font-bold, $font-color-primary-1);

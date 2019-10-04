@@ -4,7 +4,6 @@
   background-position: bottom;
   height: 502px;
   padding-top: 170px;
-  opacity: 0.8;
 }
 
 .heading{
@@ -34,7 +33,10 @@ h1{
 
 p{
     line-height: 30px;
-    @include font (16px, $font-regular,$bg-color-primary-1);
+    @include font (16px, $font-light, $font-color-primary-3);
+    @media screen and (max-width: 576px) {
+        display: none;
+    };
 }
 }
 
