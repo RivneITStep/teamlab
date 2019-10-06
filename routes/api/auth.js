@@ -5,9 +5,7 @@ const { check, validationResult } = require("express-validator");
 
 const User = require("../../models/User");
 
-router.get("/", (req, res) => res.send("Authorization Route"));
-
-router.post(
+router.get(
   "/",
   [
     check("email", "Email is required")
