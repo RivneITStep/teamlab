@@ -1,6 +1,9 @@
-@mixin btn($background, $padding-left, $padding-right, $line-height ){
+@mixin btn($background, $padding, $border, $text-transform, $display, $line-height ){
     background: $background;
-    padding-left: $padding-left;
-    padding-right: $padding-right;
+    padding: $padding;
+    border: $border;
+    text-transform: $text-transform;
+    display: $display;
     line-height: $line-height;
+    
 }
