@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
-const auth = require("../../middleware/auth");
+// const auth = require("../../config/auth");
 
 const Post = require("../../models/Post");
 const Profile = require("../../models/Post");
@@ -43,7 +43,7 @@ router.post(
   }
 );
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const posts = await Post.find().sort({ date: -1 });
     res.json(posts);
@@ -53,7 +53,7 @@ router.get("/", auth, async (req, res) => {
   }
 });
 
-router.get("/:id", auth, async (req, res) => {
+router.get("/single-post/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 
@@ -70,7 +70,32 @@ router.get("/:id", auth, async (req, res) => {
   }
 });
 
-router.delete("/:id", auth, async (req, res) => {
+router.delete("/single-post/:id", async (req, res) => {
+  try {
+    const posts = await Post.findById(req.params.id);
+
+    if (!post) {
+      return res.status(404).json({ msg: "Post not found" });
+    }
+
+    if (post.user.toString !== req.user.id) {
+      res.status(401).json({ msg: "User not authorized" });
+    }
+
+    await post.remove();
+    res.json({ msg: "Post deleted" });
+
+    res.json(posts);
+  } catch (error) {
+    console.error(error.massage);
+    if (error.kind === "ObjectId") {
+      return res.status(404).json({ msg: "Post not found" });
+    }
+    res.status(500).send("Server error");
+  }
+});
+
+router.put("/single-post/:id", async (req, res) => {
   try {
     const posts = await Post.findById(req.params.id);
 
