@@ -100,7 +100,7 @@
   }
   
   #header {
-    position: sticky;
+    //position: sticky;
     left: 0;
     top: 0;
     right: 0;
@@ -251,10 +251,11 @@
   
 
 .banner {
-  background: url(..//..//img/banner1.jpg);
-  background-size: contain;
-  background-position: bottom;
+  background: url(..//..//img/banner-bg.png);
   height: 502px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
   padding-top: 170px;
 }
 

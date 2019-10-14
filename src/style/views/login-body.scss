@@ -1,3 +1,59 @@
-main{
-    height: 250px;
+
+
+.login-top {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  .login-top-bg {
+    background: url(..//..//img/bg-01.png);
+    width: 58%;
+    height: 179px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      @include font(25px, $font-regular, $font-color-primary-4);
+      z-index: 999;
+      background: $bg-color-primary-3;
+      opacity: 0.5;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
+
+.login-main {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+
+  .login-main-bg {
+    background: #bebebe;
+    width: 58%;
+    height: 355px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-form {
+      width: 65%;
+      @media screen and (max-width: 576px) {
+        width: 85%;
+      }
+    }
+
+.register-link{
+    margin-bottom: 20px;
+}
+  }
 }
