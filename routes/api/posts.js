@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const { check, validationResult } = require("express-validator");
-var ObjectID = require("mongodb").ObjectID;
 // const auth = require("../../config/auth");
 
 const Post = require("../../models/Post");
@@ -88,7 +87,8 @@ router.delete("/single-post/:id/delete", async (req, res) => {
       }
       res.status(200).json({ msg: "Post deleted" });
     });
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(error.message);
     res.status(500).send("Operation failed. Server error");
   }
@@ -101,7 +101,7 @@ router.put("/single-post/:id/update", async (req, res) => {
 
     if (!updatedTitle && !updatedText)
       res.status(404).json({
-        msg: "Operation failed. Fields 'New Title' and 'New Text'are empty."
+        msg: "Operation failed. Fields 'New Title' and 'New Text' are empty."
       });
 
     const updatedPost = {};
