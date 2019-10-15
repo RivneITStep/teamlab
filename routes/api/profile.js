@@ -2,6 +2,7 @@
 var express = require('express');
 var router = express.Router();
 const { check, validationResult } = require('express-validator');
+
 const User = require('../../models/User');
 const Profile = require('../../models/Profile');
 const fetch = require("node-fetch");
@@ -14,11 +15,13 @@ function remove_duplicates_es6(arr) {
   let it = s.values();
   return Array.from(it);
 }
+
 router.get('/',(req, res, next)=>
 { 
   
   res.send("conected");
 });
+
 router.post('/add', 
 // [check().isEmpty().isURL()],
  async (req, res, next) => {
@@ -125,6 +128,7 @@ router.post('/show',
         }
      
   });
+
 
 
 module.exports = router;
