@@ -1,0 +1,19 @@
+
+/*ul .footer-top{
+   
+    li{
+        display: inline-block;
+        list-style: none;
+        text-transform: uppercase;
+        a{
+            @include font(14px, $font-regular, $font-color-primary-2);
+            text-decoration: none;  
+        &:hover{
+            color:$font-color-primary-hover;
+           cursor: pointer;
+           transition-duration: 0.5s;
+        }
+        
+    }
+}
+}*/

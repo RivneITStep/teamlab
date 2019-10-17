@@ -9,9 +9,27 @@
 @import "partials/buttons";
 @import "partials/fonts";
 
+
+/*Taxonomies*/
+@import "taxonomies/forms.scss";
+@import "taxonomies/lists-head.scss";
+@import "taxonomies/lists-footer.scss";
+@import "taxonomies/main-taxomon.scss";
+@import "taxonomies/texts.scss";
+@import "taxonomies/link.scss";
+
+/* Mixins */
+@import "mixins/border.scss";
+@import "mixins/button.scss";
+@import "mixins/font.scss";
+@import "mixins/links.scss";
+@import "mixins/overlay.scss";
+
+
 /* Views */
-@import "views/head";
-@import "views/main";
+@import "views/header-internal";
+@import "views/header-index";
+@import "views/index-body";
 @import "views/footer";
 @import "views/about-body";
 @import "views/news-body";
@@ -19,6 +37,9 @@
 @import "views/faq-body";
 @import "views/projects-body";
 @import "views/login-body";
+@import "views/register-body";
+@import "views/contact-body";
+@import "views/posts-body";
 
 
 

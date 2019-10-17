@@ -1,0 +1,31 @@
+@import "partials/colors";
+@import "mixins/font";
+@import "partials/fonts";
+
+h1{
+    @include font (36px, $font-bold, $font-color-primary-1);
+    text-transform: uppercase;
+    
+}
+h2{
+    @include font (30px, $font-semiBold, $font-color-primary-3);
+    
+}
+h3{
+    @include font(24px, $font-semiBold, $font-color-primary-3);  
+}
+
+h4{
+    @include font(18px, $font-semiBold, $font-color-primary-1);
+}
+
+h5{
+    @include font(16px, $font-semiBold, $font-color-primary-3);  
+}
+
+h6{
+    @include font(14px, $font-semiBold, $font-color-primary-3);
+}
+
+p{ @include font (14px,$font-regular,$font-color-primary-2);    
+}

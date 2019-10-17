@@ -1,0 +1,24 @@
+/*@import "partials/colors";
+@import "mixins/font";
+@import "partials/fonts";
+
+ul .main nav{
+    float: right;
+   
+    li{
+        display: inline-block;
+        list-style: none;
+        text-transform: uppercase;
+        a{
+            @include font(12px, $font-medium, $font-color-primary-1);
+            text-decoration: none;  
+        &:hover{
+           color:$font-color-primary-hover;
+           cursor: pointer;
+           transition-duration: 0.5s;
+        }
+        
+    }
+}
+}*/
+

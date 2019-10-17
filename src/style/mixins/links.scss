@@ -1,0 +1,5 @@
+@mixin links ($color, $text-transform, $text-decoration){
+    color: $color;
+    text-transform: $text-transform;
+    text-decoration: $text-decoration;
+}
