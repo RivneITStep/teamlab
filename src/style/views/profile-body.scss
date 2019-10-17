@@ -5,7 +5,8 @@
   
     .profile-top-bg {
       background: url(..//..//img/bg-01.png);
-      width: 58%;
+      background-size: cover;
+      width: 80%;
       height: 179px;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
@@ -33,23 +34,31 @@
   
     .profile-main-bg {
       background: #bebebe;
-      width: 58%;
-      height: 750px;
+      width: 80%;
+      height: auto;
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
       margin-bottom: 100px;
       display: flex;
-      align-items: center;
       justify-content: center;
-  
-      .login-form {
-        width: 65%;
-        @media screen and (max-width: 576px) {
-          width: 85%;
-        }
-      }
-  
-
+      padding-bottom: 20px;
     }
   }
   
+  .profile-form{
+    width: 100%;
+    padding: 25px 35px;  
+
+    .custom-file{
+        margin-top: 20px;
+    }
+
+    .sub-ptofile-form{
+        margin-top: 20px;
+    }
+
+.profile-form-item{
+    margin-top: 20px;
+}
+
+  }
