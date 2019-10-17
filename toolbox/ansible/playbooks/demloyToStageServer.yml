@@ -1,0 +1,25 @@
+- name: Pool TeamLab
+  hosts: staging
+  become: true
+  tasks:
+
+  - name: stop all docker containers
+    shell: docker stop $(docker ps -a -q)
+    ignore_errors: true
+
+  - name: remove all docker containers
+    shell: docker rm $(docker ps -a -q)
+    ignore_errors: true
+
+  - name: Remove image
+    docker_image:
+      name: macnaer/teamlab_back
+      state: absent
+
+  - name: Pull image
+    docker_image:
+      name: macnaer/teamlab_back
+
+  - name: Start macnaer/teamlab_back
+    shell: docker run -d --restart=always -p 5000:5000 macnaer/teamlab_back
+ 
