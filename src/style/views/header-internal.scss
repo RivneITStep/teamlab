@@ -100,7 +100,7 @@
 }
 
 #header {
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
   right: 0;
@@ -247,3 +247,4 @@
     left: 0;
   }
 }
+
