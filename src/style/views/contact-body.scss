@@ -14,8 +14,9 @@
     margin-bottom: 30px;
 }
 
-.contact-textarea-field{
+div .contact-textarea-field{
     @include font(15px, $font-regular, $font-color-primary-2);
+    height: 203px;
 }
 
 .contact-btn {
