@@ -16,11 +16,11 @@ function remove_duplicates_es6(arr) {
   return Array.from(it);
 }
 
-router.get('/',(req, res, next)=>
-{ 
+// router.get('/',(req, res, next)=>
+// { 
   
-  res.send("conected");
-});
+//   res.send("conected");
+// });
 
 router.post('/add', 
 // [check().isEmpty().isURL()],
@@ -83,14 +83,14 @@ let git='';
   }
 });
 
-router.post('/show',
-    // [check().isEmpty().isURL()],
-    
+router.get('/show/:profile_id/',    
     async (req, res, next) => {
-        let {user_id} = req.body;
+        const { profile_id } = req.params;
+        // res.send(profile_id);
         try{
-          let user_from_user_colections = await User.findOne({_id:user_id});
-          let userProfile_from_profile_colections = await Profile.findOne({user_id});
+          let userProfile_from_profile_colections = await Profile.findOne({_id:profile_id});
+          console.log(req.params);
+          let user_from_user_colections = await User.findOne({_id:userProfile_from_profile_colections.user_id});
           const errors = validationResult(req);
           if (!user_from_user_colections)
           {
@@ -127,6 +127,66 @@ router.post('/show',
             res.status(500).send('Server error');
         }
      
+  });
+
+
+router.put('/edit/:profile_id/',
+  async (req, res, next) => {
+     try{
+        const errors = validationResult(req);
+        const { profile_id } = req.params;
+        const {
+          location,
+          skills,
+          githubusername,
+          experience,
+          education,
+          social,
+          mainimage
+        }=req.body
+        
+
+        const editedProfile={};
+        if (location) editedProfile.location = location;
+        if (skills) editedProfile.skills = skills;
+        if (githubusername) {
+          let url = "https://api.github.com/users/" + githubusername + "/repos?client_id=796391a0b2d47394dbbf&client_secret=f9d5019a949e1e545cd049e0817e03b20fa55c56";
+          var git_response = await fetch(url);
+          var git_data = await git_response.json();
+          if (!git_data.message) {
+            editedProfile.githubusername = githubusername;
+          }
+          else {
+            return res
+              .status(400)
+              .json({
+                errors: [{ msg: 'git is not response' }]
+              });
+
+          }
+          };
+        if (experience) editedProfile.experience = experience;
+        if (education) editedProfile.education = education;
+        if (social) editedProfile.social = social;
+        if (mainimage) editedProfile.mainimage = mainimage;
+        
+        Profile.updateOne({_id:profile_id},{ $set: editedProfile }, err => {
+            if (err) {
+              if (err.kind === "ObjectId") {
+                res.status(404).json({ msg: "Profile not found" });
+              } else res.status(500).send("Operation failed. Server error");
+            }
+            res
+              //  .status(200)
+              // .json({ msg: `/api/profile/show/:${profile_id}` })
+               .redirect(`/api/profile/show/${profile_id}`)
+        });
+     }
+     catch (error) {
+       console.error(error.message);
+       res.status(500).send('Server error');
+     }
+
   });
 
 
