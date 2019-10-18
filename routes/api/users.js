@@ -1,10 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
-const jwt = require("jsonwebtoken");
-const config = require("config");
-// const auth = require("../../middleware/auth");
 
 const User = require("../../models/User");
 
@@ -42,31 +38,80 @@ router.post(
         password
       });
 
-      const salt = await bcrypt.genSalt(10);
-
-      user.password = await bcrypt.hash(password, salt);
-
       await user.save();
-      // .then(() => {
-      //   res.redirect("/api/auth");
-      // })
-      // .catch(err => console.log(err));
 
-      const payload = {
-        user: {
-          id: user.id
-        }
-      };
+      const token = user.getSignedJwtToken();
 
-      jwt.sign(
-        payload,
-        config.get("jwtSecret"),
-        { expiresIn: 3600000 },
-        (err, token) => {
-          if (err) throw err;
-          res.json({ token });
-        }
-      );
+      res.status(200).json({ success: true, token });
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Server error");
+    }
+  }
+);
+
+router.put(
+  "/:id/updatedetails",
+  [
+    check("name", "Name is required")
+      .not()
+      .isEmpty(),
+    check("email", "Not valid email").isEmail()
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    const fieldsToUpdate = {
+      name: req.body.name,
+      email: req.body.email
+    };
+
+    try {
+      const user = await User.findByIdAndUpdate(req.params.id, fieldsToUpdate, {
+        new: true
+      });
+
+      res.status(200).json({
+        success: true,
+        data: user
+      });
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).send("Server error");
+    }
+  }
+);
+
+router.put(
+  "/:id/updatepassword",
+  [
+    check("newPassword", "Password must be 6 or more characters").isLength({
+      min: 6
+    })
+  ],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    try {
+      const user = await User.findById(req.params.id);
+
+      if (!(await user.matchPassword(req.body.currentPassword))) {
+        return res.status(401).json({ msg: "Password incorrect" });
+      }
+
+      user.password = req.body.newPassword;
+      await user.save();
+
+      res.status(200).json({
+        success: true,
+        data: user
+      });
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Server error");
