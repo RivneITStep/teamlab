@@ -40,36 +40,8 @@
 
 
 
-@media screen and (max-width:768px){
-    .works-text{
-        margin-top: 33px;
-        font-size: 33px;
-    }
 
-    .faq-top{
-        height: 58px;
-        font-size: 16px;
-        padding-left: 23px;
-    }
-
-    .faq-text{
-        padding: 23px 37px;
-        line-height: 23px;
-        font-size: 12px;
-    }
-
-    .faq-blocks{
-        margin-top: 27px;
-    }
-
-    .faq-body{
-        margin-bottom: 27px;
-    }
-}
-
-
-
-@media screen and (max-width:540px){
+@media screen and (max-width:1200px){
     .works-text{
         margin-top: 30px;
         font-size: 30px;
@@ -77,14 +49,14 @@
 
     .faq-top{
         height: 55px;
-        font-size: 14px;
+        font-size: 16px;
         padding-left: 20px;
     }
 
     .faq-text{
         padding: 20px 35px;
         line-height: 20px;
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .faq-blocks{
@@ -97,78 +69,48 @@
 }
 
 
-
-@media screen and (max-width:480px){
+@media screen and (max-width:768px){
     .works-text{
         margin-top: 25px;
         font-size: 25px;
     }
 
     .faq-top{
-        height: 51px;
-        font-size: 12px;
+        height: 52px;
+        font-size: 15px;
         padding-left: 18px;
     }
 
     .faq-text{
-        padding: 18px 30px;
-        line-height: 18px;
-        font-size: 11px;
+        padding: 18px 33px;
+        line-height: 18x;
+        font-size: 13px;
     }
 
     .faq-blocks{
-        margin-top: 22px;
+        margin-top: 20px;
     }
 
     .faq-body{
-        margin-bottom: 22px;
+        margin-bottom: 20px;
     }
 }
 
 
-
-@media screen and (max-width:408px){
-    .works-text{
-        margin-top: 21px;
-        font-size: 21px;
-    }
-    .faq-top{
-        height: 49px;
-        font-size: 12px;
-        padding-left: 17px;
-    }
-
-    .faq-text{
-        padding: 15px 25px;
-        line-height: 17px;
-        font-size: 11px;
-    }
-
-    .faq-blocks{
-        margin-top: 18px;
-    }
-
-    .faq-body{
-        margin-bottom: 18px;
-    }
-}
-
-
-@media screen and (max-width:360px) {
+@media screen and (max-width:480px){
     .works-text{
         margin-top: 18px;
         font-size: 18px;
     }
-
     .faq-top{
-        height: 49px;
-        font-size: 12px;
-        padding-left: 15px;
+        height: 50px;
+        font-size: 13px;
+        padding-left: 14px;
     }
 
     .faq-text{
-        padding: 15px 20px;
-        line-height: 15px;
+        padding: 15px 30px;
+        line-height: 14px;
         font-size: 11px;
     }
 
@@ -178,5 +120,34 @@
 
     .faq-body{
         margin-bottom: 15px;
+    }
+}
+
+
+
+@media screen and (max-width:  320px) {
+    .works-text{
+        margin-top: 18px;
+        font-size: 18px;
+    }
+
+    .faq-top{
+        height: 43px;
+        font-size: 11px;
+        padding-left: 10px;
+    }
+
+    .faq-text{
+        padding: 14px 19px;
+        line-height: 12px;
+        font-size: 10px;
+    }
+
+    .faq-blocks{
+        margin-top: 10px;
+    }
+
+    .faq-body{
+        margin-bottom: 10px;
     }
 }
