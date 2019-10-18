@@ -1,0 +1,34 @@
+
+.contact-body{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-input{
+    @include font(15px, $font-regular, $font-color-primary-2);
+    margin-bottom: 30px;
+}
+
+div .contact-textarea-field{
+    @include font(15px, $font-regular, $font-color-primary-2);
+    height: 203px;
+}
+
+.contact-btn {
+    &:hover{
+        text-decoration: none;
+    }
+    
+}
+
+.contact-send-btn {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
