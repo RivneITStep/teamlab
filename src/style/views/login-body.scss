@@ -1,3 +1,4 @@
+
 .login-top {
   margin-top: 50px;
   display: flex;
@@ -15,6 +16,9 @@
 
     h4 {
       @include font(25px, $font-regular, $font-color-primary-4);
+
+      z-index: 999;
+
       background: $bg-color-primary-3;
       opacity: 0.5;
       height: 56px;
@@ -49,8 +53,14 @@
       }
     }
 
+
+.register-link{
+    margin-bottom: 20px;
+}
+
     .register-link {
       margin-bottom: 20px;
     }
+
   }
 }
