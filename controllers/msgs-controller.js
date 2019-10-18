@@ -35,6 +35,13 @@ class MsgsController {
     };
   }
 
+  // NotRegistred(data) {
+  //   return {
+  //     error: "Request Error",
+  //     errorMessage: `That ${data} is not registered.`
+  //   };
+  // }
+
   Log(inOrOut) {
     return { msg: `You are logged ${inOrOut}` };
   }
@@ -46,10 +53,11 @@ class MsgsController {
     };
   }
 
-  NoRights() {
+  NoRights(...data) {
+    let temp = data.join(", ");
     return {
       error: "Permission Error",
-      errorMessage: "Access denied. You are not admin/moderator/author"
+      errorMessage: `Access denied. You are not ${temp}.`
     };
   }
 
