@@ -1,72 +1,71 @@
 .profile-top {
-    margin-top: 50px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+
+  .profile-top-bg {
+    background: url(..//..//img/post-6.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 179px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     display: flex;
     justify-content: center;
-  
-    .profile-top-bg {
-      background: url(..//..//img/post-6.jpg);
-      background-size: cover;
-      width: 80%;
-      height: 179px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+    align-items: center;
+
+    h4 {
+      @include font(25px, $font-regular, $font-color-primary-4);
+      background: $bg-color-primary-3;
+      opacity: 0.5;
+      height: 56px;
       display: flex;
-      justify-content: center;
       align-items: center;
-  
-      h4 {
-        @include font(25px, $font-regular, $font-color-primary-4);
-        background: $bg-color-primary-3;
-        opacity: 0.5;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
+      justify-content: center;
+      width: 100%;
     }
   }
-  
-  .profile-main {
-    margin-top: 0px;
+}
+
+.profile-main {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+
+  .profile-main-bg {
+    background: #bebebe;
+    width: 80%;
+    height: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
-  
-    .profile-main-bg {
-      background: #bebebe;
-      width: 80%;
-      height: auto;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      margin-bottom: 100px;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 20px;
-    }
+    padding-bottom: 20px;
   }
-  
-.social-form, .experience-form, .education-form{
-    border: 1px dashed black;
-    padding: 15px;
-    border-radius: 5px;
 }
 
-  .profile-form{
-    width: 100%;
-    padding: 25px 35px;  
+.social-form,
+.experience-form,
+.education-form {
+  border: 1px dashed black;
+  padding: 15px;
+  border-radius: 5px;
+}
 
+.profile-form {
+  width: 100%;
+  padding: 25px 35px;
 
-
-    .custom-file{
-        margin-top: 20px;
-    }
-
-    .sub-ptofile-form{
-        margin-top: 20px;
-    }
-
-.profile-form-item{
+  .custom-file {
     margin-top: 20px;
-}
-
   }
+
+  .sub-ptofile-form {
+    margin-top: 20px;
+  }
+
+  .profile-form-item {
+    margin-top: 20px;
+  }
+}
