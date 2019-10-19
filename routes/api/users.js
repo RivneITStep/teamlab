@@ -1,54 +1,66 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
-
+const JWT = require("../../config/JWT");
+//Models
 const User = require("../../models/User");
+//Controllers
+const MsgsController = require("../../controllers/msgs-controller");
+//Midlleware
+const checkValidationErrors = require("../../midlleware/checkValidationErrors");
 
 router.post(
   "/",
   [
-    check("name", "Name is required")
+    check("name", MsgsController.Empty("Name"))
       .not()
       .isEmpty(),
-    check("email", "Not valid email").isEmail(),
-    check("password", "Password must be 6 or more characters").isLength({
-      min: 6
-    })
+    check("email", MsgsController.IncorrectData("Email")).isEmail(),
+    check("password", MsgsController.Length("Password", 6, 100)).isLength({
+      min: 6,
+      max: 100
+    }),
+    check(
+      "password",
+      "Password must include one lowercase character, one uppercase character, a number, and a special character."
+    ).matches(
+      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.* )(?=.*[^a-zA-Z0-9]).{6,}$/,
+      "i"
+    )
   ],
   async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
+    checkValidationErrors(req, res);
 
-    const { name, email, password } = req.body;
+    const { name, email, password, role } = req.body;
 
     try {
       let user = await User.findOne({ email });
 
       if (user) {
-        return res
-          .status(400)
-          .json({ errors: [{ msg: "User already exists" }] });
+        res.status(400).json(MsgsController.AlreadyExist("User"));
       }
 
       user = new User({
         name,
         email,
-        password
+        password,
+        role
       });
 
+      const salt = await bcrypt.genSalt(10);
+
+      user.password = await bcrypt.hash(password, salt);
+
       await user.save();
-
-      const token = user.getSignedJwtToken();
-
-      res.status(200).json({ success: true, token });
+      await JWT(user, res);
     } catch (error) {
       console.error(error.message);
-      res.status(500).send("Server error");
+      res.status(500).json(MsgsController.ServerError());
     }
   }
 );
+
 
 router.put(
   "/:id/updatedetails",

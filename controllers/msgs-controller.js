@@ -81,6 +81,13 @@ class MsgsController {
       errorMessage: errors
     };
   }
+
+  Length(data, min, max) {
+    return {
+      error: "Validation Error",
+      errorMessage: `${data} must be between ${min}-${max} characters long, please try again.`
+    };
+  }
 }
 
 module.exports = new MsgsController();
