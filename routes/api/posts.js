@@ -8,7 +8,7 @@ const checkRolle = require("../../midlleware/checkRolle");
 const PostController = require("../../controllers/post-controller");
 const MsgsController = require("../../controllers/msgs-controller");
 const CommentController = require("../../controllers/comment-controller");
-
+//POST Create new post
 router.post(
   "/add-new-post",
   [
@@ -31,11 +31,11 @@ router.post(
   checkRolle.checkAdminModerator,
   PostController.createNewPost
 );
-
+//GET get all posts 
 router.get("/", PostController.getAllPosts);
-
+//GET get single post
 router.get("/single-post/:id", PostController.getSinglePost);
-
+//DELETE delete single post
 router.delete(
   "/single-post/:id/delete",
   checkToken,
