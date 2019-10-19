@@ -2,10 +2,12 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const MsgsController = require("../controllers/msgs-controller");
 
-exports.provideToken = async ({ _id }, res) => {
+module.exports = async ({ id, role, name }, res) => {
   const payload = {
     user: {
-      id: _id
+      id,
+      role,
+      name
     }
   };
 
