@@ -52,7 +52,7 @@ router.post(
       user.password = await bcrypt.hash(password, salt);
 
       await user.save();
-      user.getSignedJwtToken(res);
+      await user.getSignedJwtToken(res);
     } catch (error) {
       console.error(error.message);
       res.status(500).json(MsgsController.ServerError());

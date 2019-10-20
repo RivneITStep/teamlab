@@ -1,6 +1,4 @@
 const bcrypt = require("bcryptjs");
-//ProvideToken
-const JWT = require("../config/JWT");
 //Models
 const User = require("../models/User");
 //Midlleware
@@ -21,7 +19,7 @@ exports.Login = async (req, res) => {
         bcrypt.compare(password, user.password, async (err, isMatch) => {
           if (err) throw err;
 
-          if (isMatch) await JWT(user, res);
+          if (isMatch) await user.getSignedJwtToken(res);
           else res.status(400).json(MsgsController.IncorrectData("Password"));
         });
       })

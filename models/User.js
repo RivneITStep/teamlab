@@ -34,7 +34,7 @@ UserSchema.pre("save", async function(next) {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-UserSchema.methods.getSignedJwtToken = function(res) {
+UserSchema.methods.getSignedJwtToken = async function(res) {
   const payload = {
     user: {
       id:this._id,
