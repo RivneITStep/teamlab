@@ -32,7 +32,7 @@ router.post(
   async (req, res) => {
     checkValidationErrors(req, res);
 
-    const { name, email, password, role } = req.body;
+    const { name, email, password} = req.body;
 
     try {
       let user = await User.findOne({ email });
@@ -44,8 +44,7 @@ router.post(
       user = new User({
         name,
         email,
-        password,
-        role
+        password
       });
 
       const salt = await bcrypt.genSalt(10);
@@ -53,7 +52,7 @@ router.post(
       user.password = await bcrypt.hash(password, salt);
 
       await user.save();
-      await JWT(user, res);
+      user.getSignedJwtToken(res);
     } catch (error) {
       console.error(error.message);
       res.status(500).json(MsgsController.ServerError());

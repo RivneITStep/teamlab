@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+//Controllers
+const MsgsController = require("../controllers/msgs-controller");
+
 const UserSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -31,10 +34,24 @@ UserSchema.pre("save", async function(next) {
   this.password = await bcrypt.hash(this.password, salt);
 });
 
-UserSchema.methods.getSignedJwtToken = function() {
-  return jwt.sign({ id: this._id }, config.get("jwtSecret"), {
-    expiresIn: 3600000
-  });
+UserSchema.methods.getSignedJwtToken = function(res) {
+  const payload = {
+    user: {
+      id:this._id,
+      role:this.role,
+      name:this.name
+    }
+  };
+
+  jwt.sign(
+    payload,
+    config.get("jwtSecret"),
+    { expiresIn: 3600000 },
+    (err, token) => {
+      if (err) throw err;
+      res.status(200).json([{ token }, MsgsController.Log("in")]);
+    }
+  );
 };
 
 UserSchema.methods.matchPassword = async function(enteredPassword) {
