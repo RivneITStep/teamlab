@@ -19,25 +19,20 @@ router.post(
     check("password", MsgsController.Length("Password", 6, 100)).isLength({
       min: 6,
       max: 100
-    }),
-    check(
-      "password",
-      "Password must include one lowercase character, one uppercase character, a number, and a special character."
-    ).matches(
-      /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.* )(?=.*[^a-zA-Z0-9]).{6,}$/,
-      "i"
-    )
+    })
   ],
   async (req, res) => {
     checkValidationErrors(req, res);
 
-    const { name, email, password} = req.body;
+    const { name, email, password, repassword } = req.body;
 
     try {
       let user = await User.findOne({ email });
 
       if (user) {
         res.status(400).json(MsgsController.AlreadyExist("User"));
+      } else if (password !== repassword) {
+        return res.status(400).json({ msg: "Passwords do not match" });
       }
 
       user = new User({
@@ -45,10 +40,6 @@ router.post(
         email,
         password
       });
-
-      const salt = await bcrypt.genSalt(10);
-
-      user.password = await bcrypt.hash(password, salt);
 
       await user.save();
       await user.getSignedJwtToken(res);
@@ -59,20 +50,16 @@ router.post(
   }
 );
 
-
 router.put(
   "/:id/updatedetails",
   [
-    check("name", "Name is required")
+    check("name", MsgsController.Empty("Name"))
       .not()
       .isEmpty(),
-    check("email", "Not valid email").isEmail()
+    check("email", MsgsController.IncorrectData("Email")).isEmail()
   ],
   async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
+    checkValidationErrors(req, res);
 
     const fieldsToUpdate = {
       name: req.body.name,
@@ -84,13 +71,10 @@ router.put(
         new: true
       });
 
-      res.status(200).json({
-        success: true,
-        data: user
-      });
+      res.status(200).json([{ user }, MsgsController.Success()]);
     } catch (error) {
       console.error(error.message);
-      res.status(500).send("Server error");
+      res.status(500).json(MsgsController.ServerError());
     }
   }
 );
@@ -98,33 +82,30 @@ router.put(
 router.put(
   "/:id/updatepassword",
   [
-    check("newPassword", "Password must be 6 or more characters").isLength({
-      min: 6
+    check("newPassword", MsgsController.Length("Password", 6, 100)).isLength({
+      min: 6,
+      max: 100
     })
   ],
   async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
-    }
+    checkValidationErrors(req, res);
 
     try {
       const user = await User.findById(req.params.id);
 
       if (!(await user.matchPassword(req.body.currentPassword))) {
-        return res.status(401).json({ msg: "Password incorrect" });
+        return res
+          .status(401)
+          .json(MsgsController.IncorrectData("Current password"));
       }
 
       user.password = req.body.newPassword;
       await user.save();
 
-      res.status(200).json({
-        success: true,
-        data: user
-      });
+      res.status(200).json([{ user }, MsgsController.Success()]);
     } catch (error) {
       console.error(error.message);
-      res.status(500).send("Server error");
+      res.status(500).json(MsgsController.ServerError());
     }
   }
 );
