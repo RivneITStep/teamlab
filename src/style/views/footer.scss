@@ -8,10 +8,15 @@
     color: $font-color-primary-1;
     text-decoration: none;
   }
-  a:hover {
+  .footer-a-hover:hover {
     border-bottom: 2px solid white;
     padding-bottom: 5px;
   }
+
+  .fas:hover{
+    color: $font-color-primary-4;
+  }
+
   .list-inline {
     padding-left: 0;
     list-style: none;
