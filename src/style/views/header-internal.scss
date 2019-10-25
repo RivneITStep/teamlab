@@ -1,7 +1,19 @@
+#header{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 .header-top-bg {
   background-color: $bg-color-primary-1;
   height: 50px;
   padding: 0;
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    justify-content: flex-end;
+  }
 }
 
 
@@ -29,19 +41,18 @@
   }
 }
 
-.header-bottom-bg {
-  background-color: $bg-color-primary-3;
-  height: 80px;
-}
 
-.header-top-right {
+
+.header-top-center {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 0;
-
-  @media screen and (max-width: 576px) {
-    padding-right: 10px;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
+}
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 
   ul {
@@ -69,8 +80,9 @@
     font-size: 18px;
     color: $font-color-primary-1;
     cursor: pointer;
-    @media screen and (max-width: 768px) {
-      font-size: 20px;
+
+    @media screen and (max-width: 992px) {
+      display: none;
     }
   }
 
@@ -79,8 +91,9 @@
     color: $font-color-primary-1;
     display: flex;
     align-items: inherit;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
       display: none;
+      justify-content: center;
     }
   }
   a:hover {
@@ -88,11 +101,37 @@
   }
 }
 
+.header-top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0px;
+  @media screen and (max-width: 576px) {
+    padding-right: 15px;
+  }
+
+  .btn-login-header{
+    padding: 3px 20px;
+    margin-right: 10px;
+    color: white;
+    border-color: white;
+  }
+  .btn-register-header{
+    padding: 3px 20px;
+    color: white;
+    border-color: white;
+  }
+}
+
+
 .header-bottom-bg {
+  background-color: $bg-color-primary-3;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .header-bottom {
   display: flex;
   align-items: center;
@@ -287,6 +326,9 @@
   opacity: 0;
   transition: opacity 0.4s ease;
 }
+.menu-wrap .menu > div > div > ul {
+  padding: 0;
+}
 
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
@@ -298,6 +340,7 @@
 
 .menu-wrap .menu > div > div > ul > li > a {
   color: inherit;
+  font-size: 25px;
   text-decoration: none;
   transition: color 0.4s ease;
   cursor: pointer;
