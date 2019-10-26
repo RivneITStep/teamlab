@@ -15,8 +15,30 @@ const Header = () => {
                 <Link to="about">About</Link>
               </li>
               <li>
+                <Link to="projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="news">News</Link>
+              </li>
+              <li>
+                <Link to="faq">FAQ</Link>
+              </li>
+              <li>
+                <Link to="posts">Posts</Link>
+              </li>
+              <li>
                 <Link to="contact">Contact</Link>
               </li>
+              <li>
+                <Link to="login">Login</Link>
+              </li>
+              <li>
+                <Link to="register">Register</Link>
+              </li>
+              <li>
+                <Link to="profile">Profile</Link>
+              </li>
+
               </ul>
           </nav>
         </div>
