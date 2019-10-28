@@ -1,0 +1,27 @@
+@import "../../../../style/partials/colors.scss";
+@import "../../../../style/partials/fonts.scss";
+@import "../../../../style/mixins/font.scss";
+
+.header-top-left {
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  
+    .social-header {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    .social-header li {
+      margin-right: 10px;
+    }
+    .social-header li a i {
+      font-size: 20px;
+      color: $font-color-primary-1;
+    }
+  }
