@@ -1,0 +1,12 @@
+@mixin overlay($position, $display, $width, $height, $top, $left, $right, $bottom, $background-color, $z-index) {
+    position: $position;
+    display: $display;
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    background-color: $background-color;
+    z-index: $z-index;
+}
