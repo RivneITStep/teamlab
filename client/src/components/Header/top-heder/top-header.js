@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./top-header.scss";
 import IconsHeader from "./icons-header/icons-header";
 import ContactsHeader from "./contacts-header/conacts-header";
@@ -6,15 +6,15 @@ import ButtonsHeader from "./buttons-header/buttons-header";
 
 const TopHeader = () => {
   return (
-  <div className="row header-top">
+    <Fragment>
+      <div className="row header-top">
+        <IconsHeader />
 
-      <IconsHeader  />
+        <ContactsHeader />
 
-      <ContactsHeader  />
-      
-      <ButtonsHeader />
-
-    </div>
+        <ButtonsHeader />
+      </div>
+    </Fragment>
   );
 };
 

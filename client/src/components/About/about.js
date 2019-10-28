@@ -1,17 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./about.scss";
-import Header from "../Header/header";
-import Footer from "../Footer/footer";
 
 const About = () => {
   return (
-    <div>
-      <Header />
-
+    <Fragment>
       <div>About</div>
-      
-      <Footer />
-    </div>
+    </Fragment>
   );
 };
 

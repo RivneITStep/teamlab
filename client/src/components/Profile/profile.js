@@ -1,17 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./profile.scss";
-import Header from "../Header/header";
-import Footer from "../Footer/footer";
 
 const Profile = () => {
   return (
-    <div>
-      <Header />
-
+    <Fragment>
       <div>Profile</div>
-      
-      <Footer />
-    </div>
+    </Fragment>
   );
 };
 
