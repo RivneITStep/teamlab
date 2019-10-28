@@ -4,7 +4,7 @@ import "./login.scss";
 const Login = () => {
   return (
     <Fragment>
-      <div className="container- fluid login-top-bg">
+      <div className="container-fluid login-top-bg">
         <div className="container login-body">
           <section>
             <div className="row login-top">
@@ -14,7 +14,7 @@ const Login = () => {
         </div>
       </div>
 
-      <div className="container- fluid">
+      <div className="container-fluid">
         <div className="container login-body-main">
           <section>
             <div className="row login-main">
