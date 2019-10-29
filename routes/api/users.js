@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
-const JWT = require("../../config/JWT");
-//Models
+
 const User = require("../../models/User");
 //Controllers
 const MsgsController = require("../../controllers/msgs-controller");
