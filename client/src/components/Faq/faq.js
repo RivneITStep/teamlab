@@ -1,17 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./faq.scss";
-import Header from "../Header/header";
-import Footer from "../Footer/footer";
 
 const Faq = () => {
   return (
-    <div>
-      <Header />
-
+    <Fragment>
       <div>FAQ</div>
-      
-      <Footer />
-    </div>
+    </Fragment>
   );
 };
 

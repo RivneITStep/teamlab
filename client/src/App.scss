@@ -1,0 +1,32 @@
+body {
+  min-width: 320px;
+}
+/* Custom Bootstrap */
+@import "./style/bootstrap/bootstrap-grid.min.css";
+@import "./style/bootstrap/bootstrap.min.css";
+
+/* Custom */
+@import "./style/partials/colors.scss";
+@import "./style/partials/fonts.scss";
+@import "./style/partials/buttons.scss";
+
+/* Mixins */
+@import "./style/mixins/border.scss";
+@import "./style/mixins/button.scss";
+@import "./style/mixins/font.scss";
+@import "./style/mixins/links.scss";
+@import "./style/mixins/overlay.scss";
+
+/* Views */
+@import "./components/About/about.scss";
+@import "./components/Contact/contact.scss";
+@import "./components/Faq/faq.scss";
+@import "./components/Footer/footer.scss";
+@import "./components/Header/header.scss";
+@import "./components/Home/home.scss";
+@import "./components/Login/login.scss";
+@import "./components/News/news.scss";
+@import "./components/Posts/posts.scss";
+@import "./components/Profile/profile.scss";
+@import "./components/Projects/projects.scss";
+@import "./components/Register/register.scss";

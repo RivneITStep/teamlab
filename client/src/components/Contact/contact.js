@@ -1,17 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./contact.scss";
-import Header from "../Header/header";
-import Footer from "../Footer/footer";
 
 const Contact = () => {
   return (
-    <div>
-      <Header />
-
+    <Fragment>
       <div>Contact</div>
-      
-      <Footer />
-    </div>
+    </Fragment>
   );
 };
 
