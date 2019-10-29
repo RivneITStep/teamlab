@@ -1,7 +1,11 @@
 import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
+import { register } from "../../actions/auth";
+import PropTypes from "prop-types";
+
 import "./register.scss";
 
-const Register = () => {
+const Register = ({ register }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,12 +18,12 @@ const Register = () => {
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = e => {
+  const onSubmit = async e => {
     e.preventDefault();
     if (password !== repassword) {
       console.log("Passwords do not match");
     } else {
-      console.log(formData);
+      register({ name, email, password, repassword });
     }
   };
 
@@ -43,7 +47,7 @@ const Register = () => {
                     <input
                       type="text"
                       className="form-control"
-                      id="email"
+                      id="name"
                       placeholder="Name"
                       name="name"
                       value={name}
@@ -90,7 +94,7 @@ const Register = () => {
                     <input
                       type="password"
                       className="form-control"
-                      id="pwd"
+                      id="pwd2"
                       placeholder="Confirm password"
                       name="repassword"
                       value={repassword}
@@ -102,6 +106,7 @@ const Register = () => {
                   <button
                     type="submit"
                     className="btn btn-outline-dark btn-register"
+                    value="Register"
                   >
                     Register
                   </button>
@@ -115,4 +120,11 @@ const Register = () => {
   );
 };
 
-export default Register;
+Register.propTypes = {
+  register: PropTypes.func.isRequired
+};
+
+export default connect(
+  null,
+  { register }
+)(Register);
