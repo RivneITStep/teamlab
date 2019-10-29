@@ -1,33 +1,30 @@
+.login-top-bg {
+  background: url(../../img/login.png);
 
-
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+}
 .login-top {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
 
-  .login-top-bg {
-    background: url(..//..//img/bg-01.png);
-    width: 58%;
-    height: 179px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h4 {
-      @include font(25px, $font-regular, $font-color-primary-4);
-      z-index: 999;
-      background: $bg-color-primary-3;
-      opacity: 0.5;
-      height: 56px;
+    h1 {
+      @include font(50px, $font-regular, $font-color-primary-1);
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
     }
   }
-}
+
 
 .login-main {
   margin-top: 0px;
@@ -35,12 +32,11 @@
   justify-content: center;
 
   .login-main-bg {
-    background: #bebebe;
-    width: 58%;
+    background: $bg-color-primary-2;
+    width: 75%;
     height: 355px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin-bottom: 100px;
+    border-radius: 20px;
+    margin: 75px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,8 +48,12 @@
       }
     }
 
-.register-link{
-    margin-bottom: 20px;
-}
+    .register-link {
+      margin-bottom: 20px;
+    }
+
+    .register-link {
+      margin-bottom: 20px;
+    }
   }
 }
