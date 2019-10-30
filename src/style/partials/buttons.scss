@@ -16,11 +16,7 @@
 
 /*button -text- apply for the post*/
 .btn-whiteBlack{
-
-    @include btn( $bg-color-btn-2, 10px 15px, none, uppercase, inline-block, 30px);
-
     @include btn( $bg-color-btn-2, 0px 30px, none, uppercase, inline-block, 42px);
-
     @include font(14px,$font-medium, $color-btn-2);
     &:hover{
         background:$bg-color-btn-2-hover ;

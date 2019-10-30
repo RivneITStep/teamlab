@@ -140,23 +140,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "dancing_script_otregular";
-  src: url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.eot");
-  src: url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.woff2")
-      format("woff2"),
-    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.woff")
-      format("woff"),
-    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.ttf")
-      format("truetype"),
-    url("../fonts/DancingScript-Regular/dancingscript-regular-webfont.svg#dancing_script_otregular")
-      format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 $font-awesome: "fontawesomeRegular";
 $font-linearIcons: "fontLineariconsRegular";
 $font-bold: "poppinsBold";
@@ -167,4 +150,3 @@ $font-medium: "poppinsMedium";
 $font-regular: "poppinsRegular";
 $font-semiBold: "poppinsSemiBold";
 $font-thin: "poppinsThin";
-$font-dancing: "dancing_script_otregular";
