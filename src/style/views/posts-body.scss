@@ -1,249 +1,139 @@
+.posts-top-bg {
+    background: url(../../img/111.png);
+    height: 350px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+  
+    .posts-top {
+      display: flex;
+      justify-content: center;
+  
+      h1 {
+        @include font(50px, $font-regular, $font-color-primary-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+}
 
- .posts{
-     height: 75px;
-     background: $bg-color-primary-2;
-     display: flex;
-     align-items: center;
-     padding: 10px;
- }
+.posts-body{
+    padding: 0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 
- .posts-text{
+.posts-head-title {
     display: flex;
     justify-content: center;
-    font-family: $font-semiBold;
-    color: $font-color-primary-1;
-    text-transform: uppercase;
-    font-size: 36px;
- }
-
- .single-carusel{
-    margin-bottom: 40px;
-    overflow: hidden;
-    width: 100%;
-
-    p {
-        display: block;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-size: 14px; 
+    line-height: 55px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  
+    p{
+        @include font(25px, $font-regular, $font-color-primary-3)
     }
+  }
 
-    h4{
-        color: black;
-        font-size: 14px; 
-    }
-}
-
-
- .align-items-center {
-    align-items: center !important;
-}
-
-.row {
+.posts-block{
+    padding: 10px;
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3em;
+
+    padding-bottom: 40px;
+   // background: $bg-color-primary-4;
+    background: #e0e0e0;
+   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+    .posts-details{
+        display: block ;    
+    
+        h5{
+            margin-top: 3px;
+            font-size:20px;
+            color: $font-color-primary-3;
+            font-family: $font-semiBold;
+        }
+
+        p{
+            font-size: 14px;
+            font-family: $font-regular;
+            color:$font-color-primary-2;
+            padding-right: 15px;
+        }
+
+        h6{
+            width: 100%;
+            height: 30px;
+            font-size: 14px;
+            font-family: $font-regular;
+            margin-bottom: 10px;
+            //color:$font-color-primary-2;
+        }
+
+        .posts-img{
+            border-radius: 10px;
+            padding: 7px;
+        }
+    }
 }
 
 
-.img-fluid{
-    max-width: 100%;
-    height: auto;
-
-  img{
-    vertical-align: middle;
-    border-style: none; 
-}
-}
-
-.thumb{
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.detials{
-    position: relative;
+.posts-more-btn {
     width: 100%;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 1em;
+    // padding-top: 1em;
+    .more-posts{
+        width: 125px;
+        height: 40px;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+  }
+
+
+
+  /////////////////////////////////////////////////////
+  
+@media screen and (max-width: 1200px) {
+
 }
-
-
-@media screen and (max-width: 991px) {
-
-    .posts{
-        height: 70px;
-        padding: 10px;
-    }
-
-    
-    .single-carusel{
-    margin-bottom: 40px;
-
-    p {
-        font-size: 14px; 
-    }
-
-    h4{
-        font-size: 14px; 
-    }
-    }
-
-
-    .row {
-    margin-top: 15px;
-    margin-right: 15px;
-    margin-left: 15px;
-    }
-  }
-
   
-  @media screen and (max-width: 768px) {
-
-    .container-fluid {
-        padding: 10px;
+@media screen and (max-width: 768px) {
     
-    }
-
-    .posts{
-        height: 65px;
-        padding: 10px;
-    }
-   
-    .posts-text{
-       font-size: 30px;
-    }
-    
-
-    .single-carusel{
-    margin-bottom: 40px;
-
-    p {
-        font-size: 12px; 
-    }
-
-    h4{
-        font-size: 12px; 
-    }
-    }
-
-
-    .row {
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    }
-    
-    .thumb{
-    padding-right: 10px;
-    padding-left: 10px;
-    }
-
-    .detials{
-    padding-right: 10px;
-    padding-left: 10px;
-    }
-  }
+}
   
-    
-  @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
 
-    .container-fluid {
-        padding: 0px;
-    
-    }
-    .posts{
-        height: 50px;
-        padding: 7px;
-    }
-   
-    .posts-text{
-       font-size: 25px;
-    }
-    
-
-    .single-carusel{
-    margin-bottom: 30px;
-
-    p {
-        font-size: 11px; 
-    }
-
-    h4{
-        font-size: 11px; 
-    }
-    }
-
-
-    .row {
-    //padding: 0px 15px;
-    margin-top: 6px;
-    margin-right: 6px;
-    margin-left: 6px;
-    }
-
-    
-    .thumb{
-    padding-right: 6px;
-    padding-left: 6px;
-    }
-
-    .detials{
-    padding-right: 6px;
-    padding-left: 6px;
-    }
-  }
+}
   
-
-     
-  @media screen and (max-width: 320px) {
-
-    .container-fluid {
-        padding: 0px;
-    }
-
-    .posts{
-        height: 35px;
-        padding: 0px;
-    }
+@media screen and (max-width: 320px) {
    
-    .posts-text{
-       font-size: 17px;
-    }
-    
-    .single-carusel{
-    margin-bottom: 20px;
-
-    p {  
-        font-size: 10px; 
-    }
-
-    h4{
-        font-size: 10px; 
-    }
-    }
-
-    .row {
-    margin-top: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    }
-
-    .thumb{
-    padding-right: 3px;
-    padding-left: 3px;
-    }
-
-    .detials{
-    padding-right: 3px;
-    padding-left: 3px;
-    }
-  }
- 
-
-
+}
+  
