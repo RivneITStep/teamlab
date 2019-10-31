@@ -1,20 +1,33 @@
-
- .posts{
-     height: 75px;
-     background: $bg-color-primary-2;
-     display: flex;
-     align-items: center;
-     padding: 10px;
- }
-
- .posts-text{
+.posts-top-bg {
+    background: url(../../img/279563.png);
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: center;
     justify-content: center;
-    font-family: $font-semiBold;
-    color: $font-color-primary-1;
-    text-transform: uppercase;
-    font-size: 36px;
- }
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+  
+    .posts-top {
+      display: flex;
+      justify-content: center;
+  
+      h1 {
+        @include font(50px, $font-regular, $font-color-primary-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+  
+
+
 
  .single-carusel{
     margin-bottom: 40px;
