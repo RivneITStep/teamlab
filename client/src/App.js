@@ -16,25 +16,30 @@ import Footer from "./components/Footer/footer";
 
 import "./App.scss";
 
+import { Provider } from "react-redux";
+import store from "./store";
+
 const App = () => (
-  <Router>
-    <Fragment>
-      <Header />
-      <Route path="/" exact component={Home} />
-      <Route path="/about" exact component={About} />
-      <Route path="/projects" exact component={Projects} />
-      <Route path="/news" exact component={News} />
-      <Route path="/faq" exact component={Faq} />
-      <Route path="/posts" exact component={Posts} />
-      <Route path="/contact" exact component={Contact} />
-      <Switch>
-        <Route path="/login" exact component={Login} />
-        <Route path="/register" exact component={Register} />
-      </Switch>
-      <Route path="/profile" exact component={Profile} />
-      <Footer />
-    </Fragment>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Fragment>
+        <Header />
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route path="/projects" exact component={Projects} />
+        <Route path="/news" exact component={News} />
+        <Route path="/faq" exact component={Faq} />
+        <Route path="/posts" exact component={Posts} />
+        <Route path="/contact" exact component={Contact} />
+        <Switch>
+          <Route path="/login" exact component={Login} />
+          <Route path="/register" exact component={Register} />
+        </Switch>
+        <Route path="/profile" exact component={Profile} />
+        <Footer />
+      </Fragment>
+    </Router>
+  </Provider>
 );
 
 export default App;

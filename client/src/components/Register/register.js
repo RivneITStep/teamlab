@@ -1,10 +1,35 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
+import { register } from "../../actions/auth";
+import PropTypes from "prop-types";
+
 import "./register.scss";
 
-const Register = () => {
+const Register = ({ register }) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    repassword: ""
+  });
+
+  const { name, email, password, repassword } = formData;
+
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
+  const onSubmit = async e => {
+    e.preventDefault();
+    if (password !== repassword) {
+      console.log("Passwords do not match");
+    } else {
+      register({ name, email, password, repassword });
+    }
+  };
+
   return (
     <Fragment>
-      <div className="container- fluid">
+      <div className="container-fluid">
         <div className="container register-body">
           <section>
             <div className="row register-top">
@@ -16,73 +41,72 @@ const Register = () => {
           <section>
             <div className="row register-main">
               <div className="row register-main-bg">
-                <form className="login-form">
+                <form className="login-form" onSubmit={e => onSubmit(e)}>
                   <div className="form-group">
-                    <label for="uname">First name:</label>
+                    <label htmlFor="uname">Name:</label>
                     <input
                       type="text"
                       className="form-control"
-                      id="email"
+                      id="name"
                       placeholder="Name"
+                      name="name"
+                      value={name}
+                      onChange={e => onChange(e)}
+                      required
                     />
                   </div>
                   <div className="form-group">
-                    <label for="sname">Last name:</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="email"
-                      placeholder="Surname"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label for="city">City:</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="email"
-                      placeholder="City"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label for="email">Email address:</label>
+                    <label htmlFor="email">Email address:</label>
                     <input
                       type="email"
                       className="form-control"
                       id="email"
                       placeholder="E-mail"
+                      name="email"
+                      value={email}
+                      onChange={e => onChange(e)}
+                      required
                     />
                   </div>
                   <div className="form-group">
-                    <label for="pwd">Password:</label>
+                    <label htmlFor="pwd">Password:</label>
                     <input
                       type="password"
                       className="form-control"
                       id="pwd"
                       placeholder="Password"
+                      name="password"
+                      value={password}
+                      onChange={e => onChange(e)}
+                      required
                     />
                     <small
                       id="passwordHelpBlock"
                       className="form-text text-muted"
                     >
-                      Your password must be 8-20 characters long, contain
+                      Your password must be 6-20 characters long, contain
                       letters and numbers, and must not contain spaces, special
                       characters, or emoji.
                     </small>
                   </div>
                   <div className="form-group">
-                    <label for="pwd">Confirm password:</label>
+                    <label htmlFor="pwd">Confirm password:</label>
                     <input
                       type="password"
                       className="form-control"
-                      id="pwd"
+                      id="pwd2"
                       placeholder="Confirm password"
+                      name="repassword"
+                      value={repassword}
+                      onChange={e => onChange(e)}
+                      required
                     />
                   </div>
 
                   <button
                     type="submit"
                     className="btn btn-outline-dark btn-register"
+                    value="Register"
                   >
                     Register
                   </button>
@@ -96,4 +120,11 @@ const Register = () => {
   );
 };
 
-export default Register;
+Register.propTypes = {
+  register: PropTypes.func.isRequired
+};
+
+export default connect(
+  null,
+  { register }
+)(Register);
