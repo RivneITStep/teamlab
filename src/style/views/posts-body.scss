@@ -61,4 +61,11 @@ h4 {
 
 .detials-posts {
   padding-right: 0;
+
+  .date{
+    margin: 0;
+  }
+  .author{
+    color: $font-color-primary-5;
+  }
 }
