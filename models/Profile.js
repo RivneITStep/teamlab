@@ -85,6 +85,9 @@ const ProfileSchema = new mongoose.Schema({
         },
         instagram: {
             type: String
+        },
+        phone_number: {
+            type: String
         }
     },
     mainimage: {
