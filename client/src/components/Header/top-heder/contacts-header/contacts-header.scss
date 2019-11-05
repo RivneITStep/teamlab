@@ -3,59 +3,61 @@
 @import "../../../../style/mixins/font.scss";
 
 .header-top-center {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 0;
-    @media screen and (max-width: 1200px) {
-      justify-content: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 0;
+  @media screen and (max-width: 1200px) {
+    justify-content: center;
   }
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  
-    ul {
-      list-style: none;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+
+    li {
+      margin-right: 10px;
       display: flex;
-      padding: 0;
-      margin-bottom: 0;
-  
-      li {
-        margin-right: 10px;
-        display: flex;
-        align-items: center;
-      }
-      li:hover {
-        text-decoration: none;
-      }
+      align-items: center;
     }
-  
-    .email-header-li {
-      margin-right: 0;
-    }
-  
-    i {
-      margin-right: 5px;
-      font-size: 18px;
-      color: $font-color-primary-1;
-      cursor: pointer;
-  
-      @media screen and (max-width: 992px) {
-        display: none;
-      }
-    }
-  
-    a {
-      font-size: 14px;
-      color: $font-color-primary-1;
-      display: flex;
-      align-items: inherit;
-      @media screen and (max-width: 1200px) {
-        display: none;
-        justify-content: center;
-      }
-    }
-    a:hover {
+    li:hover {
       text-decoration: none;
     }
   }
+
+  .email-header-li {
+    margin-right: 0;
+  }
+
+  i {
+    margin-right: 5px;
+    font-size: 18px;
+    color: $font-color-primary-1;
+    cursor: pointer;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  a {
+    font-size: 14px;
+    color: $font-color-primary-1;
+    display: flex;
+    align-items: inherit;
+    @media screen and (max-width: 1200px) {
+      display: none;
+      justify-content: center;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    color: $font-color-primary-1;
+  }
+
+}

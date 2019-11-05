@@ -1,6 +1,7 @@
 @import "../../../../style/partials/colors.scss";
 @import "../../../../style/partials/fonts.scss";
 @import "../../../../style/mixins/font.scss";
+@import "../../../../style/css-font-awesome/all.css";
 
 .header-top-left {
     padding: 10px 0;
@@ -20,8 +21,15 @@
     .social-header li {
       margin-right: 10px;
     }
-    .social-header li a i {
-      font-size: 20px;
+    .social-header li a .i-brand {
+      font-family: $font-awesome-brands;
+      font-size: 22px;
       color: $font-color-primary-1;
     }
+    .social-header li a .i-user {
+      font-family: $font-awesome;
+      font-size: 22px;
+      color: $font-color-primary-1;
+    }
+
   }
