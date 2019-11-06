@@ -3,24 +3,29 @@
 @import "../../../../style/mixins/font.scss";
 
 .header-top-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 0px;
-    @media screen and (max-width: 576px) {
-      padding-right: 15px;
-    }
-  
-    .btn-login-header{
-      padding: 3px 20px;
-      margin-right: 10px;
-      color: white;
-      border-color: white;
-    }
-    .btn-register-header{
-      padding: 3px 20px;
-      color: white;
-      border-color: white;
-    }
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 0px;
+  @media screen and (max-width: 576px) {
+    padding-right: 15px;
   }
-  
+
+  .btn-login-header {
+    padding: 3px 20px;
+    margin-right: 10px;
+    color: $font-color-primary-1;
+    border-color: $font-color-primary-1;
+  }
+  .btn-login-header:hover {
+    background: $bg-color-primary-1;
+  }
+  .btn-register-header {
+    padding: 3px 20px;
+    color: $font-color-primary-1;
+    border-color: $font-color-primary-1;
+  }
+  .btn-register-header:hover {
+    background: $bg-color-primary-1;
+  }
+}

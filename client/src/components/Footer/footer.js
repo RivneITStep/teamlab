@@ -60,15 +60,15 @@ const Footer = () => {
 
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 contact-us-footer">
               <h6 className="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <a href="https://www.google.com/maps/dir//50.618813,26.258895/@50.618813,26.258895,17z?hl=ru-UA">
-                <i className="fas fa-home mr-3"></i> Soborna str, 16, Rivne,
+              <a href="https://www.google.com/maps/dir//50.618813,26.258895/@50.618813,26.258895,17z?hl=ru-UA" target="_blank">
+                <i className="fas fa-home mr-3" title="Visit us"></i> Soborna str, 16, Rivne,
                 Ukraine
               </a>
               <a href="mailto:office_rv@itstep.org">
-                <i className="fas fa-envelope mr-3"></i>office_rv@itstep.org
+                <i className="fas fa-envelope mr-3" title="Email us"></i>office_rv@itstep.org
               </a>
               <a href="tel:+38-067-557-8704">
-                <i className="fas fa-phone mr-3"></i> +38 (067) 557-87-04
+                <i className="fas fa-phone mr-3" title="Call us"></i> +38 (067) 557-87-04
               </a>
             </div>
           </div>
@@ -91,6 +91,7 @@ const Footer = () => {
                     <a
                       href="https://www.facebook.com/comp.academy.step"
                       title="Facebook"
+                      target="_blank"
                       className="btn-floating btn-sm rgba-white-slight mx-1"
                     >
                       <i className="fab fa-facebook"></i>
@@ -100,6 +101,7 @@ const Footer = () => {
                     <a
                       href="https://mystat.itstep.org/en/auth/login/index"
                       title="MyStat"
+                      target="_blank"
                       className="btn-floating btn-sm rgba-white-slight mx-1"
                     >
                       <i className="fas fa-user-graduate"></i>
@@ -109,6 +111,7 @@ const Footer = () => {
                     <a
                       className="btn-floating btn-sm rgba-white-slight mx-1"
                       title="GitHub"
+                      target="_blank"
                       href="https://github.com/RivneITStep"
                     >
                       <i className="fab fa-github"></i>

@@ -1,7 +1,5 @@
 import React, { Fragment } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./icons-header.scss";
-import { Link } from "react-router-dom";
 
 const IconsHeader = () => {
   return (
@@ -9,31 +7,31 @@ const IconsHeader = () => {
       <div className="header-top-left col">
         <ul className="social-header">
           <li>
-            <Link
-              to="https://www.facebook.com/comp.academy.step"
-              // target="_blank"
-              // title="Facebook"
+            <a
+              href="https://www.facebook.com/comp.academy.step"
+              target="_blank"
+              title="Facebook"
             >
-              <i className="fa fa-facebook-f"></i>
-            </Link>
+              <i className="fab fa-facebook i-brand"></i>
+            </a>
           </li>
           <li>
-            <Link
-              to="https://mystat.itstep.org/en/auth/login/index"
+            <a
+              href="https://mystat.itstep.org/en/auth/login/index"
               target="_blank"
               title="MyStat"
             >
-              <i className="fa fa-user-graduate"></i>
-            </Link>
+              <i className="fab fa-user-graduate i-user"></i>
+            </a>
           </li>
           <li>
-            <Link
-              to="https://github.com/RivneITStep"
+            <a
+              href="https://github.com/RivneITStep"
               target="_blank"
               title="GitHub"
             >
-              <i className="fa fa-github"></i>
-            </Link>
+               <i className="fab fa-github i-brand"></i>
+            </a>
           </li>
         </ul>
       </div>
