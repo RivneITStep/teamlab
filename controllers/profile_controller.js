@@ -18,7 +18,7 @@ exports.createProfile=async(req,res)=>{
             id
         } = req.user;
         const user_id=id;
-        console.log(user_id)
+       
         const {
             location,
             githubusername,
@@ -53,6 +53,36 @@ exports.createProfile=async(req,res)=>{
                 .json(MsgsController.Fail())
 
         }
+        if (education)
+        {
+            education.map((item)=>{
+                if (item.to)
+                {
+                    item.current = false
+                }
+                else 
+                    {
+                        item.current = true
+                    }
+                if (item.current === true)
+                item.to=new Date;
+            })
+        }
+         if (experience)
+        {
+            education.map((item)=>{
+                if (item.to)
+                {
+                    item.current = false
+                }
+                else 
+                    {
+                        item.current = true
+                    }
+                if (item.current === true)
+                item.to=new Date;
+            })
+        }
         const newProfile = new Profile({
             user_id: user_id,
                 location: location,
@@ -83,9 +113,8 @@ exports.showProfile = async (req, res) => {
     try {
         checkValidationErrors(req, res);
         const {
-            name,
             id
-        } = req.user;
+        } = req.params;
         const user_id = id;
         let user_from_user_colections = await User.findOne({_id: user_id });
         let userProfile_from_profile_colections = await Profile.findOne({user_id});
@@ -153,8 +182,31 @@ exports.updateProfile = async (req, res) => {
 
             }
         };
-        if (experience) editedProfile.experience = experience;
-        if (education) editedProfile.education = education;
+        if (experience) {
+                    experience.map((item) => {
+                    if (item.to) {
+                        item.current = false
+                    } else {
+                        item.current = true
+                    }
+                    if (item.current === true)
+                        item.to = new Date;
+                })
+            editedProfile.experience = experience;
+        }
+        if (education) {
+            
+            education.map((item) => {
+                    if (item.to) {
+                        item.current = false
+                    } else {
+                        item.current = true
+                    }
+                    if (item.current === true)
+                        item.to = new Date;
+                })
+            editedProfile.education = education;
+        }
         if (social) editedProfile.social = social;
         if (mainimage) editedProfile.mainimage = mainimage;
         
