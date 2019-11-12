@@ -19,10 +19,12 @@ checkToken,
 ProfileController.createProfile
 );
 
-router.get('/show/:id',
+router.get('/show_single_profile/:id',
 ProfileController.showProfile
 );
-
+router.get('/',
+  ProfileController.getAllProfiles
+);
 
 router.put('/edit',
 checkToken,
