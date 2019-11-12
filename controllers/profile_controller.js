@@ -10,6 +10,15 @@ const upload = multer({dest: './public/uploads/'});
 
 const remove_duplicates_es6= require("../midlleware/removeDublicate")
 
+exports.getAllProfiles = async (req, res) => {
+  try {
+    const profiles = await Profile.find().sort({ date: -1 });
+    res.status(200).json([MsgsController.Success(), profiles]);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json(MsgsController.ServerError());
+  }
+};
 exports.createProfile=async(req,res)=>{
     try {
         checkValidationErrors(req, res);
