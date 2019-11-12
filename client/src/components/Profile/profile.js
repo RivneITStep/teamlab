@@ -1,12 +1,28 @@
 import React, { Fragment } from "react";
+import { connect } from "react-redux";
+import { allProfile } from '../../actions/allProfile'
 import "./profile.scss";
 
-const Profile = () => {
+// import ProfileShow from './profileShow/profileShow'
+
+ const Profile = ({allProfile}) => {
+   
+
+
   return (
     <Fragment>
-      <div>Profile</div>
+
+      <div >Profile</div>
+
     </Fragment>
   );
-};
 
-export default Profile;
+};
+function mapStateToProps(state){
+  return
+  {
+      // profile:state.allProfile
+  };
+}
+export default connect(mapStateToProps(),{allProfile}) 
+                  (Profile);
