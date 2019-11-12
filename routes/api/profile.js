@@ -19,8 +19,7 @@ checkToken,
 ProfileController.createProfile
 );
 
-router.post('/show',    
-checkToken,
+router.get('/show/:id',
 ProfileController.showProfile
 );
 
