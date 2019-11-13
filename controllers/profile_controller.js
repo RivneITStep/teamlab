@@ -13,7 +13,26 @@ const remove_duplicates_es6= require("../midlleware/removeDublicate")
 exports.getAllProfiles = async (req, res) => {
   try {
     const profiles = await Profile.find().sort({ date: -1 });
-    res.status(200).json(profiles);
+
+    const user_from_user_colections = await User.find().sort({ date: -1 });
+    
+    const pr=profiles.map((profile)=>{
+        let obj={};
+        user_from_user_colections.map((user)=>{
+         if (profile.user_id==user._id)
+         {
+            //  console.log('user', user._id);
+            //  console.log('  profile ', profile.user_id);
+             obj={profile,user_name:user.name}
+         }
+    })
+         console.log(obj);
+        return obj})
+    
+    
+   
+    res.status(200).json(pr);
+
   } catch (error) {
     console.error(error.message);
     res.status(500).json(MsgsController.ServerError());
