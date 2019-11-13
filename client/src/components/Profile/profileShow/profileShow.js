@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 
 
 
-const ProfileShow = () => {
+const profileShow = (props) => {
   return (
     <Fragment>
-      <div>Profile</div>
+      <div>Single profile</div>
     </Fragment>
   );
 };
 
-export default (ProfileShow);
+export default (profileShow);
