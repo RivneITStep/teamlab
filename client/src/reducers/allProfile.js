@@ -3,9 +3,12 @@ import {
     GET_PROFILES_FAIL
 } from '../actions/types'
 
-const initialState = {    
-    profile: true,
-    user: null
+const initialState = {
+  profile: null,
+  profiles: [],
+  repos: [],
+  loading: true,
+  error: {}
 };
 
 export default function (state = initialState, action) {
@@ -13,12 +16,23 @@ export default function (state = initialState, action) {
     
     switch (type) {
         case GET_PROFILES_SUCCESS:
-            return  payload
+            return {
+              ...state,
+              profiles: payload,
+              loading: false
+            };
+
             
         case GET_PROFILES_FAIL:
-            return null;
+            return {
+              ...state,
+              profiles: [],
+              error: payload,
+              loading: false
+            };
+            
         default:
-            console.log("all profile reducer")
+
             return state;
     }
 }

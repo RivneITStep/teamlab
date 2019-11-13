@@ -5,22 +5,17 @@ import {
 
 export const allProfile = () => async dispatch =>
  {
-  const config = {
-    headers: {
-      "Content-Type": "application/json"
-    }
-  };
-
+ console.log("action")
   try {
-    const res = await axios.post("api/profile", config);
-    
+    const res = await axios.get("/api/profile");
     dispatch({
       type: GET_PROFILES_SUCCESS,
       payload: res.data
     });
   } catch (error) {
     dispatch({
-      type: GET_PROFILES_FAIL
+      type: GET_PROFILES_FAIL,
+      payload: error
     });
   }
 };
