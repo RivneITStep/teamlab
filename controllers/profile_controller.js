@@ -13,6 +13,7 @@ const remove_duplicates_es6= require("../midlleware/removeDublicate")
 exports.getAllProfiles = async (req, res) => {
   try {
     const profiles = await Profile.find().sort({ date: -1 });
+
     const user_from_user_colections = await User.find().sort({ date: -1 });
     
     const pr=profiles.map((profile)=>{
@@ -31,6 +32,7 @@ exports.getAllProfiles = async (req, res) => {
     
    
     res.status(200).json(pr);
+
   } catch (error) {
     console.error(error.message);
     res.status(500).json(MsgsController.ServerError());
