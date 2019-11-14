@@ -49,11 +49,9 @@
   align-items: center;
   padding: 10px 0;
   @media screen and (max-width: 1200px) {
-    justify-content: center;
-}
-  @media screen and (max-width: 768px) {
     display: none;
-  }
+}
+
 
   ul {
     list-style: none;

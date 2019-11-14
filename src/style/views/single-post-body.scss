@@ -1,0 +1,28 @@
+.sPost-top-bg {
+    background: url(../../img/home-page1.png);
+    height: 350px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+  
+    .sPost-top {
+      display: flex;
+      justify-content: center;
+  
+      h1 {
+        @include font(50px, $font-regular, $font-color-primary-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+  
