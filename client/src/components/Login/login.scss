@@ -1,0 +1,64 @@
+@import "../../style/partials/fonts.scss";
+@import "../../style/partials/colors.scss";
+@import "../../style/mixins/font.scss";
+
+
+
+.login-top-bg {
+  background: url(../../style/img/login.png);
+  background-position: bottom;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+}
+.login-top {
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    @include font(50px, $font-regular, $font-color-primary-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.login-main {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+
+  .login-main-bg {
+    background: $bg-color-primary-2;
+    width: 75%;
+    height: 355px;
+    border-radius: 20px;
+    margin: 75px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-form {
+      width: 65%;
+      @media screen and (max-width: 576px) {
+        width: 85%;
+      }
+    }
+
+    .register-link {
+      margin-bottom: 20px;
+    }
+
+    .register-link {
+      margin-bottom: 20px;
+    }
+  }
+}
