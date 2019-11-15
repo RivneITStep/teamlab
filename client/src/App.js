@@ -13,6 +13,9 @@ import Profile from "./components/Profile/profile";
 import Register from "./components/Register/register";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
+import Forgot from "./components/Forgot/forgot";
+import SinglePost from "./components/Single-post/single-post";
+import SingleProject from "./components/Single-project/single-project";
 
 import "./App.scss";
 
@@ -47,6 +50,9 @@ const App = () => {
             <Route path="/register" exact component={Register} />
           </Switch>
           <Route path="/profile" exact component={Profile} />
+          <Route path="/single-post" exact component={SinglePost} />
+          <Route path="/single-project" exact component={SingleProject} />
+          <Route path="/forgot" exact component={Forgot} />
           <Footer />
         </Fragment>
       </Router>
