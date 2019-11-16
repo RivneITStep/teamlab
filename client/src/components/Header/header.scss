@@ -1,0 +1,32 @@
+@import "../../style/partials/colors.scss";
+@import "../../style/partials/fonts.scss";
+
+#header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-top-bg {
+    background-color: $bg-color-primary-1;
+    height: 50px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  
+    @media screen and (max-width: 768px) {
+      justify-content: flex-end;
+    }
+  }
+  
+  .header-bottom-bg {
+    background-color: $bg-color-primary-3;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+  
+  
