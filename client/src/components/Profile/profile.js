@@ -1,53 +1,40 @@
 import React, { Fragment,Component } from "react";
-import PropTypes from "prop-types";
+
 import { connect } from "react-redux";
 import { allProfile } from '../../actions/allProfile'
-import { Link } from "react-router-dom";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./profile.scss";
 
-import profileShow from './profileShow/profileShow'
-import Login from "../Login/login";
-
+import ProfileList from './profileList/ProfileList'
+import PrShow from './PrShow'
  class  Profile extends Component  {
-   componentDidMount(){
-     console.log("mounted")
-    this.props.allProfile();
+  async componentDidMount(){
+   try {
+      console.log("profile render")
+     this.props.allProfile();
+   }
+    catch (error) {
+       console.error(error);
+    }
    };
-  profileList() {
-    const items=this.props.profiles
-          return items.map ((item)=>{
-            const path = `/profile/show_single_profile/${item.profile._id}`
-            console.log(path);
-            return (
-              <Fragment>
-              < Link to = {path} >
-              <div>{item.user_name}</div>
-              <div>{item.profile.githubusername}</div>
-              <div>{item.profile.mainimage}</div>
-              </Link>
-              < Route path = {path} exact component = {profileShow}/>
-              </Fragment>
-            )}) 
-        }  
+  
 
- 
-  render()
-  {
-    console.log(this.props.profiles);
+  
+  render(){
     
      return (
-       <Fragment>
-         <Router>
-        {this.profileList()}
+       <Router>
+      
+        <Route exact path ="/profile" component={ProfileList}/>
+        <Route exact path ="/profile/show_single_profile/:id" component={PrShow}/>
+        
         </Router>
-       </Fragment>
      );
   }
- };
+}
 const mapStateToProps = state => { 
    return { 
-     profiles: state.allProfile.profiles
+      list: state.allProfile.profiles
    }; 
 }; 
 export default connect(mapStateToProps,{allProfile}) 
