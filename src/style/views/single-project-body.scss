@@ -26,3 +26,32 @@
     }
   }
   
+
+.sProject-Title{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.sProject-title-logo{
+  padding-bottom: 10px;
+}
+
+.sProject-Info {
+  margin-top: 20px;
+}
+
+.sProject-date, .sProject-skills, .sProject-links {
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 0 10px;
+}
+
+.sProject-title-logo{
+  display: flex;
+  justify-content: center;
+}
