@@ -73,7 +73,7 @@ router.put(
         new: true
       });
 
-      res.status(200).json([{ user }, MsgsController.Success()]);
+      res.status(200).json({ user });
     } catch (error) {
       console.error(error.message);
       res.status(500).json(MsgsController.ServerError());
@@ -104,7 +104,7 @@ router.put(
       user.password = req.body.newPassword;
       await user.save();
 
-      res.status(200).json([{ user }, MsgsController.Success()]);
+      res.status(200).json({ user });
     } catch (error) {
       console.error(error.message);
       res.status(500).json(MsgsController.ServerError());

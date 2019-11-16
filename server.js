@@ -6,6 +6,7 @@ const ProfileRouter = require("./routes/api/profile");
 const Registration = require("./routes/api/users");
 const Authorization = require("./routes/api/auth");
 const Posts = require("./routes/api/posts");
+const Projects = require("./routes/api/projects");
 
 const app = express();
 connectDB();
@@ -29,6 +30,7 @@ app.use("/api/users", Registration);
 app.use("/api/profile", ProfileRouter);
 app.use("/api/auth", Authorization);
 app.use("/api/posts", Posts);
+app.use("/api/projects", Projects);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server started..."));
