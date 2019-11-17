@@ -2,8 +2,8 @@ import axios from "axios";
 import {
     GET_PR_SUCCESS,
     GET_PR_FAIL,
-    GET_PROFILES_OK,
-    GET_PROFILES_NOT_OK} from './types';
+    GET_PROFILES_SUCCESS,
+    GET_PROFILES_FAIL} from './types';
 
 export const allProfile = (user_id=false) => async dispatch =>
  {
@@ -26,14 +26,13 @@ export const allProfile = (user_id=false) => async dispatch =>
  else {
     try {
       const res = await axios.get("/api/profile");
-      console.log("GET_PROFILES_SUCCESS",user_id)
       dispatch({
-        type: GET_PROFILES_OK,
+        type: GET_PROFILES_SUCCESS,
         payload: res.data
       });
     } catch (error) {
       dispatch({
-        type: GET_PROFILES_NOT_OK,
+        type: GET_PROFILES_FAIL,
         payload: error
       });
     }

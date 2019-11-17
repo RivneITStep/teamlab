@@ -1,8 +1,8 @@
 import {
     GET_PR_SUCCESS,
     GET_PR_FAIL,
-    GET_PROFILES_OK,
-    GET_PROFILES_NOT_OK} from  '../actions/types'
+    GET_PROFILES_SUCCESS,
+    GET_PROFILES_FAIL} from  '../actions/types'
 
 
 export default function (state, action) {
@@ -18,7 +18,7 @@ export default function (state, action) {
   }
     const {type,payload} = action;
     switch (type) {
-        case GET_PROFILES_OK:
+        case GET_PROFILES_SUCCESS:
         {
             return {
               ...state,
@@ -27,7 +27,7 @@ export default function (state, action) {
             };     
         break;
         }
-        case GET_PROFILES_NOT_OK:
+        case GET_PROFILES_FAIL:
             return {
               ...state,
               profiles: [],
