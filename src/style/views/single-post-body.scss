@@ -1,28 +1,648 @@
 .sPost-top-bg {
-    background: url(../../img/home-page1.png);
-    height: 350px;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: -ms-flexbox;
+  background: url(../../img/279563.png);
+  height: 350px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+  
+  .sPost-top {
     display: flex;
-    -ms-flex-pack: center;
     justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 0;
   
-    .sPost-top {
+    h1 {
+      @include font(50px, $font-regular, $font-color-primary-1);
       display: flex;
+      align-items: center;
       justify-content: center;
-  
-      h1 {
-        @include font(50px, $font-regular, $font-color-primary-1);
+      width: 100%;
+    }
+  }
+}
+
+.single-post-area{
+  margin-bottom: 50px;
+  margin-top: 50px;
+    
+  .posts-list{
+    padding-left: 0px;
+
+
+    .single-post{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+      margin: 0px;
+      
+      border: 1px solid #eee;
+
+
+      h3{
         display: flex;
-        align-items: center;
         justify-content: center;
-        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      .feature-img{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 30px;
+      }
+    }
+  
+    .meta-details{
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: right;
+    }
+  }
+
+}
+
+
+.comments-area{
+  background: #fafaff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #eee;
+  padding: 32px 20px;
+  padding-bottom: 0px;
+   
+  h3{
+    font-family: $font-semiBold;
+    font-size: 24px;
+    color: #222;
+    text-align: center;
+    margin-bottom: 23px;
+  }
+
+  .single-comment {
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+
+    img{
+      width: 80px;
+      margin-right: 15px;
+      
+    }
+
+    a{
+      text-decoration: none;
+      outline: 0;
+      font-size:16px;
+      color: #222;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      display: block;
+      font-size:14px;
+      width: 107%;
+    }
+
+    .reply-btn{
+      width: 6%;
+      height: 100%;
+    }
+  }
+}
+
+
+
+
+
+.sPost{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.sPost-body-main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #eee;
+
+ 
+}
+
+.sPost-body-comment{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+
+  .comment-form{
+    h4{
+      @include font(24px, $font-regular, $font-color-primary-3);
+
+    }
+    
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+  }
+
+}
+
+.form-group-sPost{
+  margin: 0;
+}
+
+
+.sPost-input {
+  @include font(15px, $font-regular, $font-color-primary-2);
+  margin-bottom: 30px;
+}
+
+div .sPost-textarea-field {
+  @include font(15px, $font-regular, $font-color-primary-2);
+  height: 203px;
+}
+
+.sPost-btn{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sPost-btn {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.sPost-send-btn {
+  padding: 0;
+  
+  display: flex;
+  justify-content: center;
+  margin-left: 289px;
+}
+
+.text-comment {
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px){
+
+
+.sPost-send-btn {
+padding: 0;
+
+display: flex;
+justify-content: center;
+margin-left: 226px;
+}
+
+}
+
+@media screen and (max-width: 991px){
+
+  .single-post-area{
+    margin-bottom: 45px;
+    margin-top: 45px;
+      
+    .posts-list{
+
+      .single-post{
+        h3{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+  
+        .feature-img{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-bottom: 25px;
+        }
       }
     }
   }
   
+  
+  .comments-area{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding: 32px 20px;
+     
+    h3{
+      font-family: $font-semiBold;
+      font-size: 22px;
+      color: #222;
+      text-align: center;
+      margin-bottom: 23px;
+    }
+  
+  }
+  
+  
+  .sPost-body-main {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    border: 1px solid #eee;
+  
+   
+  }
+  
+  .sPost-body-comment{
+    .comment-form{
+      h4{
+        @include font(22px, $font-regular, $font-color-primary-3);
+  
+      }
+    }
+  
+  }
+  
+  
+  .sPost-input {
+    @include font(14px, $font-regular, $font-color-primary-2);
+    margin-bottom: 30px;
+  }
+  
+  div .sPost-textarea-field {
+    @include font(14px, $font-regular, $font-color-primary-2);
+    height: 203px;
+  }
+  
+ 
+  
+  
+
+
+.sPost-send-btn {  
+  display: flex;
+  justify-content: center;
+  margin-left: 258px;
+  margin-top: 15px;
+
+  
+  }
+
+  .comment-sPost{
+    padding: 0px;
+  }
+
+
+  .reply-btn{
+    width: 6%;
+    height: 100%;
+    margin-right: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  .single-post-area{
+    margin-bottom: 40px;
+    margin-top: 40px;
+      
+    .posts-list{
+
+      .single-post{
+        padding-left: 5px;
+        padding-right: 5px;
+        h3{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 15px;
+        }
+  
+        p{
+          font-size: 12px;
+
+        }
+        .feature-img{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  
+  
+  .comments-area{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px 18px;
+     
+    h3{
+      font-family: $font-semiBold;
+      font-size: 20px;
+      color: #222;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    h5{
+      font-size: 14px;
+
+    }
+    p.date{
+      font-size: 12px;
+
+    }
+    p.comment{
+      font-size: 12px;
+    }
+  
+  }
+  
+  
+  .sPost-body-main {
+    margin-top: 40px;
+    margin-bottom: 40px;   
+  }
+  
+  .sPost-body-comment{
+    .comment-form{
+      h4{
+        @include font(20px, $font-regular, $font-color-primary-3);
+      }
+    }
+  
+  }
+  
+  .sPost-input {
+    @include font(12px, $font-regular, $font-color-primary-2);
+    margin-bottom: 25px;
+  }
+  
+  div .sPost-textarea-field {
+    @include font(12px, $font-regular, $font-color-primary-2);
+    height: 180px;
+  }
+  
+
+.sPost-send-btn {  
+  margin-left: 0px;
+  margin-top: 15px;
+
+  display: flex;
+  justify-content: center;
+ 
+  
+  }
+
+  .comment-sPost{
+    padding: 0px;
+  }
+
+  .reply-btn{
+    display: flex;
+    align-items: self-end;
+    margin: 0px;
+    padding: 0px;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .single-post-area{
+    margin-bottom: 30px;
+    margin-top: 30px;
+      
+    .posts-list{
+
+      .single-post{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 6px;
+
+        
+        h3{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 12px;
+         
+
+        }
+  
+        p{
+          font-size: 11px;
+
+        }
+        .feature-img{
+          padding-top: 4px;
+          padding-bottom: 4px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+  
+  
+  .comments-area{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px 16px;
+
+    .single-comment{
+      img{
+        width: 70px;
+        margin-right: 15px;
+      
+      }
+    }
+     
+    h3{
+      font-family: $font-semiBold;
+      font-size: 18px;
+      color: #222;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+    h5{
+      font-size: 12px;
+
+    }
+    p.date{
+      font-size: 11px;
+      width: 90%;
+
+    }
+    p.comment{
+      font-size: 11px;
+    }
+  
+  }
+  
+  
+  .sPost-body-main {
+    margin-top: 30px;
+    margin-bottom: 30px;   
+  }
+  
+  .sPost-body-comment{
+    .comment-form{
+      h4{
+        @include font(18px, $font-regular, $font-color-primary-3);
+      }
+    }
+  
+  }
+  
+  .sPost-input {
+    @include font(11px, $font-regular, $font-color-primary-2);
+    margin-bottom: 20px;
+  }
+  
+  div .sPost-textarea-field {
+    @include font(11px, $font-regular, $font-color-primary-2);
+    height: 150px;
+  }
+  
+
+.sPost-send-btn {  
+  margin-left: 0px;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: center;
+  }
+
+  .comment-sPost{
+    padding: 0px;
+  }
+
+  .reply-btn{
+  
+    width: 80%;
+    margin: 0px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .single-post-area{
+    margin-bottom: 20px;
+    margin-top: 20px;
+      
+    .posts-list{
+
+      .single-post{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 6px;
+        h3{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+
+        p{
+         font-size: 10px;
+        }
+
+        .feature-img{
+          padding-top: 4px;
+          padding-bottom: 4px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+  
+  
+  .comments-area{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 16px 12px;
+     
+
+    .single-comment {
+      margin-bottom: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 30px;
+  
+      img{
+        width: 70px;
+        margin-right: 15px;
+        
+      }
+
+    }
+
+    h3{
+      font-family: $font-semiBold;
+      font-size: 14px;
+      color: #222;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    h5{
+      font-size: 11px;
+
+    }
+    p.date{
+      font-size: 10px;
+
+    }
+    p.comment{
+      font-size: 10px;
+      width: 90%;
+
+    }
+  
+  }
+  
+  
+  .sPost-body-main {
+    margin-top: 20px;
+    margin-bottom: 20px;   
+  }
+  
+  .sPost-body-comment{
+    .comment-form{
+      h4{
+        @include font(14px, $font-regular, $font-color-primary-3);
+      }
+    }
+  
+  }
+  
+  .sPost-input {
+    @include font(10px, $font-regular, $font-color-primary-2);
+    margin-bottom: 16px;
+  }
+  
+  div .sPost-textarea-field {
+    @include font(10px, $font-regular, $font-color-primary-2);
+    height: 120px;
+  }
+  
+
+.sPost-send-btn {  
+  margin-left: 0px;
+  margin-top: 5px;
+
+  display: flex;
+  justify-content: center;
+  }
+
+  .comment-sPost{
+    padding: 0px;
+  }
+
+  .reply-btn{
+ 
+    display: none;
+
+  }
+}
