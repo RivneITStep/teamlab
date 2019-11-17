@@ -50,30 +50,30 @@ Education()
                             <div>Education</div>
                             <div className="row">
                                 <div className="col">
-                                    <label for="name">School</label>
+                                    <label htmlFor="name">School</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.school} />
                                 </div>
                                 <div className="col">
-                                    <label for="name">Degree</label>
+                                    <label htmlFor="name">Degree</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.degree} />
                                 </div>
                             </div>
 
                             <div className="row sub-ptofile-form">
                                 <div className="col-8">
-                                    <label for="field">Field of Study</label>
+                                    <label htmlFor="field">Field of Study</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.fieldofstady}/>
                                 </div>
                                 <div className="col-2">
-                                    <label for="from">From</label>
+                                    <label htmlFor="from">From</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.from} />
                                 </div>
                                 <div className="col-2">
-                                    <label for="to">To</label>
+                                    <label htmlFor="to">To</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={data}  />
                                 </div>
                                 <div className="col-2">
-                                    <label for="to">description</label>
+                                    <label htmlFor="to">description</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.description}  />
                                 </div>
                             </div>
@@ -99,30 +99,30 @@ Expirience()
                             <div>Experience</div>
                             <div className="row">
                                 <div className="col">
-                                    <label for="name">Company</label>
+                                    <label htmlFor="name">Company</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.company} />
                                 </div>
                                 <div className="col">
-                                    <label for="name">Position</label>
+                                    <label htmlFor="name">Position</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.position} />
                                 </div>
                             </div>
 
                             <div className="row sub-ptofile-form">
                                 <div className="col-8">
-                                    <label for="field">Location</label>
+                                    <label htmlFor="field">Location</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.location}/>
                                 </div>
                                 <div className="col-2">
-                                    <label for="from">From</label>
+                                    <label htmlFor="from">From</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.from} />
                                 </div>
                                 <div className="col-2">
-                                    <label for="to">To</label>
+                                    <label htmlFor="to">To</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={data}  />
                                 </div>
                                 <div className="col-2">
-                                    <label for="to">description</label>
+                                    <label htmlFor="to">description</label>
                                     <input  readOnly={this.ProfileOvner()} type="text" className="form-control" placeholder={item.description}  />
                                 </div>
                             </div>
@@ -132,8 +132,12 @@ Expirience()
 }
 
     render(){
-        console.log(this.props.singlPr)
-        return (!this.props.singlPr)?(<Preloader/>):((this.props.singlPr.profile.user_id!=this.state.user_id)?(<Preloader/>):
+        if (!this.props.singlPr){}
+        else{
+        console.log("this.props.singlPr.profile.user_id",this.props.singlPr.profile.user_id)
+        console.log("came from PARAMS",this.props.match.params.id)}
+        let user_idFromParams=this.props.match.params.id
+        return (!this.props.singlPr)?(<Preloader/>):((this.props.singlPr.profile.user_id!=user_idFromParams)?(<Preloader/>):
         (   
             <Fragment>  
                 <Link to={'/profile'}  >
@@ -250,7 +254,8 @@ Expirience()
 }
 const mapStateToProps = state => { 
    return { 
-      singlPr: state.allProfile.profile
+      singlPr: state.allProfile.profile,
+
    }; 
 }; 
 export default connect(mapStateToProps)(PrShow);

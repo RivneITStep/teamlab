@@ -23,18 +23,18 @@ import PrShow from './PrShow'
   render(){
     
      return (
-       <Router>
-      
+        <Fragment>
+       {/* <Router>
         <Route exact path ="/profile" component={ProfileList}/>
         <Route exact path ="/profile/show_single_profile/:id" component={PrShow}/>
-        
-        </Router>
+        </Router> */}
+        </Fragment>
      );
   }
 }
 const mapStateToProps = state => { 
    return { 
-      list: state.allProfile.profiles
+      // list: state.allProfile.profiles
    }; 
 }; 
 export default connect(mapStateToProps,{allProfile}) 

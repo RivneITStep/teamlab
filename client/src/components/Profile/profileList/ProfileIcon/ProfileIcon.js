@@ -17,7 +17,7 @@ class ProfileIcom extends React.Component
    const profile=this.state.profile
     const path =`/profile/show_single_profile/${profile.profile.user_id}`
         return(
-        <Link to={path} onClick={()=>{console.log("icon Clicked");this.props.allProfile(profile.profile.user_id)}}>
+        <Link to={path} onClick={()=>{this.props.allProfile(profile.profile.user_id)}}>
             <div>{profile.user_name}</div>
             <div>{profile.profile.githubusername}</div>
             <div>{profile.profile.mainimage}</div>
