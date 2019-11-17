@@ -17,6 +17,10 @@ import Forgot from "./components/Forgot/forgot";
 import SinglePost from "./components/Single-post/single-post";
 import SingleProject from "./components/Single-project/single-project";
 
+import ProfileList from './components/Profile/profileList/ProfileList'
+import PrShow from './components/Profile/PrShow'
+
+
 import "./App.scss";
 
 import { Provider } from "react-redux";
@@ -50,6 +54,11 @@ const App = () => {
             <Route path="/register" exact component={Register} />
           </Switch>
           <Route path="/profile" exact component={Profile} />
+
+          <Route  path ="/profile" exact component={ProfileList}/>
+          <Route path ="/profile/show_single_profile/:id" exact  component={PrShow}/>
+
+
           <Route path="/single-post" exact component={SinglePost} />
           <Route path="/single-project" exact component={SingleProject} />
           <Route path="/forgot" exact component={Forgot} />
