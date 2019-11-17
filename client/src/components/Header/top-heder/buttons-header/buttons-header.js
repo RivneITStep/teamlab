@@ -24,6 +24,7 @@ const ButtonsHeader = ({ auth: { isAuthenticated, loading, user }, logout}) => {
         Logout
       </button>
     </Link>
+    
     <Link to={`/profile/show_single_profile/${user._id}`}>
       <AuthProfileIcon/>
     </Link>
