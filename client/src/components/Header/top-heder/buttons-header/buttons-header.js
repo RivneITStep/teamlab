@@ -4,16 +4,16 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../../../actions/auth";
 import AuthProfileIcon from '../../../Profile/profileList/ProfileIcon/AuthProfileIcon'
-
+import Preloader from "../../../Preloader/Preloader"
 
 
 import "./buttons-header.scss";
 
-const ButtonsHeader = ({ auth: { isAuthenticated, loading,user }, logout}) => {
-   const userProfile_path=((user==null))?('/'):(`/profile/show_single_profile/${user._id}`)
-   const userProfile_id=((user==null))?(''):(user._id)
-  console.log ("user_ID",userProfile_id);
-  const authLinks = (
+const ButtonsHeader = ({ auth: { isAuthenticated, loading, user }, logout}) => {
+  //  const userProfile_path=((user==null))?('/'):(`/profile/show_single_profile/${user._id}`)
+  //  const userProfile_id=((user==null))?(''):(user._id)
+  // console.log ("user_ID",userProfile_id);
+  const authLinks = (!user)?(<Preloader/>): (
     <Fragment>
     <Link to="/">
       <button
@@ -24,8 +24,9 @@ const ButtonsHeader = ({ auth: { isAuthenticated, loading,user }, logout}) => {
         Logout
       </button>
     </Link>
-    <Link to={userProfile_path}>
-      <AuthProfileIcon user_id={userProfile_id}/>
+    
+    <Link to={`/profile/show_single_profile/${user._id}`}>
+      <AuthProfileIcon/>
     </Link>
     </Fragment>
   );
