@@ -6,7 +6,7 @@ const checkValidationErrors = require("../midlleware/checkValidationErrors");
 const MsgsController = require("./msgs-controller");
 
 // @desc    Get all projects
-// @route   GET /api/projects/projects
+// @route   GET /api/projects
 // access   Public
 exports.getProjects = async (req, res, next) => {
   try {
@@ -44,7 +44,7 @@ exports.createProject = async (req, res, next) => {
   checkValidationErrors(req, res);
   try {
     const { name, id } = req.user;
-    const { title, description } = req.body;
+    const { title, description, stage } = req.body;
     const author = {
       id,
       name
@@ -53,7 +53,8 @@ exports.createProject = async (req, res, next) => {
     const project = new Project({
       author,
       title,
-      description
+      description,
+      stage
     });
     await project.save();
 

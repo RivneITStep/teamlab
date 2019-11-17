@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
 const { Schema } = mongoose;
 
 const ProjectSchema = new mongoose.Schema({
@@ -6,7 +7,7 @@ const ProjectSchema = new mongoose.Schema({
     id: { type: Schema.Types.ObjectId, ref: "User", required: true },
     name: { type: String }
   },
-  name: {
+  title: {
     type: String,
     required: true
   },
@@ -26,6 +27,11 @@ const ProjectSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   }
+});
+
+ProjectSchema.pre("save", function(next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 module.exports = Project = mongoose.model("Project", ProjectSchema);

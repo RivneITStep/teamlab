@@ -6,7 +6,7 @@ const Comment = require("../models/Comment");
 exports.checkAdminModerator = (req, res, next) => {
   try {
     const { role } = req.user;
-    if (role !== ("admin" || "moderator"))
+    if (role !== ("admin" && "moderator"))
       res.status(403).json(MsgsController.NoRights("admin", "moderator"));
     next();
   } catch (error) {
@@ -17,7 +17,7 @@ exports.checkAdminModerator = (req, res, next) => {
 exports.checkAuthor = async (req, res, next) => {
   try {
     const { id, role } = req.user;
-    console.log("req.user:",req.user);
+    console.log("req.user:", req.user);
     const { commentId } = req.params;
     const comment = await Comment.findById(commentId);
     const { author } = comment;

@@ -37,7 +37,9 @@ UserSchema.pre("save", async function(next) {
 UserSchema.methods.getSignedJwtToken = async function(res) {
   const payload = {
     user: {
-      id: this._id
+      id: this._id,
+      role: this.role,
+      name: this.name
     }
   };
 
