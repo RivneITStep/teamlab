@@ -9,7 +9,7 @@ class PrShow extends React.Component
         user_id:this.props.match.params.id
     }
 ProfileOvner(){
-  return false
+  return true
 }
 GitRepositories() {
     const profile = this.props.singlPr
@@ -231,12 +231,6 @@ Expirience()
                                 </div>
                                 { this.Education()}
                                 {this.Expirience()}
-                            
-                            
-                            
-                            
-                            
-                            
                             </section>
                             </div>
 

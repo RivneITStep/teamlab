@@ -38,7 +38,6 @@ export default function (state, action) {
           case GET_PR_SUCCESS:
             return {
               ...state,
-              
               profile: payload,
               loading: false
             };
