@@ -8,7 +8,7 @@ import Contact from "./components/Contact/contact";
 import Faq from "./components/Faq/faq";
 import Login from "./components/Login/login";
 import News from "./components/News/news";
-import Posts from "./components/Posts/posts";
+import Posts from "./components/Posts/page-posts";
 import Profile from "./components/Profile/profile";
 import Register from "./components/Register/register";
 import Header from "./components/Header/header";
@@ -19,9 +19,8 @@ import SingleProject from "./components/Single-project/single-project";
 
 import "./App.scss";
 
-import { Provider } from "react-redux";
-import store from "./store";
-import { loadUser } from "./actions/auth";
+// import store from "./store";
+// import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
 if (localStorage.token) {
@@ -29,13 +28,11 @@ if (localStorage.token) {
 }
 
 const App = () => {
-  useEffect(() => {
-    store.dispatch(loadUser());
-  }, []);
+  // useEffect(() => {
+  //   store.dispatch(loadUser());
+  // }, []);
 
   return (
-    <Provider store={store}>
-      <Router>
         <Fragment>
           <Header />
           <Route path="/" exact component={Home} />
@@ -55,8 +52,6 @@ const App = () => {
           <Route path="/forgot" exact component={Forgot} />
           <Footer />
         </Fragment>
-      </Router>
-    </Provider>
   );
 };
 

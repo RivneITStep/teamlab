@@ -1,0 +1,20 @@
+@import "../../../index";
+
+.main-bg{
+  background-color: $bg-color-primary-4;
+}
+
+.user-posts {
+  padding: 30px 0 0 0;
+}
+
+.posts-block-row {
+  margin: 40px 0;
+}
+
+.posts-block {
+  display: flex;
+  text-align: justify;
+  padding-right: 0;
+  margin-bottom: 35px;
+}
