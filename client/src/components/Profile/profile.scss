@@ -1,0 +1,84 @@
+@import "../../style/partials/colors.scss";
+@import "../../style/partials/fonts.scss";
+@import "../../style/mixins/font.scss";
+.profile-top-bg {
+    background: url(../../style/img/20180521flatironschool-selects-303.jpg);
+    height: 350px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+
+    .profile-top {
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            @include font(50px, $font-regular, $font-color-primary-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}
+
+.profile-main {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+
+    .profile-main-bg {
+        background: $bg-color-primary-2;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+}
+
+.social-form,
+.experience-form,
+.education-form {
+    border: 1px dashed black;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.profile-form {
+    width: 100%;
+    padding: 25px 35px;
+
+    .profile-block {
+        margin: 0px;
+    }
+
+    .profile-block-left {
+        padding-left: 0px;
+    }
+
+    .profile-block-right {
+        padding-right: 0px;
+    }
+
+    .custom-file {
+        margin-top: 20px;
+    }
+
+    .sub-ptofile-form {
+        margin-top: 20px;
+    }
+
+    .profile-form-item {
+        margin-top: 20px;
+    }
+}
