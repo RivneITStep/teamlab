@@ -30,7 +30,7 @@ const ProjectSchema = new mongoose.Schema({
 });
 
 ProjectSchema.pre("save", function(next) {
-  this.slug = slugify(this.name, { lower: true });
+  this.slug = slugify(this.title, { lower: true });
   next();
 });
 

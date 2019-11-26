@@ -1,15 +1,23 @@
 const express = require("express");
 const router = express.Router();
-const bcrypt = require("bcryptjs");
-const { check, validationResult } = require("express-validator");
-
-//Models
-
-const User = require("../../models/User");
+const { check } = require("express-validator");
+//Midllewares
+const checkToken = require("../../midlleware/checkToken");
+const checkRolle = require("../../midlleware/checkRolle");
 //Controllers
 const MsgsController = require("../../controllers/msgs-controller");
-//Midlleware
-const checkValidationErrors = require("../../midlleware/checkValidationErrors");
+const {
+  getUsers,
+  getUser,
+  createUser,
+  updateDetails,
+  updatePassword,
+  deleteUser
+} = require("../../controllers/user-controller");
+
+router.get("/", checkToken, checkRolle.checkAdmin, getUsers);
+
+router.get("/:id", checkToken, checkRolle.checkAdmin, getUser);
 
 router.post(
   "/",
@@ -23,33 +31,7 @@ router.post(
       max: 100
     })
   ],
-  async (req, res) => {
-    checkValidationErrors(req, res);
-
-    const { name, email, password, repassword } = req.body;
-
-    try {
-      let user = await User.findOne({ email });
-
-      if (user) {
-        res.status(400).json(MsgsController.AlreadyExist("User"));
-      } else if (password !== repassword) {
-        return res.status(400).json({ msg: "Passwords do not match" });
-      }
-
-      user = new User({
-        name,
-        email,
-        password
-      });
-
-      await user.save();
-      await user.getSignedJwtToken(res);
-    } catch (error) {
-      console.error(error.message);
-      res.status(500).json(MsgsController.ServerError());
-    }
-  }
+  createUser
 );
 
 router.put(
@@ -60,25 +42,8 @@ router.put(
       .isEmpty(),
     check("email", MsgsController.IncorrectData("Email")).isEmail()
   ],
-  async (req, res) => {
-    checkValidationErrors(req, res);
-
-    const fieldsToUpdate = {
-      name: req.body.name,
-      email: req.body.email
-    };
-
-    try {
-      const user = await User.findByIdAndUpdate(req.params.id, fieldsToUpdate, {
-        new: true
-      });
-
-      res.status(200).json({ user });
-    } catch (error) {
-      console.error(error.message);
-      res.status(500).json(MsgsController.ServerError());
-    }
-  }
+  checkToken,
+  updateDetails
 );
 
 router.put(
@@ -89,27 +54,10 @@ router.put(
       max: 100
     })
   ],
-  async (req, res) => {
-    checkValidationErrors(req, res);
-
-    try {
-      const user = await User.findById(req.params.id);
-
-      if (!(await user.matchPassword(req.body.currentPassword))) {
-        return res
-          .status(401)
-          .json(MsgsController.IncorrectData("Current password"));
-      }
-
-      user.password = req.body.newPassword;
-      await user.save();
-
-      res.status(200).json({ user });
-    } catch (error) {
-      console.error(error.message);
-      res.status(500).json(MsgsController.ServerError());
-    }
-  }
+  checkToken,
+  updatePassword
 );
+
+router.delete("/:id", checkToken, checkRolle.checkAdmin, deleteUser);
 
 module.exports = router;

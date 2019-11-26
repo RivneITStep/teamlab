@@ -14,13 +14,12 @@ exports.getProjects = async (req, res, next) => {
 
     res.status(200).json({ count: projects.length, projects });
   } catch (error) {
-    console.error(error.message);
     res.status(500).json(MsgsController.ServerError());
   }
 };
 
 // @desc    Get single project
-// @route   GET /api/projects/projects/:id
+// @route   GET /api/projects/:id
 // access   Public
 exports.getProject = async (req, res, next) => {
   try {
@@ -32,13 +31,12 @@ exports.getProject = async (req, res, next) => {
 
     res.status(200).json({ project });
   } catch (error) {
-    console.error(error.message);
     res.status(500).json(MsgsController.ServerError());
   }
 };
 
 // @desc    Create new project
-// @route   POST /api/projects/projects
+// @route   POST /api/projects
 // access   Private
 exports.createProject = async (req, res, next) => {
   checkValidationErrors(req, res);
@@ -65,7 +63,7 @@ exports.createProject = async (req, res, next) => {
 };
 
 // @desc    Update project
-// @route   PUT /api/projects/projects/:id
+// @route   PUT /api/projects/:id
 // access   Private
 exports.updateProject = async (req, res, next) => {
   checkValidationErrors(req, res);
@@ -80,13 +78,12 @@ exports.updateProject = async (req, res, next) => {
 
     res.status(200).json({ project });
   } catch (error) {
-    console.error(error.message);
     res.status(500).json(MsgsController.ServerError());
   }
 };
 
 // @desc    Delete project
-// @route   DELETE /api/projects/projects/:id
+// @route   DELETE /api/projects/:id
 // access   Private
 exports.deleteProject = async (req, res, next) => {
   try {
@@ -98,7 +95,6 @@ exports.deleteProject = async (req, res, next) => {
 
     res.status(200).json(MsgsController.Success());
   } catch (error) {
-    console.error(error.message);
     res.status(500).json(MsgsController.ServerError());
   }
 };

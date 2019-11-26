@@ -21,12 +21,12 @@ exports.createNewPost = async (req, res) => {
 
     const { name, id } = req.user;
     const { title, text } = req.body;
-    const author ={
+    const author = {
       id,
       name
-    }
+    };
     console.log("author:", author);
-    
+
     const newPost = new Post({
       title,
       text,
