@@ -9,7 +9,7 @@ const MsgsController = require("../../controllers/msgs-controller");
 // Midleware
 const auth = require("../../midlleware/checkToken");
 
-router.get("/", auth, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
     res.json(user);
