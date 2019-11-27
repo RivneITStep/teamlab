@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9561544-0a01-4d27-a96c-a673b97f9489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/hoc/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/hoc/with-poststore-service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/store-service-context/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/store-service-context/store-service-context.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/posts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/posts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/style/partials/colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/style/partials/colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/like-controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/comment-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/comment-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/post-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/posts.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +51,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.textmate.bundles" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -104,6 +94,8 @@
       <workItem from="1573856511654" duration="16892000" />
       <workItem from="1573983446712" duration="1826000" />
       <workItem from="1573985318871" duration="735000" />
+      <workItem from="1574800475956" duration="572000" />
+      <workItem from="1574801181553" duration="2227000" />
     </task>
     <servers />
   </component>
