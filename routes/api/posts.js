@@ -95,7 +95,7 @@ router.post(
 );
 //DELETE comment from single post
 router.delete(
-    "/single-post/delete-comment/:commentId",
+    "/single-post/:id/delete-comment/:commentId",
     checkToken,
     checkRolle.checkAuthor,
     CommentController.deleteComment

@@ -51,11 +51,8 @@ const App = () => {
             <Route path="/register" exact component={Register} />
           </Switch>
           <Route path="/profile" exact component={Profile} />
-
           <Route  path ="/profile" exact component={ProfileList}/>
           <Route path ="/profile/show_single_profile/:id" exact  component={PrShow}/>
-
-
           <Route path="/single-post" exact component={SinglePost} />
           <Route path="/single-project" exact component={SingleProject} />
           <Route path="/forgot" exact component={Forgot} />

@@ -38,7 +38,7 @@ exports.addCommentToSinglePost = async (req, res) => {
                 res.status(400).json(MsgsController.Fail());
             });
     } catch (error) {
-        console.error("erRor:",error.message);
+        console.error("erRor:", error.message);
         if (error.kind === "ObjectId") {
             return res.status(404).json(MsgsController.NotFound("Post"));
         }
@@ -48,8 +48,13 @@ exports.addCommentToSinglePost = async (req, res) => {
 
 exports.deleteComment = async (req, res) => {
     try {
-        const {commentId} = req.params;
-
+        const {commentId, id: postId} = req.params;
+        //delete comment from single post(in collection "posts") and save it
+        const post = await Post.findById(postId);
+        const index = post.comments.indexOf(commentId);
+        post.comments.splice(index);
+        await post.save();
+        //delete comment from collection "comments"
         Comment.deleteOne({_id: commentId}, err => {
             if (err) {
                 if (err.kind === "ObjectId")

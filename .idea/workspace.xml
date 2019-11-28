@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9561544-0a01-4d27-a96c-a673b97f9489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/like-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Like.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/comment-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/comment-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/post-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/posts.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
