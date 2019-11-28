@@ -14,7 +14,7 @@ import Register from "./components/Register/register";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Forgot from "./components/Forgot/forgot";
-import SinglePost from "./components/Single-post/single-post";
+import PageSinglePost from "./components/Single-post/page-single-post";
 import SingleProject from "./components/Single-project/single-project";
 
 import ProfileList from './components/Profile/profileList/ProfileList'
@@ -53,7 +53,7 @@ const App = () => {
           <Route path="/profile" exact component={Profile} />
           <Route  path ="/profile" exact component={ProfileList}/>
           <Route path ="/profile/show_single_profile/:id" exact  component={PrShow}/>
-          <Route path="/single-post" exact component={SinglePost} />
+          <Route path="/single-post/:id" exact component={PageSinglePost} />
           <Route path="/single-project" exact component={SingleProject} />
           <Route path="/forgot" exact component={Forgot} />
           <Footer />

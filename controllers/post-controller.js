@@ -94,7 +94,7 @@ exports.deletePost = async (req, res) => {
         res.status(500).json(MsgsController.ServerError());
     }
 };
-//UDATE POST
+//UPDATE POST
 exports.updatePost = async (req, res) => {
     try {
         checkValidationErrors(req, res);

@@ -2,13 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9561544-0a01-4d27-a96c-a673b97f9489" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list-item/comments-list-item.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list-item/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/comments-list.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/single-post-header/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/single-post-header/single-post-header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/comment-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/comment-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/page-posts-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/page-posts-header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/page-posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/page-posts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Profile/PrShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/PrShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/single-post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/single-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/post-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post-controller.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +38,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="mainProject" />
@@ -46,29 +80,50 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/Single-post/post-information" />
       <recent name="$PROJECT_DIR$/client/src/services" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager" selected="Node.js.leave-a-comment.js">
+    <configuration name="leave-a-comment.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" working-dir="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment">
+      <method v="2" />
+    </configuration>
+    <configuration name="post-list-item.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" working-dir="$PROJECT_DIR$/client/src/components/Posts/post-list-item">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Node.js.leave-a-comment.js" />
+        <item itemvalue="Node.js.post-list-item.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -93,6 +148,9 @@
       <workItem from="1573985318871" duration="735000" />
       <workItem from="1574800475956" duration="572000" />
       <workItem from="1574801181553" duration="2227000" />
+      <workItem from="1574973701277" duration="30000" />
+      <workItem from="1574977730908" duration="394000" />
+      <workItem from="1574978146361" duration="103000" />
     </task>
     <servers />
   </component>
@@ -111,5 +169,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="205" y="31" key="SettingsEditor" timestamp="1574978123944">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1574978123944" />
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1574978148026">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1574978148026" />
   </component>
 </project>

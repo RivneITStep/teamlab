@@ -16,13 +16,7 @@ const initialState = {
 };
 
 export default function(state = initialState, action) {
-  if (!state)
-       return {
-           token: localStorage.getItem("token"),
-           isAuthenticated: null,
-           loading: true,
-           user: null
-       };
+
   const { type, payload } = action;
 
   switch (type) {

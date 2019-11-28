@@ -4,12 +4,11 @@ import {
     FETCH_POSTS_SUCCESS
 } from "../actions/types";
 
-const updatePostList = (state, action) => {
+const InitialState = {
+    posts: []
+};
 
-    if (!state)
-        return {
-            posts: []
-        };
+const updatePostList = (state = InitialState, action) => {
 
     const {type, payload} = action;
 
