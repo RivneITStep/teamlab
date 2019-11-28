@@ -1,0 +1,29 @@
+@import "../../../index";
+
+.posts-top-bg {
+  background: url(../../../style/img/279563.png);
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+
+  .posts-top {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      @include font(50px, $font-regular, $font-color-primary-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}
