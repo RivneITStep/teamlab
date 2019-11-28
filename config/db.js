@@ -1,15 +1,16 @@
-const mongoose = require('mongoose');
-const config = require('config');
-const db = config.get('mongoURL');
+const mongoose = require("mongoose");
+const config = require("config");
+const db = config.get("mongoURL");
 
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true
+      useCreateIndex: true,
+      useFindAndModify: false
     });
-    console.log('Atlas connected...');
+    console.log("Atlas connected...");
   } catch (err) {
     console.log(err.message);
     process.exit(1);

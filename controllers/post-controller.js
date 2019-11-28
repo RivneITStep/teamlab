@@ -134,4 +134,3 @@ exports.deleteLike = async (req, res) => {
     await LikeController.deleteLikeFromPost(authorId, postId);
     res.status(200).json(MsgsController.Success());
 };
-
