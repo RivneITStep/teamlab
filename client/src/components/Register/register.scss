@@ -2,24 +2,6 @@
 @import "../../style/partials/colors.scss";
 @import "../../style/mixins/font.scss";
 
-.register-top-bg {
-  background: url(../../style/img/bg-01.png);
-  height: 350px;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 0;
-
-  .register-top {
-    display: flex;
-    justify-content: center;
-
     h1 {
       @include font(50px, $font-regular, $font-color-primary-1);
       display: flex;
@@ -27,8 +9,6 @@
       justify-content: center;
       width: 100%;
     }
-  }
-}
 
 .register-main {
   margin-top: 0px;

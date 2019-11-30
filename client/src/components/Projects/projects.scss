@@ -1,0 +1,111 @@
+@import "../../style/partials/colors.scss";
+@import "../../style/mixins/font.scss";
+
+.projects-top-bg {
+    background: url(../../style/img/666.png);
+    height: 350px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+  
+    .projects-top {
+      display: flex;
+      justify-content: center;
+  
+      h1 {
+        @include font(50px, $font-regular, $font-color-primary-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+  
+  .project-body {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.project-title{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    color: $font-color-primary-2;
+ }
+
+
+.project-head-title {
+    display: flex;
+    justify-content: center;
+    line-height: 55px;
+    height: 50px;
+    background-color: $bg-color-primary-2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    p{
+        @include font(25px, $font-regular, $font-color-primary-3)
+    }
+}
+
+.project-field{
+    background-color: $bg-color-primary-4;
+    
+    @media screen and (min-width: 992px){
+        display: flex;
+    }
+
+    .project-description{
+        padding-top: 20px;
+
+        p, a{
+            padding-left: 20px;
+        }
+    }
+    
+}
+
+
+.project-logo{
+    width: 225px;
+    height: 225px;
+    padding: 25px 0px 0px 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-apply-btn {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    background-color: $bg-color-primary-4;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    .apply-project{
+        width: 125px;
+        height: 40px;
+        line-height: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+
+.project-block{
+    margin-bottom: 50px;
+}
+
+.project-field-in-progress{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
