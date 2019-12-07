@@ -5,42 +5,42 @@ import { getProjects } from "../../actions/project";
 import Preloader from "../Preloader/Preloader";
 import ProjectItem from "./ProjectItem";
 
+import "./projects.scss";
+
 const Projects = ({ getProjects, project: { projects, loading } }) => {
   useEffect(() => {
     getProjects();
   }, [getProjects]);
 
-  return loading ? <Preloader/> : 
-      <Fragment>
-        <div className="container-fluid projects-top-bg">
-            <div className="container projects-body">
-                <section>
-                    <div className="row projects-top">
-                        <h1 className="projects-text">Projects</h1>
-                    </div>
-                </section>
+  return loading || projects === "undefined" ? (
+    <Preloader />
+  ) : (
+    <Fragment>
+      <div className="container-fluid projects-top-bg">
+        <div className="container projects-body">
+          <section>
+            <div className="row projects-top">
+              <h1 className="projects-text">Open projects</h1>
             </div>
+          </section>
         </div>
-        <div className="container-fluid">
-            <div className="container project-body">
-                <section>
-                    <div className="project-title">
-                        <h2>Open projects</h2>
-                    </div>
-                        <section className="project-block">
-                            {projects.map(project => (
-                                <ProjectItem key={project._id} project={project} />
-                            ))} 
-                        </section>
-                </section>
-            </div>
+      </div>
+      <div className="container-fluid">
+        <div className="container project-body">
+          <section>
+              {projects.projects.map(project => (
+                <ProjectItem key={project._id} project={project} />
+              ))}
+          </section>
         </div>
-      </Fragment>
+      </div>
+    </Fragment>
+  );
 };
 
 Projects.propTypes = {
   getProjects: PropTypes.func.isRequired,
-  post: PropTypes.object.isRequired
+  project: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({

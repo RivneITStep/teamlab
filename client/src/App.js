@@ -15,15 +15,16 @@ import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Forgot from "./components/Forgot/forgot";
 import SinglePost from "./components/Single-post/single-post";
-import SingleProject from "./components/Single-project/single-project";
+import SingleProject from "./components/Project/Project";
+import AddProject from "./components/Projects/ProjectForm";
 
 import ProfileList from "./components/Profile/profileList/ProfileList";
 import PrShow from "./components/Profile/PrShow";
 
 import "./App.scss";
 
-// import store from "./store";
-// import { loadUser } from "./actions/auth";
+import store from "./store";
+import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 
 if (localStorage.token) {
@@ -31,9 +32,9 @@ if (localStorage.token) {
 }
 
 const App = () => {
-  // useEffect(() => {
-  //   store.dispatch(loadUser());
-  // }, []);
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
 
   return (
     <Fragment>
@@ -48,6 +49,7 @@ const App = () => {
       <Switch>
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />
+        <Route path="/add-project" exact component={AddProject} />
       </Switch>
       <Route path="/profile" exact component={Profile} />
 
@@ -55,7 +57,7 @@ const App = () => {
       <Route path="/profile/show_single_profile/:id" exact component={PrShow} />
 
       <Route path="/single-post" exact component={SinglePost} />
-      <Route path="/single-project" exact component={SingleProject} />
+      <Route path="/single-project/:id" exact component={SingleProject} />
       <Route path="/forgot" exact component={Forgot} />
       <Footer />
     </Fragment>
