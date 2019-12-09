@@ -4,26 +4,26 @@ import "./news.scss";
 const News = () => {
   return (
     <Fragment>
-      <div className="container- fluid news-top-bg">
-        <div className="container news-body">
+      <div classNameName="container- fluid news-top-bg">
+        <div classNameName="container news-body">
           <section>
-            <div className="row news-top">
-              <h1 className="news-text">News</h1>
+            <div classNameName="row news-top">
+              <h1 classNameName="news-text">News</h1>
             </div>
           </section>
         </div>
       </div>
 
-      <div class="container-fluid">
-        <div class="container news-body">
-          <div class="row">
-            <section class="news-block col-md-4">
-              <div class="row news-block-body ">
-                <div class="col-md-12">
-                  <div class="news-img"></div>
+      <div className="container-fluid">
+        <div className="container news-body">
+          <div className="row">
+            <section className="news-block col-md-4">
+              <div className="row news-block-body ">
+                <div className="col-md-12">
+                  <div className="news-img"></div>
                 </div>
 
-                <div class="news-details">
+                <div className="news-details">
                   <h5>Title</h5>
                   <p>25th February, 2018</p>
                   <p>
@@ -35,10 +35,10 @@ const News = () => {
                   </p>
                   <h6>by Bill Gates</h6>
 
-                  <div class="news-more-btn ">
+                  <div className="news-more-btn ">
                     <button
                       type="button"
-                      class="btn btn-outline-dark more-news"
+                      className="btn btn-outline-dark more-news"
                     >
                       Read more
                     </button>
@@ -46,13 +46,13 @@ const News = () => {
                 </div>
               </div>
             </section>
-            <section class="news-block col-md-4">
-              <div class="row news-block-body ">
-                <div class="col-md-12">
-                  <div class="news-img"></div>
+            <section className="news-block col-md-4">
+              <div className="row news-block-body ">
+                <div className="col-md-12">
+                  <div className="news-img"></div>
                 </div>
 
-                <div class="news-details">
+                <div className="news-details">
                   <h5>Title</h5>
                   <p>25th February, 2018</p>
                   <p>
@@ -64,10 +64,10 @@ const News = () => {
                   </p>
                   <h6>by Bill Gates</h6>
 
-                  <div class="news-more-btn ">
+                  <div className="news-more-btn ">
                     <button
                       type="button"
-                      class="btn btn-outline-dark more-news"
+                      className="btn btn-outline-dark more-news"
                     >
                       Read more
                     </button>
@@ -75,13 +75,13 @@ const News = () => {
                 </div>
               </div>
             </section>
-            <section class="news-block col-md-4">
-              <div class="row news-block-body ">
-                <div class="col-md-12">
-                  <div class="news-img"></div>
+            <section className="news-block col-md-4">
+              <div className="row news-block-body ">
+                <div className="col-md-12">
+                  <div className="news-img"></div>
                 </div>
 
-                <div class="news-details">
+                <div className="news-details">
                   <h5>Title</h5>
                   <p>25th February, 2018</p>
                   <p>
@@ -93,10 +93,10 @@ const News = () => {
                   </p>
                   <h6>by Bill Gates</h6>
 
-                  <div class="news-more-btn ">
+                  <div className="news-more-btn ">
                     <button
                       type="button"
-                      class="btn btn-outline-dark more-news"
+                      className="btn btn-outline-dark more-news"
                     >
                       Read more
                     </button>
@@ -106,14 +106,14 @@ const News = () => {
             </section>
           </div>
 
-          <div class="row">
-            <section class="news-block col-md-4">
-              <div class="row news-block-body ">
-                <div class="col-md-12">
-                  <div class="news-img"></div>
+          <div className="row">
+            <section className="news-block col-md-4">
+              <div className="row news-block-body ">
+                <div className="col-md-12">
+                  <div className="news-img"></div>
                 </div>
 
-                <div class="news-details">
+                <div className="news-details">
                   <h5>Title</h5>
                   <p>25th February, 2018</p>
                   <p>
@@ -125,10 +125,10 @@ const News = () => {
                   </p>
                   <h6>by Bill Gates</h6>
 
-                  <div class="news-more-btn ">
+                  <div className="news-more-btn ">
                     <button
                       type="button"
-                      class="btn btn-outline-dark more-news"
+                      className="btn btn-outline-dark more-news"
                     >
                       Read more
                     </button>
@@ -136,13 +136,13 @@ const News = () => {
                 </div>
               </div>
             </section>
-            <section class="news-block col-md-4">
-              <div class="row news-block-body ">
-                <div class="col-md-12">
-                  <div class="news-img"></div>
+            <section className="news-block col-md-4">
+              <div className="row news-block-body ">
+                <div className="col-md-12">
+                  <div className="news-img"></div>
                 </div>
 
-                <div class="news-details">
+                <div className="news-details">
                   <h5>Title</h5>
                   <p>25th February, 2018</p>
                   <p>
@@ -154,10 +154,10 @@ const News = () => {
                   </p>
                   <h6>by Bill Gates</h6>
 
-                  <div class="news-more-btn ">
+                  <div className="news-more-btn ">
                     <button
                       type="button"
-                      class="btn btn-outline-dark more-news"
+                      className="btn btn-outline-dark more-news"
                     >
                       Read more
                     </button>
@@ -165,13 +165,13 @@ const News = () => {
                 </div>
               </div>
             </section>
-            <section class="news-block col-md-4">
-              <div class="row news-block-body ">
-                <div class="col-md-12">
-                  <div class="news-img"></div>
+            <section className="news-block col-md-4">
+              <div className="row news-block-body ">
+                <div className="col-md-12">
+                  <div className="news-img"></div>
                 </div>
 
-                <div class="news-details">
+                <div className="news-details">
                   <h5>Title</h5>
                   <p>25th February, 2018</p>
                   <p>
@@ -183,10 +183,10 @@ const News = () => {
                   </p>
                   <h6>by Bill Gates</h6>
 
-                  <div class="news-more-btn ">
+                  <div className="news-more-btn ">
                     <button
                       type="button"
-                      class="btn btn-outline-dark more-news"
+                      className="btn btn-outline-dark more-news"
                     >
                       Read more
                     </button>
