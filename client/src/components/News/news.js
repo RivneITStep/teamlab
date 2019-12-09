@@ -4,11 +4,11 @@ import "./news.scss";
 const News = () => {
   return (
     <Fragment>
-      <div classNameName="container- fluid news-top-bg">
-        <div classNameName="container news-body">
+<div className="container- fluid news-top-bg">
+        <div className="container news-top-body">
           <section>
-            <div classNameName="row news-top">
-              <h1 classNameName="news-text">News</h1>
+            <div className="row news-top">
+              <h1 className="news-top-text">News</h1>
             </div>
           </section>
         </div>
