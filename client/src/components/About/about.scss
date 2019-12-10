@@ -1,0 +1,31 @@
+@import "../../style/mixins/font.scss";
+@import "../../style/partials/fonts.scss";
+@import "../../style/partials/colors.scss";
+
+.about-top-bg {
+    background: url(../../style/img/about.png);
+    height: 350px;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 0;
+  
+    .about-top {
+      display: flex;
+      justify-content: center;
+  
+      h1 {
+        @include font(50px, $font-regular, $font-color-primary-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
