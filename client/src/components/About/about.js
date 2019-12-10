@@ -61,35 +61,25 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container-fluid">
-        <div className="row">
+      <div className="container-fluid info-midle-fluid">
+        <div className="row info-midle">
           <div className="col  info-midle-left">
-            <div className="img-fluid" ></div>       
+            <div className="img-fluid"></div>
           </div>
           <div className="col info-midle-right">
-            <h1>Who we are to Serave the nation</h1>
+            <h2>Who we are to Serave the nation</h2>
             <p>
-              inappropriate behavior is often laughed off as “boys will be
+              Inappropriate behavior is often laughed off as “boys will be
               boys,” women face higher conduct standards especially in the
               workplace. That’s why it’s crucial that, as women, our behavior on
-              the job is beyond reproach.
-      
-            <br />
-            <br />
-           
-                inappropriate behavior is often laughed off as “boys will be
-                boys,” women face higher conduct standards especially in the
-                workplace. That’s why it’s crucial that, as women, our behavior
-                on the job is beyond reproach. inappropriate behavior is often
-                laughed off as “boys will be boys,” women face higher conduct
-                standards especially in the workplace. That’s why it’s crucial
-                that, as women, our behavior on the job is beyond reproach.
-              </p>
-           
+              the job is beyond reproach. inappropriate behavior is often
+              laughed off as “boys will be boys,” women face higher conduct
+              standards especially in the workplace. That’s why it’s crucial
+              that, as women, our behavior on the job is beyond reproach.
+            </p>
           </div>
         </div>
       </div>
-  
     </Fragment>
   );
 };
