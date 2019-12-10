@@ -3,29 +3,70 @@
 @import "../../style/partials/colors.scss";
 
 .about-top-bg {
-    background: url(../../style/img/about.png);
-    height: 350px;
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
-    display: -ms-flexbox;
+  background: url(../../style/img/about.png);
+  height: 350px;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+
+  .about-top {
     display: flex;
-    -ms-flex-pack: center;
     justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-radius: 0;
-  
-    .about-top {
+
+    h1 {
+      @include font(50px, $font-regular, $font-color-primary-1);
       display: flex;
+      align-items: center;
       justify-content: center;
-  
-      h1 {
-        @include font(50px, $font-regular, $font-color-primary-1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
+      width: 100%;
     }
   }
+}
+
+.blocks_top {
+  margin: 35px 0;
+
+  .single_top {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 0px 6px 0px;
+    margin-right: 30px;
+    padding: 0 30px;
+    border-radius: 2%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  .single_top:last-child {
+    margin-right: 0;
+  }
+
+  .more-news {
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $bg-color-primary-1;
+    }
+  }
+
+  @media (max-width: 992px) {
+    display: block;
+    margin-bottom: 35px;
+  }
+}
