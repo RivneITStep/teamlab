@@ -29,21 +29,12 @@ const Login = ({ login, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <div className="container-fluid login-top-bg">
-        <div className="container login-body">
-          <section>
-            <div className="row login-top">
-              <h1 className="login-text">Login</h1>
-            </div>
-          </section>
-        </div>
-      </div>
-
       <div className="container-fluid">
         <div className="container login-body-main">
           <section>
             <div className="row login-main">
               <div className="row login-main-bg">
+              <h1 className="login-text">Login</h1>
                 <form className="login-form" onSubmit={e => onSubmit(e)}>
                   <div className="form-group">
                     <label htmlFor="email">Email address:</label>
@@ -70,7 +61,8 @@ const Login = ({ login, isAuthenticated }) => {
                     />
                   </div>
                   <div className="forgot">
-                    <a href="!#">Forgot password?</a>
+                    <Link to="/forgot">
+                      Forgot password?</Link>
                   </div>
                   <div className="register-link">
                     <Link to="/register">

@@ -7,9 +7,9 @@ const User = require("../../models/User");
 const AuthController = require("../../controllers/auth-controller");
 const MsgsController = require("../../controllers/msgs-controller");
 // Midleware
-const auth = require("../../midlleware/checkToken");
+const checkToken = require("../../midlleware/checkToken");
 
-router.get("/", async (req, res) => {
+router.get("/", checkToken, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
     res.json(user);

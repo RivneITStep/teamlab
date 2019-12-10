@@ -2,13 +2,13 @@
 @import "../../style/partials/colors.scss";
 @import "../../style/mixins/font.scss";
 
-    h1 {
-      @include font(50px, $font-regular, $font-color-primary-1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
+h1 {
+  @include font(50px, $font-regular, $font-color-primary-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 
 .register-main {
   margin-top: 0px;
@@ -20,7 +20,7 @@
     background: $bg-color-primary-2;
     height: 750px;
     border-radius: 20px;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 
