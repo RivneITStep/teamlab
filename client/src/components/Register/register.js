@@ -38,15 +38,9 @@ const Register = ({ register, isAuthenticated }) => {
       <div className="container-fluid">
         <div className="container register-body">
           <section>
-            <div className="row register-top">
-              <div className="register-top-bg">
-                <h4 className="register-text">Register</h4>
-              </div>
-            </div>
-          </section>
-          <section>
             <div className="row register-main">
               <div className="row register-main-bg">
+              <h1 className="register-text">Register</h1>
                 <form className="login-form" onSubmit={e => onSubmit(e)}>
                   <div className="form-group">
                     <label htmlFor="uname">Name:</label>

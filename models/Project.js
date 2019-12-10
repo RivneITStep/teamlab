@@ -21,7 +21,8 @@ const ProjectSchema = new mongoose.Schema({
     default: "no-img.jpg"
   },
   stage: {
-    type: String
+    type: String,
+    default: "Open"
   },
   date: {
     type: Date,
