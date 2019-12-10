@@ -70,3 +70,35 @@
     margin-bottom: 35px;
   }
 }
+
+
+    .info-midle-left {
+        padding: 0;
+      .img-fluid {
+        background: url(../../style/img/noutbuk-telefon-naushniki-kofe-tsvetok-tekhnika.jpg);
+        height: 350px;
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-radius: 0;
+
+      }
+    }
+
+    .info-midle-right {
+      padding-left: 80px;
+      h1 {
+        color: $font-color-primary-4;
+      }
+      p {
+        line-height: 25px;
+      }
+    }
+  
+ 

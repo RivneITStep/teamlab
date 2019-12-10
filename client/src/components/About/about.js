@@ -14,63 +14,82 @@ const About = () => {
         </div>
       </div>
 
-  
-        <div className="container">
-          <div className="row blocks_top">
-            <div className="col single_top">
-              <div className="title_top">
-                <h4>My First Text</h4>
-              </div>
-              <div className="desc_top">
-                <p>
-                  Usage of the Internet is becoming more common due to rapid
-                  advancement of technology.
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-outline-dark more-news"
-                >
-                  Join now
-                </button>
-              </div>
+      <div className="container">
+        <div className="row blocks_top">
+          <div className="col single_top">
+            <div className="title_top">
+              <h4>My First Text</h4>
             </div>
-            <div className="col single_top">
-              <div className="title_top">
-                <h4>My First Text</h4>
-              </div>
-              <div className="desc_top">
-                <p>
-                  Usage of the Internet is becoming more common due to rapid
-                  advancement of technology.
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-outline-dark more-news"
-                >
-                  Join now
-                </button>
-              </div>
+            <div className="desc_top">
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology.
+              </p>
+              <button type="button" className="btn btn-outline-dark more-news">
+                Join now
+              </button>
             </div>
-            <div className="col single_top">
-              <div className="title_top">
-                <h4>My First Text</h4>
-              </div>
-              <div className="desc_top">
-                <p>
-                  Usage of the Internet is becoming more common due to rapid
-                  advancement of technology.
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-outline-dark more-news"
-                >
-                  Join now
-                </button>
-              </div>
+          </div>
+          <div className="col single_top">
+            <div className="title_top">
+              <h4>My First Text</h4>
+            </div>
+            <div className="desc_top">
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology.
+              </p>
+              <button type="button" className="btn btn-outline-dark more-news">
+                Join now
+              </button>
+            </div>
+          </div>
+          <div className="col single_top">
+            <div className="title_top">
+              <h4>My First Text</h4>
+            </div>
+            <div className="desc_top">
+              <p>
+                Usage of the Internet is becoming more common due to rapid
+                advancement of technology.
+              </p>
+              <button type="button" className="btn btn-outline-dark more-news">
+                Join now
+              </button>
             </div>
           </div>
         </div>
- 
+      </div>
+
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col  info-midle-left">
+            <div className="img-fluid" ></div>       
+          </div>
+          <div className="col info-midle-right">
+            <h1>Who we are to Serave the nation</h1>
+            <p>
+              inappropriate behavior is often laughed off as “boys will be
+              boys,” women face higher conduct standards especially in the
+              workplace. That’s why it’s crucial that, as women, our behavior on
+              the job is beyond reproach.
+      
+            <br />
+            <br />
+           
+                inappropriate behavior is often laughed off as “boys will be
+                boys,” women face higher conduct standards especially in the
+                workplace. That’s why it’s crucial that, as women, our behavior
+                on the job is beyond reproach. inappropriate behavior is often
+                laughed off as “boys will be boys,” women face higher conduct
+                standards especially in the workplace. That’s why it’s crucial
+                that, as women, our behavior on the job is beyond reproach.
+              </p>
+           
+          </div>
+        </div>
+      </div>
+  
     </Fragment>
   );
 };
