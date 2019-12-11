@@ -44,6 +44,14 @@
 
       border: 1px solid #eee;
 
+      .like-true{
+        text-decoration: none;
+        color:green;
+      }
+
+      a {
+        text-decoration: none;
+      }
 
       h3 {
         display: flex;
@@ -51,7 +59,7 @@
         margin-bottom: 25px;
       }
 
-      .img-fluid{
+      .img-fluid {
         float: left;
         margin: 7px;
       }

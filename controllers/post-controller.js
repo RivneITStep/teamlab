@@ -1,6 +1,6 @@
 //Models
 const Post = require("../models/Post");
-const LikeController = require("./like-controller");
+const Like = require("../models/Like");
 //Midlleware
 const checkValidationErrors = require("../midlleware/checkValidationErrors");
 //Controllers
@@ -8,7 +8,12 @@ const MsgsController = require("./msgs-controller");
 //GET ALL POSTS
 exports.getAllPosts = async (req, res) => {
     try {
-        const posts = await Post.find().sort({date: -1});
+        const posts = await Post
+            .find()
+            .sort({date: -1})
+            .populate('comments')
+            .populate('likes')
+            .exec();
         res.status(200).json([MsgsController.Success(), posts]);
     } catch (error) {
         console.error(error.message);
@@ -52,25 +57,15 @@ exports.createNewPost = async (req, res) => {
 exports.getSinglePost = async (req, res) => {
     try {
         const {id} = req.params;
-        const post = await Post.findById(id);
+        const post = await Post.findById(id).populate('comments').populate('likes').exec();
 
         if (!post) {
             return res.status(404).json(MsgsController.NotFound("Post"));
         }
-        // post.populate('likes');
+
         post.views += 1;
         await post.save();
-
-        await post
-            .populate('comments')
-            .populate('likes')
-            .exec((res, err) => {
-                if (res)
-                    console.log("res:", res);
-                else console.log("err:", err)
-            });
-
-        res.status(200).json(post);
+        res.status(200).json([MsgsController.Success(), post]);
     } catch (error) {
         res.status(500).send(MsgsController.ServerError());
     }
@@ -123,15 +118,40 @@ exports.updatePost = async (req, res) => {
 };
 //ADD LIKE
 exports.setLikeToPost = async (req, res) => {
-    const {authorId, postId} = req.params;
-    //CONST LIKE =
-    await LikeController.setLikeToPost(authorId, postId);
-    res.status(200).json(MsgsController.Success());
+    try {
+        const { postId: item} = req.params;
+
+        const post = await Post.findById(item);
+
+        const like = new Like({
+            item
+        });
+
+        await like.save();
+        post.likes.push(like._id);
+        await post.save();
+        res.status(200).json([MsgsController.Success(), like]);
+    } catch (e) {
+        res.status(400).json(MsgsController.Fail());
+    }
 };
 //DELETE LIKE
 exports.deleteLike = async (req, res) => {
-    const {authorId, postId} = req.params;
-    await LikeController.deleteLikeFromPost(authorId, postId);
-    res.status(200).json(MsgsController.Success());
+    try {
+        const {postId} = req.params;
+
+        Like.deleteOne({item: postId}, err => {
+            if (err) {
+                if (err.kind === "ObjectId")
+                    res.status(404).json(MsgsController.NotFound("Like"));
+                console.error(error.message);
+                res.status(500).json(MsgsController.ServerError());
+            }
+            res.status(200).json(MsgsController.Success());
+        });
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json(MsgsController.ServerError());
+    }
 };
 

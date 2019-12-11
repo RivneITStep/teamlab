@@ -25,12 +25,12 @@ export default class TeamlabstoreService {
         return axios.get(`${this.url}/api/posts/single-post/${id}/update`);
     }
 
-    setLikeToPost(authorId, postId) {
-        return axios.post(`${this.url}/api/posts/like/${authorId}/${postId}`);
+    setLikeToPost(postId) {
+        return axios.post(`${this.url}/api/posts/like/${postId}`);
     }
 
-    deleteLikeFromPost(authorId, postId) {
-        return axios.delete(`${this.url}/api/posts/like/${authorId}/${postId}`);
+    deleteLikeFromPost(postId) {
+        return axios.post(`${this.url}/api/posts/like/delete/${postId}`);
     }
 
     addCommentToSinglePost(id) {

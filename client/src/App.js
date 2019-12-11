@@ -23,7 +23,7 @@ import PrShow from './components/Profile/PrShow'
 
 import "./App.scss";
 
-// import store from "./store";
+import store from "./store";
 // import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
 

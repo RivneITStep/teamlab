@@ -5,10 +5,12 @@ import "./post-list-item.scss";
 
 const PostListItem = ({post}) => {
     const {title, author: {name: author}, text: content, date, _id, views, comments, likes} = post;
+
     const linkStyle = {
         color: 'inherit',
         textDecoration: 'inherit'
     };
+
     return (
         <Fragment>
             <div className="col-4 d-flex flex-row justify-content-center img-likes">
@@ -29,7 +31,7 @@ const PostListItem = ({post}) => {
 
             <div className=" col-8 detials-posts">
                 <Link style={linkStyle} to={`/single-post/${_id}`} >
-                    <h3 className="text-lg-center font-weight-bold"><a href="#">{title}</a></h3>
+                    <h3 className="text-lg-center font-weight-bold">{title}</h3>
                     <p>
                         {content}
                     </p>

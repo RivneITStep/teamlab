@@ -55,15 +55,12 @@
   }
 
   h3 {
-    a {
-      text-decoration: none;
-      color: $font-color-primary-4;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
+    color: $font-color-primary-4;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
-    :hover {
+    &:hover {
       color: #0056b3;
     }
   }

@@ -2,32 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9561544-0a01-4d27-a96c-a673b97f9489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list-item/comments-list-item.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list-item/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/comments-list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/single-post-header/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/single-post-header/single-post-header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/actions/single-post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/single-post-container/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/containers/single-post-container/single-post-container.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/reducers/single-post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/page-posts-header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/page-posts-header/page-posts-header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/page-posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/page-posts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Profile/PrShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Profile/PrShow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/single-post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/single-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Preloader/Prelpader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Preloader/Prelpader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/comments-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/comments-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/post-list-container/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/post-list-container/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/like-controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/post-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Comment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/Like.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Like.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/posts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +90,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ebs-2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -101,15 +100,19 @@
       <recent name="$PROJECT_DIR$/client/src/services" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.leave-a-comment.js">
+  <component name="RunManager" selected="Node.js.posts.js">
     <configuration name="leave-a-comment.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" working-dir="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment">
       <method v="2" />
     </configuration>
     <configuration name="post-list-item.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" working-dir="$PROJECT_DIR$/client/src/components/Posts/post-list-item">
       <method v="2" />
     </configuration>
+    <configuration name="posts.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/routes/api/posts.js" working-dir="$PROJECT_DIR$/routes/api">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.posts.js" />
         <item itemvalue="Node.js.leave-a-comment.js" />
         <item itemvalue="Node.js.post-list-item.js" />
       </list>
@@ -151,6 +154,19 @@
       <workItem from="1574973701277" duration="30000" />
       <workItem from="1574977730908" duration="394000" />
       <workItem from="1574978146361" duration="103000" />
+      <workItem from="1575143071450" duration="5655000" />
+      <workItem from="1575148763186" duration="506000" />
+      <workItem from="1575149296004" duration="25161000" />
+      <workItem from="1575234355660" duration="331000" />
+      <workItem from="1575270464465" duration="1237000" />
+      <workItem from="1575461052940" duration="645000" />
+      <workItem from="1575546653891" duration="612000" />
+      <workItem from="1575624172862" duration="619000" />
+      <workItem from="1575624839869" duration="612000" />
+      <workItem from="1575641230866" duration="604000" />
+      <workItem from="1575835618785" duration="2008000" />
+      <workItem from="1575978287835" duration="599000" />
+      <workItem from="1576010511826" duration="599000" />
     </task>
     <servers />
   </component>
@@ -171,13 +187,85 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575835650434">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1575835650434" />
+    <state width="1253" height="193" key="GridCell.Tab.0.bottom" timestamp="1575234136297">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1575234136297" />
+    <state width="1253" height="193" key="GridCell.Tab.0.center" timestamp="1575234136297">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1575234136297" />
+    <state width="1253" height="193" key="GridCell.Tab.0.left" timestamp="1575234136296">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1575234136296" />
+    <state width="1253" height="193" key="GridCell.Tab.0.right" timestamp="1575234136297">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1575234136297" />
+    <state width="1253" height="193" key="GridCell.Tab.1.bottom" timestamp="1575234136298">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.1.bottom/67.27.1299.741@67.27.1299.741" timestamp="1575234136298" />
+    <state width="1253" height="193" key="GridCell.Tab.1.center" timestamp="1575234136298">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.1.center/67.27.1299.741@67.27.1299.741" timestamp="1575234136298" />
+    <state width="1253" height="193" key="GridCell.Tab.1.left" timestamp="1575234136297">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.1.left/67.27.1299.741@67.27.1299.741" timestamp="1575234136297" />
+    <state width="1253" height="193" key="GridCell.Tab.1.right" timestamp="1575234136298">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.1.right/67.27.1299.741@67.27.1299.741" timestamp="1575234136298" />
+    <state width="1253" height="193" key="GridCell.Tab.2.bottom" timestamp="1575234136299">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.2.bottom/67.27.1299.741@67.27.1299.741" timestamp="1575234136299" />
+    <state width="1253" height="193" key="GridCell.Tab.2.center" timestamp="1575234136298">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.2.center/67.27.1299.741@67.27.1299.741" timestamp="1575234136298" />
+    <state width="1253" height="193" key="GridCell.Tab.2.left" timestamp="1575234136298">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.2.left/67.27.1299.741@67.27.1299.741" timestamp="1575234136298" />
+    <state width="1253" height="193" key="GridCell.Tab.2.right" timestamp="1575234136299">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.2.right/67.27.1299.741@67.27.1299.741" timestamp="1575234136299" />
+    <state width="1253" height="193" key="GridCell.Tab.3.bottom" timestamp="1575234136300">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.3.bottom/67.27.1299.741@67.27.1299.741" timestamp="1575234136300" />
+    <state width="1253" height="193" key="GridCell.Tab.3.center" timestamp="1575234136299">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.3.center/67.27.1299.741@67.27.1299.741" timestamp="1575234136299" />
+    <state width="1253" height="193" key="GridCell.Tab.3.left" timestamp="1575234136299">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.3.left/67.27.1299.741@67.27.1299.741" timestamp="1575234136299" />
+    <state width="1253" height="193" key="GridCell.Tab.3.right" timestamp="1575234136300">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="193" key="GridCell.Tab.3.right/67.27.1299.741@67.27.1299.741" timestamp="1575234136300" />
     <state x="205" y="31" key="SettingsEditor" timestamp="1574978123944">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1574978123944" />
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1574978148026">
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576012527104">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="372" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1574978148026" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576012527104" />
+    <state x="380" y="175" key="run.anything.popup" timestamp="1575206790747">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="380" y="175" key="run.anything.popup/67.27.1299.741@67.27.1299.741" timestamp="1575206790747" />
   </component>
 </project>

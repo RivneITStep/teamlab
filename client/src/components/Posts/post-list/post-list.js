@@ -8,6 +8,7 @@ const PostList = ({posts}) => {
     console.log("postList:", posts);
     let cntr = 0;
     let className = "";
+    if (!posts) return (<p>(((</p>);
     return (
         <div className="container-fluid main-bg">
             <div className="container user-posts">
