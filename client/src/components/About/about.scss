@@ -77,14 +77,15 @@
 .info-midle {
   margin: 40px 0;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 0px 6px 0px;
+  background-color: #f8f8ff ;
 
   .info-midle-left {
     padding: 0;
     .img-fluid {
-      background: url(../../style/img/noutbuk-telefon-naushniki-kofe-tsvetok-tekhnika.jpg);
+      background: url(../../style/img/about-mid-pic.png);
       height: 350px;
-      background-size: cover;
-      background-position: bottom;
+      background-size: contain;
+      background-position: center;
       background-repeat: no-repeat;
       display: -ms-flexbox;
       display: flex;
@@ -92,7 +93,7 @@
       justify-content: center;
       -ms-flex-align: center;
       align-items: center;
-      border-radius: 0;
+
     }
     @media (max-width: 992px) {
       display: none;
@@ -100,7 +101,6 @@
   }
 
   .info-midle-right {
-    padding-left: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,4 +120,20 @@
     padding: 35px;
     
   }
+}
+
+.goals-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.goals-item{
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 0px 6px 0px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }

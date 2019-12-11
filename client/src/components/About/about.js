@@ -80,6 +80,26 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <div className="container-fluid">
+        <div className="container">
+          <div className="row goals-header">
+            <h2>Goals to Achieve for the leadership</h2>
+            <p>Who are in extremely love with eco friendly system.</p>
+          </div>
+          <div className="row">
+            <div className="col goals-left">
+              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
+            </div>
+            <div className="col goals-right">
+              <div className="img-goals"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </Fragment>
   );
 };
