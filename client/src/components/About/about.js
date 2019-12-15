@@ -87,7 +87,7 @@ const About = () => {
             <h2>Goals to Achieve for the leadership</h2>
             <p>Who are in extremely love with eco friendly system.</p>
           </div>
-          <div className="row">
+          <div className="row goals-row">
             <div className="col goals-left">
               <div className="goals-item"><a href="#">Lorem ipsum</a></div>
               <div className="goals-item"><a href="#">Lorem ipsum</a></div>
@@ -95,7 +95,8 @@ const About = () => {
               <div className="goals-item"><a href="#">Lorem ipsum</a></div>
             </div>
             <div className="col goals-right">
-              <div className="img-goals"></div>
+              <div className="img-goals">
+              </div>
             </div>
           </div>
         </div>
