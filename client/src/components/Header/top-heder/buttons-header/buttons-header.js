@@ -19,6 +19,7 @@ const ButtonsHeader = ({ auth: { isAuthenticated, loading,user}, logout }) => {
       </Link>
     );
   }
+  
   const authLinks = (
     <Fragment>
       <Link to="/">

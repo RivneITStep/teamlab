@@ -8,6 +8,7 @@ import EducationBlock from "./ProfileEducation/EducationBlock"
 import {ClearTMP} from '../../../actions/allProfile'
 import {socAction} from '../../../actions/allProfile'
 import {profileToDb}from '../../../actions/allProfile'
+import ProfileSkill from './ProfileExpiriance/ProfileSkills/ProfileSkill'
 
 
 
@@ -33,6 +34,11 @@ const onSubmit = e => {
         socAction({githubusername,location,youtube,twitter,facebook,linkedin,instagram,phone_number});
         profileToDb(tmp);
     };
+const plVal={git:"githubusername"}
+if (tmp&&tmp.githubusername!="")
+{
+    plVal.git=tmp.githubusername
+}
     
         return(
             <Fragment>
@@ -59,7 +65,8 @@ const onSubmit = e => {
                                                                 <input   
                                                                         type="text" 
                                                                         className="form-control" 
-                                                                        placeholder="githubusername"  
+                                                                        placeholder={tmp.githubusername}
+                                                                        value ={tmp.githubusername}
                                                                         id="githubusername"
                                                                         name="githubusername"
                                                                         onChange={e =>onChange(e)}/>
@@ -145,6 +152,12 @@ const onSubmit = e => {
                                 </div>
                                  <button type="submit" className="btn btn-outline-dark btn-register">Save</button>
                                 </form>
+                                <div>Skills</div>
+                                    <div className="row">
+                                        <div className="col">
+                                            <ProfileSkill/>
+                                        </div>
+                                    </div>
                                <EducationBlock/>
                                <ExpirienceBlock/>
                             </section>

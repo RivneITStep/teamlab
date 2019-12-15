@@ -4,7 +4,7 @@ import ProfileCreate from './ProfileCreate/ProfileCreateMain'
 import "./profile.scss"
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-
+import {EditProfile} from  "../../actions/allProfile"
 class PrShow extends React.Component
 {
     state = {
@@ -132,17 +132,20 @@ Expirience()
           )
         })  
 } 
-
+EditProfileOnclick(){
+    console.log("Edit On click")
+    this.props.EditProfile()
+    // return(state)
+}
     render(){
         let user_idFromParams=this.props.match.params.id
         return (!this.props.singlPr)?(<Preloader/>):
         (this.props.singlPr.errorMessage=='no Profile for this user already exist.')?(<ProfileCreate/>):
+        (this.props.editProfile)?(<ProfileCreate/>):
         (this.props.singlPr.profile.user_id!=user_idFromParams)?(<Preloader/>):
         (   
             <Fragment>  
-                <Link to={'/profile'}  >
-                Back
-                </Link>
+                <i className="far fa-edit" onClick={()=>this.EditProfileOnclick()}></i>
                 <div className="container- fluid profile-top-bg">
                     <div className="container profile-body">
                             <section >
@@ -247,7 +250,8 @@ Expirience()
 const mapStateToProps = state => { 
    return { 
       singlPr: state.allProfile.profile,
+      editProfile:state.allProfile.editProfile
 
    }; 
 }; 
-export default connect(mapStateToProps)(PrShow);
+export default connect(mapStateToProps,{EditProfile})(PrShow);
