@@ -1,8 +1,10 @@
 import React, {Fragment} from "react";
 import Preloader from './../Preloader/Preloader'
+import ProfileCreate from './ProfileCreate/ProfileCreateMain'
 import "./profile.scss"
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+
 class PrShow extends React.Component
 {
     state = {
@@ -129,15 +131,13 @@ Expirience()
                         </div>
           )
         })  
-}
+} 
 
     render(){
-        if (!this.props.singlPr){}
-        else{
-        console.log("this.props.singlPr.profile.user_id",this.props.singlPr.profile.user_id)
-        console.log("came from PARAMS",this.props.match.params.id)}
         let user_idFromParams=this.props.match.params.id
-        return (!this.props.singlPr)?(<Preloader/>):((this.props.singlPr.profile.user_id!=user_idFromParams)?(<Preloader/>):
+        return (!this.props.singlPr)?(<Preloader/>):
+        (this.props.singlPr.errorMessage=='no Profile for this user already exist.')?(<ProfileCreate/>):
+        (this.props.singlPr.profile.user_id!=user_idFromParams)?(<Preloader/>):
         (   
             <Fragment>  
                 <Link to={'/profile'}  >
@@ -240,9 +240,7 @@ Expirience()
                 </div>
             </Fragment>
         
-        
-        
-        ))
+        )
         
     }
 }
