@@ -16,7 +16,8 @@ import Footer from "./components/Footer/footer";
 import Forgot from "./components/Forgot/forgot";
 
 import PageSinglePost from "./components/Single-post/page-single-post";
-import SingleProject from "./components/Single-project/single-project";
+// import SingleProject from "./components/Single-project/single-project";
+import SingleProject from "./components/Project/Project";
 import AddProject from "./components/Projects/ProjectForm";
 
 import ProfileList from "./components/Profile/profileList/ProfileList";

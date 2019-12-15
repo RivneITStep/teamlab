@@ -9,7 +9,7 @@ const InitialState = {
 };
 
 const updatePostList = (state = InitialState, action) => {
-
+ const {type,payload}=action
   switch (type) {
     case FETCH_POSTS_SUCCESS:
       return {
