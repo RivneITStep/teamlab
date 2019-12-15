@@ -3,20 +3,35 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../../../actions/auth";
+import AuthProfileIcon from "../../../Profile/profileList/ProfileIcon/AuthProfileIcon";
+import Preloader from "../../../Preloader/Preloader";
 
 import "./buttons-header.scss";
 
-const ButtonsHeader = ({ auth: { isAuthenticated, loading }, logout }) => {
+const ButtonsHeader = ({ auth: { isAuthenticated, loading,user}, logout }) => {
+  // console.log(user._id);
+  let icon=null;
+
+  if (isAuthenticated&&user) {
+    icon = (
+      <Link to={`/profile/show_single_profile/${user._id}`}>
+        <AuthProfileIcon />
+      </Link>
+    );
+  }
   const authLinks = (
-    <Link to="/">
-      <button
-        onClick={logout}
-        type="button"
-        className="btn btn-login-header btn-outline-primary"
-      >
-        Logout
-      </button>
-    </Link>
+    <Fragment>
+      <Link to="/">
+        <button
+          onClick={logout}
+          type="button"
+          className="btn btn-login-header btn-outline-primary"
+        >
+          Logout
+        </button>
+      </Link>
+      {icon}
+    </Fragment>
   );
 
   const guestLinks = (
