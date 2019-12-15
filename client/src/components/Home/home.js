@@ -4,11 +4,11 @@ import "./home.scss";
 const Home = () => {
   return (
     <Fragment>
-      <div className="container- fluid about-top-bg">
-        <div className="container about-top-body">
+      <div className="container- fluid home-top-bg">
+        <div className="container home-top-body">
           <section>
-            <div className="row about-top">
-              <h1 className="about-top-text">HOME</h1>
+            <div className="row home-top">
+              <h1 className="home-top-text">HOME</h1>
             </div>
           </section>
         </div>

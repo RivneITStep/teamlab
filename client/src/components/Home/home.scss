@@ -2,7 +2,7 @@
 @import "../../style/partials/fonts.scss";
 @import "../../style/partials/colors.scss";
 
-.about-top-bg {
+.home-top-bg {
   background: url(../../style/img/home-page1.png);
   height: 350px;
   background-size: cover;
@@ -16,7 +16,7 @@
   align-items: center;
   border-radius: 0;
 
-  .about-top {
+  .home-top {
     display: flex;
     justify-content: center;
 
