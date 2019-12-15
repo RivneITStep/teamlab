@@ -8,7 +8,9 @@ import {
     CLEAR_TMP_STORE,
     SOCIAL_TO_STORE,
     PROFILE_TO_DB_SUCCESS,
-    PROFILE_TO_DB_FAIL} from  '../actions/types'
+    PROFILE_TO_DB_FAIL,
+    ADD_SKILL,
+    EDIT_PROFILE} from  '../actions/types'
 
 
 export default function (state, action) {
@@ -16,6 +18,7 @@ export default function (state, action) {
   {
     return {
   profile: null,
+  editProfile:false,
   profiles: [],
   repos: [],
   loading: true,
@@ -41,12 +44,30 @@ export default function (state, action) {
   }
     const {type,payload} = action;
     switch (type) {
+      case EDIT_PROFILE:
+        return {
+              ...state,
+              tmpPr:{...state.profile.profile},  
+              editProfile:true,
+              loading: false,
+            };     
+        break;
+      case ADD_SKILL:
+        return {
+              ...state,
+              tmpPr:{...state.tmpPr,
+                    skills:[...state.tmpPr.skills,payload]},  
+              loading: false,
+              editProfile:false
+            };     
+        break;
       case PROFILE_TO_DB_FAIL:
         return {
               ...state,
               tmpPr:{...state.tmpPr,
                     error:payload},  
               loading: false
+
             };     
         break;
 
@@ -124,13 +145,15 @@ export default function (state, action) {
                     },
                     mainimage: ""
                 },
-              loading: false
+              loading: false,
+              editProfile:false
             };     
         break;
         case GET_PROFILES_SUCCESS:
             return {
               ...state,
               profiles: payload,
+              editProfile:false,
               loading: false
             };     
         break;
@@ -139,6 +162,7 @@ export default function (state, action) {
               ...state,
               profiles: [],
               error: payload,
+              editProfile:false,
               loading: false
             };
             break;
@@ -146,12 +170,14 @@ export default function (state, action) {
             return {
               ...state,
               profile: payload,
+              editProfile:false,
               loading: false
             };
             case GET_PR_FAIL:
             return{
               ...state,
               profile: {},
+              editProfile:false,
               error: payload,
               loading: false}
         default:

@@ -9,7 +9,10 @@ import {
     CLEAR_TMP_STORE,
     SOCIAL_TO_STORE,
     PROFILE_TO_DB_SUCCESS,
-    PROFILE_TO_DB_FAIL} from './types';
+    PROFILE_TO_DB_FAIL,
+    ADD_SKILL,
+    EDIT_PROFILE}
+     from './types';
 
 export const allProfile = (user_id=false) => async dispatch =>
  {
@@ -96,6 +99,18 @@ export const profileToDb = (data)=>async dispatch=>{
       payload: error.response.data.errorMessage
     });
   }
+}
+ export const addSkill = (data)=>async dispatch=>{
+  dispatch({
+      type: ADD_SKILL,
+      payload: data
+    });
+}
+export const EditProfile = ()=>async dispatch=>{
+  dispatch({
+      type: EDIT_PROFILE,
+      payload: true
+    });
 }
 
 
