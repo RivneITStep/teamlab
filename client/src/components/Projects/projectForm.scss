@@ -1,0 +1,38 @@
+@import "../../style/partials/fonts.scss";
+@import "../../style/partials/colors.scss";
+@import "../../style/mixins/font.scss";
+
+h1 {
+  @include font(50px, $font-regular, $font-color-primary-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.register-main {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+
+  .register-main-bg {
+    background: $bg-color-primary-2;
+    height: 750px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .login-form {
+      width: 65%;
+      @media screen and (max-width: 576px) {
+        width: 75%;
+      }
+    }
+
+    .btn-register {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+ "user_id":"5d8bbdb99503416b7852b02e",
+ "location":"Rivne", 
+ "githubusername":"macnaer",
+ "experience": [{
+	        	"position":"teacher",
+	        	"company": "ItStep",
+	        	"location":"Rsvne",
+	        	"from": "20016-02-02",
+	        	"to":"",
+	        	"current":"true",
+	        	"description":"" 
+	    	}],
+"education":[{
+		        "degree": "NAUP",
+		        "fieldofstady": "pm",
+		        "from":"2008-02-02",
+		        "to":"2016-02-02",
+		        "current": "true",
+		        "description":"Lorem islend"
+    		}],
+"social": {
+		        "youtube": "https://www.youtube.com/channel/UCN0LEnU0NF2RGevr8JJajPw",
+		        "twitter": "",
+		        "facebook": "https://www.facebook.com/AllReal2016/",
+		        "linkedin":"",
+		        "instagram": "https://www.instagram.com/allreal___/"
+    		}
+
+}
