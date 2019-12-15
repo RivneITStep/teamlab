@@ -89,10 +89,10 @@ const About = () => {
           </div>
           <div className="row goals-row">
             <div className="col goals-left">
-              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
-              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
-              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
-              <div className="goals-item"><a href="#">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
+              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
             </div>
             <div className="col goals-right">
               <div className="img-goals">
