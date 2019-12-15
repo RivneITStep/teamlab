@@ -1,6 +1,7 @@
 //Models
 const Comment = require("../models/Comment");
 const Post = require("../models/Post");
+const User = require("../models/User");
 //Midlleware
 const checkValidationErrors = require("../midlleware/checkValidationErrors");
 //Controllers
@@ -12,17 +13,21 @@ exports.addCommentToSinglePost = async (req, res) => {
     try {
         checkValidationErrors(req, res);
 
-        const {id: author} = req.user;
+        const {id} = req.user;
         const {id: postId} = req.params;
         const {comment} = req.body;
 
+        const user = await User.findById(id);
         const post = await Post.findById(postId);
         //create new comment
         const newComment = new Comment({
             _id: new mongoose.Types.ObjectId(),
             postId,
             comment,
-            author
+            author:{
+                id,
+                name: user.name
+            }
         });
         // added comment to single post and save it
         post.comments.push(newComment._id);
@@ -31,7 +36,7 @@ exports.addCommentToSinglePost = async (req, res) => {
         newComment
             .save()
             .then(() => {
-                res.status(200).json(MsgsController.Success());
+                res.status(200).json([MsgsController.Success(),newComment]);
             })
             .catch(err => {
                 console.log(err);

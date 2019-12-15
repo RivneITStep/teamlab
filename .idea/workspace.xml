@@ -2,31 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9561544-0a01-4d27-a96c-a673b97f9489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/actions/single-post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/single-post-container/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/single-post-container/single-post-container.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/reducers/single-post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/modal/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/modal/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/modal/modal.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Preloader/Prelpader.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Preloader/Prelpader.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/actions/single-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/actions/single-post.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/comments-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list/comments-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list-item/comments-list-item.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/comments-list-item/comments-list-item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/leave-a-comment/leave-a-comment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/containers/post-list-container/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/post-list-container/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/single-post-container/single-post-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/single-post-container/single-post-container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/teamlabstore-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/like-controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/post-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/post-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/comment-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/comment-controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Comment.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Comment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Like.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Like.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,6 +155,11 @@
       <workItem from="1575835618785" duration="2008000" />
       <workItem from="1575978287835" duration="599000" />
       <workItem from="1576010511826" duration="599000" />
+      <workItem from="1576048638695" duration="161000" />
+      <workItem from="1576152163519" duration="702000" />
+      <workItem from="1576233511947" duration="599000" />
+      <workItem from="1576331153489" duration="17264000" />
+      <workItem from="1576365950349" duration="25056000" />
     </task>
     <servers />
   </component>
@@ -187,10 +180,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575835650434">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576331930666">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1575835650434" />
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1576331930666" />
     <state width="1253" height="193" key="GridCell.Tab.0.bottom" timestamp="1575234136297">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -259,10 +252,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1574978123944" />
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576012527104">
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576331168512">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576012527104" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576331168512" />
     <state x="380" y="175" key="run.anything.popup" timestamp="1575206790747">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

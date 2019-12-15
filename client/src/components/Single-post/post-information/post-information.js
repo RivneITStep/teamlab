@@ -1,84 +1,77 @@
-import React, {Component, Fragment} from 'react';
+import React, {useEffect, useState} from 'react';
 import CommentsList from "./comments-list";
 import LeaveAComment from "./leave-a-comment";
 import Preloader from "../../Preloader/Preloader";
 
-export default class PostInformation extends Component {
+const PostInformation = ({teamlabstoreService, post, user, error}) => {
 
-    state = {
-        postData: null,
-        like: false,
-        error: false
-    };
+    const [info, setInfo] = useState('');
 
-    updateLike = async () => {
-        const {teamlabstoreService, post: {_id: postId}} = this.props;
-        const {like} = this.state;
+    useEffect(() => {
+        setInfo({
+            postData: post,
+            like: false,
+            error: false
+        });
+        console.log("postData:", info.postData);
+        console.log("post:", post);
+    }, []);
 
+    const onUpdateLike = async (likePressed, postId) => {
         let apiServiceMethod = '';
-        like ? apiServiceMethod = 'setLikeToPost' : apiServiceMethod = 'deleteLikeFromPost';
+
+        likePressed ? apiServiceMethod = 'setLikeToPost' : apiServiceMethod = 'deleteLikeFromPost';
 
         await teamlabstoreService[apiServiceMethod](postId)
             .then(() => {
-                this.setState((state) => {
-                    return {
-                        like: !state.like
-                    }
-                })
+                setInfo({...info, like: !likePressed})
             })
             .catch((err) => {
-                this.setState((state) => {
-                    return {
-                        error: true
-                    }
-                })
+                setInfo({...info, error: true})
             })
     };
 
-    onLike = async () => {
-        await this.updateLike();
-    };
+    const content = <PostView teamlabstoreService={teamlabstoreService} like={info.like} post={info.postData}
+                              user={user}
+                              onUpdateLike={onUpdateLike}
+    />;
 
-    render() {
-        const {like} = this.state;
-        const {post, user, loading, error} = this.props;
-
-        const content = !loading ? <PostView like={like} post={post} user={user} onLike ={this.onLike}/> : <Preloader/>;
-
-        return (
-            <section className="post-content-area single-post-area">
-                <div className="container-fluid">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12 posts-list">
-                                {content}
-                            </div>
+    return (
+        <section className="post-content-area single-post-area">
+            <div className="container-fluid">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12 posts-list">
+                            {info ? content : <Preloader/>}
                         </div>
                     </div>
                 </div>
-            </section>
-        );
-    }
-}
+            </div>
+        </section>
+    );
+};
 
-const PostView =({post, user , like, onLike}) =>{
-    const {title, author: {name: author}, text: content, date, views, comments, likes} = post;
-
+const PostView = ({post, user, like, onUpdateLike, teamlabstoreService}) => {
+    const {_id, title, author: {name: author}, text: content, date, views, comments, likes} = post;
+    console.log("id:", _id, "like:", like);
     let likeClassName = "";
+    const [total, setTotal] = useState(likes.length);
+
     like ? likeClassName = "like-true" : likeClassName = "";
 
-    const userLikeArea = <a href="#" className={likeClassName} onClick={onLike}
-    ><i className="fa fa-thumbs-up"
-        aria-hidden="true"></i> {likes.length}
-    </a>;
-    const guestLikeArea = <a href="#">
-        <i className="fa fa-thumbs-up"
-           aria-hidden="true"></i> {likes.length}
-    </a>;
+    const likeArea = user ?
+        <a href="#" className={likeClassName} onClick={() => {
+            onUpdateLike(like, _id);
+            !like ? setTotal(total + 1) : setTotal(total - 1);
+        }
+        }>
+            <i className="fa fa-thumbs-up" aria-hidden="true"></i>{total}
+        </a> :
+        <a href="#"><i className="fa fa-thumbs-up" aria-hidden="true"></i> {likes.length}</a>;
     return (
-        <Fragment>
+        <>
             <div className="single-post row">
-                <h3 className="mt-20 mb-20">{title}</h3>
+                <h3 className="mt-20 mb-20" >{title}</h3>
                 <p>
                     <img className="img-fluid"
                          src={require("../../../style/img/people-coffee-tea-meeting.jpg")}
@@ -92,13 +85,15 @@ const PostView =({post, user , like, onLike}) =>{
                 </div>
                 <div className="col-lg-6 col-md-6 d-flex flex-row justify-content-around">
                     <a href="#"><i className="fa fa-eye" aria-hidden="true"></i> {views}</a>
-                    {user ? userLikeArea : guestLikeArea}
-                    <a href="#"><i className="fa fa-comments"
-                                   aria-hidden="true"></i> {comments.length}</a>
+                    {likeArea}
+                    <a href="#"><i className="fa fa-comments" aria-hidden="true"></i> {comments.length}</a>
                 </div>
             </div>
             <CommentsList comments={comments}/>
-            {user ? <LeaveAComment/> : null}
-        </Fragment>
+            {user ? <LeaveAComment teamlabstoreService={teamlabstoreService} postId={_id} user={user}
+            /> : null}
+        </>
     )
 };
+
+export default PostInformation

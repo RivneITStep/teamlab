@@ -28,11 +28,9 @@ const singlePostError = error => {
 
 const fetchSinglePost = (teamlabstoreService,postId) => () => dispatch => {
     dispatch(singlePostRequested());
-    console.log("hip-hop");
     teamlabstoreService
         .getSinglePost(postId)
         .then(data => {
-            console.log("fetch POST:",data);
             dispatch(singlePostLoaded(data));
         })
         .catch(err => {

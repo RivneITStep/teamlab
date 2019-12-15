@@ -3,6 +3,12 @@ import axios from "axios";
 export default class TeamlabstoreService {
     //PROJECT URL
     url = "http://localhost:5000";
+    //CUSTOMIZE AXIOS
+    config = {
+        headers: {
+            "Content-Type": "application/json"
+        }
+    };
 
     //POSTS SERVICE (CRUD)
     getPosts() {
@@ -21,8 +27,8 @@ export default class TeamlabstoreService {
         return axios.post(`${this.url}/api/posts/add-new-post`);
     }
 
-    updateSinglePost(id) {
-        return axios.get(`${this.url}/api/posts/single-post/${id}/update`);
+    updateSinglePost(id, body) {
+        return axios.put(`${this.url}/api/posts/single-post/${id}/update`, body, this.config);
     }
 
     setLikeToPost(postId) {
@@ -33,8 +39,8 @@ export default class TeamlabstoreService {
         return axios.post(`${this.url}/api/posts/like/delete/${postId}`);
     }
 
-    addCommentToSinglePost(id) {
-        return axios.post(`${this.url}/api/posts/single-post/${id}/add-comment`);
+    addCommentToSinglePost(id, body) {
+        return axios.post(`${this.url}/api/posts/single-post/${id}/add-comment`, body, this.config);
     }
 
     deleteCommentToSinglePost(id, commentId) {

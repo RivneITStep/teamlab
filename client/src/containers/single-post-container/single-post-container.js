@@ -7,6 +7,7 @@ import {connect} from "react-redux";
 import withTeamlabstoreService from "../../components/hoc";
 import {fetchSinglePost} from "../../actions/single-post";
 import compose from "../../utils/compose";
+import Preloader from "../../components/Preloader/Preloader";
 
 class SinglePostContainer extends Component {
 
@@ -15,11 +16,12 @@ class SinglePostContainer extends Component {
     }
 
     render() {
-        let loading = null;
+        let loading = true;
         const {post, user, teamlabstoreService} = this.props;
         loading = !post || !post.author;
-        console.log("user:", user);
-        return <PostInformation teamlabstoreService={teamlabstoreService} loading={loading} user={user} post={post}/>;
+        return !loading ?
+            <PostInformation teamlabstoreService={teamlabstoreService} loading={loading} user={user} post={post}/> :
+            <Preloader/>;
     }
 }
 
