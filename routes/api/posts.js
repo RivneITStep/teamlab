@@ -71,12 +71,12 @@ router.get(
     PostController.getSinglePost
 );
 //POST add like
-router.post('/like/:authorId/:postId',
+router.post('/like/:postId',
     checkToken,
     PostController.setLikeToPost);
 //DELETE like
-router.delete('/like/:authorId/:postId',
-    checkToken,
+router.post('/like/delete/:postId',
+    // checkToken,
     PostController.deleteLike);
 //POST add comment to single post
 router.post(
@@ -95,7 +95,7 @@ router.post(
 );
 //DELETE comment from single post
 router.delete(
-    "/single-post/delete-comment/:commentId",
+    "/single-post/:id/delete-comment/:commentId",
     checkToken,
     checkRolle.checkAuthor,
     CommentController.deleteComment
