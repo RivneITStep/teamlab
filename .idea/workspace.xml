@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a9561544-0a01-4d27-a96c-a673b97f9489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Project/Project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/page-single-post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list-item/post-list-item.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Posts/post-list/post-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Single-post/post-information/post-information.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/containers/post-list-container/post-list-container.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/containers/post-list-container/post-list-container.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +155,8 @@
       <workItem from="1576331153489" duration="17264000" />
       <workItem from="1576365950349" duration="25552000" />
       <workItem from="1576421886877" duration="1369000" />
-      <workItem from="1576423388133" duration="3012000" />
+      <workItem from="1576423388133" duration="3470000" />
+      <workItem from="1576439231010" duration="2794000" />
     </task>
     <servers />
   </component>
@@ -270,10 +271,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1574978123944" />
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576331168512">
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1576439231422">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576331168512" />
+    <state x="374" y="225" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1576439231422" />
     <state x="471" y="177" width="481" height="439" key="git4idea.merge.GitMergeDialog" timestamp="1576422254910">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
