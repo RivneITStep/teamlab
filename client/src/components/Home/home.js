@@ -4,7 +4,7 @@ import "./home.scss";
 const Home = () => {
   return (
     <Fragment>
-            <div className="container- fluid about-top-bg">
+      <div className="container- fluid about-top-bg">
         <div className="container about-top-body">
           <section>
             <div className="row about-top">
@@ -89,31 +89,48 @@ const Home = () => {
           </div>
           <div className="row goals-row">
             <div className="col goals-left">
-              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
-              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
-              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
-              <div className="goals-item"><a href="#" className="goals-item-a">Lorem ipsum</a></div>
+              <div className="goals-item">
+                <a href="#" className="goals-item-a">
+                  Lorem ipsum
+                </a>
+              </div>
+              <div className="goals-item">
+                <a href="#" className="goals-item-a">
+                  Lorem ipsum
+                </a>
+              </div>
+              <div className="goals-item">
+                <a href="#" className="goals-item-a">
+                  Lorem ipsum
+                </a>
+              </div>
+              <div className="goals-item">
+                <a href="#" className="goals-item-a">
+                  Lorem ipsum
+                </a>
+              </div>
             </div>
             <div className="col goals-right">
-              <div className="img-goals">
-              </div>
+              <div className="img-goals"></div>
             </div>
           </div>
         </div>
       </div>
 
-<div className="container-fluid under-f-area">
-      <div className="container">
-            <div className="row">
-                <div className="col-lg-8 und-left">
-                    <h1>Lorem ipsum dolor sit amet consectetur</h1>
-                </div>
-                <div className="col-lg-4 und-right">
-                    <button className="btn btn-outline-dark view">View our blog</button>
-                </div>
+      <div className="container-fluid under-f-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 und-left">
+              <h1>Lorem ipsum dolor sit amet consectetur</h1>
+            </div>
+            <div className="col-lg-4 und-right">
+              <button className="btn btn-outline-dark view">
+                View our blog
+              </button>
+            </div>
+          </div>
         </div>
-        </div>
-        </div>
+      </div>
     </Fragment>
   );
 };
