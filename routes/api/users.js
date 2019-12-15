@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const User = require("../../models/User");
+
 const { check } = require("express-validator");
 //Midllewares
 const checkToken = require("../../midlleware/checkToken");
 const checkRolle = require("../../midlleware/checkRolle");
-//Controllers
+
 const MsgsController = require("../../controllers/msgs-controller");
 const {
   getUsers,
