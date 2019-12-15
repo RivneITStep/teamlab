@@ -47,15 +47,19 @@
   padding-right: 0;
 
   p {
-    max-height: 128px;
-    min-height: 128px;
+    max-height: 140px;
+    min-height: 140px ;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 1.3em;
   }
 
   h3 {
-    color: $font-color-primary-4;
+    height: 30px;
+    color: #254E58;
+    font-size: 18px;
+    align-items: center;
+    vertical-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

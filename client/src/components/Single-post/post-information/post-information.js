@@ -71,7 +71,7 @@ const PostView = ({post, user, like, onUpdateLike, teamlabstoreService}) => {
     return (
         <>
             <div className="single-post row">
-                <h3 className="mt-20 mb-20" >{title}</h3>
+                <h3 className="mt-20 mb-20 " >{title}</h3>
                 <p>
                     <img className="img-fluid"
                          src={require("../../../style/img/people-coffee-tea-meeting.jpg")}
