@@ -10,7 +10,6 @@ class AuthProfileIcon extends React.Component
         user_id:this.props.user_id
     }
   render(){
-        console.log("autj",this.props.auth._id)
         return (
          <Fragment >
          <i className="far fa-id-card" onClick={()=>{this.props.allProfile(this.props.auth._id)}}></i>

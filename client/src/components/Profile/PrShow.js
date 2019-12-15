@@ -1,10 +1,12 @@
 import React, {Fragment} from "react";
 import Preloader from './../Preloader/Preloader'
+import ProfileCreate from './ProfileCreate/ProfileCreateMain'
 import "./profile.scss"
-import {connect} from "react-redux";
-import {Link} from "react-router-dom";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
-class PrShow extends React.Component {
+class PrShow extends React.Component
+{
     state = {
         user_id: this.props.match.params.id
     }
@@ -107,57 +109,25 @@ class PrShow extends React.Component {
                             <input readOnly={this.ProfileOvner()} type="text" className="form-control"
                                    placeholder={item.company}/>
                         </div>
-                        <div className="col">
-                            <label htmlFor="name">Position</label>
-                            <input readOnly={this.ProfileOvner()} type="text" className="form-control"
-                                   placeholder={item.position}/>
-                        </div>
-                    </div>
 
-                    <div className="row sub-ptofile-form">
-                        <div className="col-8">
-                            <label htmlFor="field">Location</label>
-                            <input readOnly={this.ProfileOvner()} type="text" className="form-control"
-                                   placeholder={item.location}/>
-                        </div>
-                        <div className="col-2">
-                            <label htmlFor="from">From</label>
-                            <input readOnly={this.ProfileOvner()} type="text" className="form-control"
-                                   placeholder={item.from}/>
-                        </div>
-                        <div className="col-2">
-                            <label htmlFor="to">To</label>
-                            <input readOnly={this.ProfileOvner()} type="text" className="form-control"
-                                   placeholder={data}/>
-                        </div>
-                        <div className="col-2">
-                            <label htmlFor="to">description</label>
-                            <input readOnly={this.ProfileOvner()} type="text" className="form-control"
-                                   placeholder={item.description}/>
-                        </div>
-                    </div>
-                </div>
-            )
-        })
-    }
+          )
+        })  
+} 
 
-    render() {
-        if (!this.props.singlPr) {
-        } else {
-            console.log("this.props.singlPr.profile.user_id", this.props.singlPr.profile.user_id)
-            console.log("came from PARAMS", this.props.match.params.id)
-        }
-        let user_idFromParams = this.props.match.params.id
-        return (!this.props.singlPr) ? (<Preloader/>) : ((this.props.singlPr.profile.user_id != user_idFromParams) ? (
-                <Preloader/>) :
-            (
-                <Fragment>
-                    <Link to={'/profile'}>
-                        Back
-                    </Link>
-                    <div className="container- fluid profile-top-bg">
-                        <div className="container profile-body">
-                            <section>
+    render(){
+        let user_idFromParams=this.props.match.params.id
+        return (!this.props.singlPr)?(<Preloader/>):
+        (this.props.singlPr.errorMessage=='no Profile for this user already exist.')?(<ProfileCreate/>):
+        (this.props.singlPr.profile.user_id!=user_idFromParams)?(<Preloader/>):
+        (   
+            <Fragment>  
+                <Link to={'/profile'}  >
+                Back
+                </Link>
+                <div className="container- fluid profile-top-bg">
+                    <div className="container profile-body">
+                            <section >
+
                                 <div className="row profile-top">
                                     <h1 className="news-text">Profile</h1>
                                 </div>

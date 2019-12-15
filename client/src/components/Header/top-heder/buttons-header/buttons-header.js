@@ -3,31 +3,34 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { logout } from "../../../../actions/auth";
-import AuthProfileIcon from '../../../Profile/profileList/ProfileIcon/AuthProfileIcon'
-import Preloader from "../../../Preloader/Preloader"
-
+import AuthProfileIcon from "../../../Profile/profileList/ProfileIcon/AuthProfileIcon";
+import Preloader from "../../../Preloader/Preloader";
 
 import "./buttons-header.scss";
 
-const ButtonsHeader = ({ auth: { isAuthenticated, loading, user }, logout}) => {
-  //  const userProfile_path=((user==null))?('/'):(`/profile/show_single_profile/${user._id}`)
-  //  const userProfile_id=((user==null))?(''):(user._id)
-  // console.log ("user_ID",userProfile_id);
-  const authLinks = (!user)?(<Preloader/>): (
+const ButtonsHeader = ({ auth: { isAuthenticated, loading,user}, logout }) => {
+  // console.log(user._id);
+  let icon=null;
+
+  if (isAuthenticated&&user) {
+    icon = (
+      <Link to={`/profile/show_single_profile/${user._id}`}>
+        <AuthProfileIcon />
+      </Link>
+    );
+  }
+  const authLinks = (
     <Fragment>
-    <Link to="/">
-      <button
-        onClick={logout}
-        type="button"
-        className="btn btn-login-header btn-outline-primary"
-      >
-        Logout
-      </button>
-    </Link>
-    
-    <Link to={`/profile/show_single_profile/${user._id}`}>
-      <AuthProfileIcon/>
-    </Link>
+      <Link to="/">
+        <button
+          onClick={logout}
+          type="button"
+          className="btn btn-login-header btn-outline-primary"
+        >
+          Logout
+        </button>
+      </Link>
+      {icon}
     </Fragment>
   );
 
@@ -56,9 +59,7 @@ const ButtonsHeader = ({ auth: { isAuthenticated, loading, user }, logout}) => {
   return (
     <Fragment>
       <div className="header-top-right col">
-        {!loading && (
-          <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
-        )}
+        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       </div>
     </Fragment>
   );
@@ -73,6 +74,4 @@ const mapStateToProps = state => ({
   auth: state.auth
 });
 
-export default connect(
-  mapStateToProps, {logout}
-)(ButtonsHeader);
+export default connect(mapStateToProps, { logout })(ButtonsHeader);

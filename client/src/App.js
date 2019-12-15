@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./components/Home/home";
 import About from "./components/About/about";
-import Projects from "./components/Projects/projects";
+import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/contact";
 import Faq from "./components/Faq/faq";
 import Login from "./components/Login/login";
@@ -14,17 +14,20 @@ import Register from "./components/Register/register";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/footer";
 import Forgot from "./components/Forgot/forgot";
+
 import PageSinglePost from "./components/Single-post/page-single-post";
 import SingleProject from "./components/Single-project/single-project";
+import AddProject from "./components/Projects/ProjectForm";
 
-import ProfileList from './components/Profile/profileList/ProfileList'
-import PrShow from './components/Profile/PrShow'
-
+import ProfileList from "./components/Profile/profileList/ProfileList";
+import PrShow from "./components/Profile/PrShow";
 
 import "./App.scss";
 
 import store from "./store";
-// import { loadUser } from "./actions/auth";
+
+import { loadUser } from "./actions/auth";
+
 import setAuthToken from "./utils/setAuthToken";
 
 if (localStorage.token) {
@@ -32,11 +35,12 @@ if (localStorage.token) {
 }
 
 const App = () => {
-  // useEffect(() => {
-  //   store.dispatch(loadUser());
-  // }, []);
+  useEffect(() => {
+    store.dispatch(loadUser());
+  }, []);
 
   return (
+
         <Fragment>
           <Header />
           <Route path="/" exact component={Home} />
@@ -49,12 +53,13 @@ const App = () => {
           <Switch>
             <Route path="/login" exact component={Login} />
             <Route path="/register" exact component={Register} />
+            <Route path="/add-project" exact component={AddProject} />
           </Switch>
           <Route path="/profile" exact component={Profile} />
           <Route  path ="/profile" exact component={ProfileList}/>
           <Route path ="/profile/show_single_profile/:id" exact  component={PrShow}/>
           <Route path="/single-post/:id" exact component={PageSinglePost} />
-          <Route path="/single-project" exact component={SingleProject} />
+           <Route path="/single-project/:id" exact component={SingleProject} />
           <Route path="/forgot" exact component={Forgot} />
           <Footer />
         </Fragment>
