@@ -19,7 +19,7 @@ export const allProfile = (user_id=false) => async dispatch =>
  if (user_id)
  {
    try {
-    const res = await axios.get(`http://localhost:5000/api/profile/show_single_profile/${user_id}`);
+    const res = await axios.get(`/api/profile/show_single_profile/${user_id}`);
     console.log('res',res);
     dispatch({
       type: GET_PR_SUCCESS,
@@ -85,7 +85,7 @@ export const profileToDb = (data)=>async dispatch=>{
   const body = JSON.stringify(data);
   
   try {
-    const res = await axios.post("http://localhost:5000/api/profile/add",body,config);
+    const res = await axios.post("/api/profile/add",body,config);
     
     dispatch({
       type: PROFILE_TO_DB_SUCCESS,
@@ -123,7 +123,7 @@ export const EditedProfileToDb = (data)=>async dispatch=>{
   const body = JSON.stringify(data);
  
   try {
-    const res = await axios.post("http://localhost:5000/api/profile/edit",body,config);
+    const res = await axios.post("/api/profile/edit",body,config);
  
     dispatch({
       type: PROFILE_TO_DB_SUCCESS,

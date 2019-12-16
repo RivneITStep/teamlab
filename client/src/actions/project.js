@@ -10,7 +10,7 @@ import {
 // Get projects
 export const getProjects = () => async dispatch => {
   try {
-    const res = await axios.get("http://localhost:5000/api/projects");
+    const res = await axios.get("/api/projects");
 
     dispatch({
       type: GET_PROJECTS,
@@ -27,7 +27,7 @@ export const getProjects = () => async dispatch => {
 // Get single project
 export const getProject = id => async dispatch => {
   try {
-    const res = await axios.get(`http://localhost:5000/api/projects/${id}`);
+    const res = await axios.get(`/api/projects/${id}`);
 
     dispatch({
       type: GET_PROJECT,
@@ -44,7 +44,7 @@ export const getProject = id => async dispatch => {
 // Delete project
 export const deleteProject = id => async dispatch => {
   try {
-    await axios.delete(`http://localhost:5000/api/projects/${id}`);
+    await axios.delete(`/api/projects/${id}`);
 
     dispatch({
       type: DELETE_PROJECT,
@@ -67,7 +67,7 @@ export const addProject = formData => async dispatch => {
   };
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/projects/",
+      "/api/projects/",
       formData,
       config
     );

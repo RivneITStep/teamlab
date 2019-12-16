@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default class TeamlabstoreService {
     //PROJECT URL
-    url = "http://localhost:5000";
+    url = "http://13.53.138.219";
     //CUSTOMIZE AXIOS
     config = {
         headers: {
