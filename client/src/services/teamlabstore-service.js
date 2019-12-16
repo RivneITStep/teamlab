@@ -1,54 +1,65 @@
 import axios from "axios";
 
 export default class TeamlabstoreService {
-    //PROJECT URL
-    url = "http://13.53.138.219";
-    //CUSTOMIZE AXIOS
-    config = {
-        headers: {
-            "Content-Type": "application/json"
-        }
-    };
-
-    //POSTS SERVICE (CRUD)
-    getPosts() {
-        return axios.get(`${this.url}/api/posts`);
+  //PROJECT URL
+  url = "http://13.53.138.219:5000";
+  //CUSTOMIZE AXIOS
+  config = {
+    headers: {
+      "Content-Type": "application/json"
     }
+  };
 
-    getSinglePost(id) {
-        return axios.get(`${this.url}/api/posts/single-post/${id}`);
-    }
+  //POSTS SERVICE (CRUD)
+  getPosts() {
+    return axios.get(`${this.url}/api/posts`);
+  }
 
-    deleteSinglePost(id) {
-        return axios.delete(`${this.url}/api/posts/single-post/${id}/delete`);
-    }
+  getSinglePost(id) {
+    return axios.get(`${this.url}/api/posts/single-post/${id}`);
+  }
 
-    addNewPost() {
-        return axios.post(`${this.url}/api/posts/add-new-post`);
-    }
+  deleteSinglePost(id) {
+    return axios.delete(`${this.url}/api/posts/single-post/${id}/delete`);
+  }
 
-    updateSinglePost(id, body) {
-        return axios.put(`${this.url}/api/posts/single-post/${id}/update`, body, this.config);
-    }
+  addNewPost() {
+    return axios.post(`${this.url}/api/posts/add-new-post`);
+  }
 
-    setLikeToPost(postId) {
-        return axios.post(`${this.url}/api/posts/like/${postId}`);
-    }
+  updateSinglePost(id, body) {
+    return axios.put(
+      `${this.url}/api/posts/single-post/${id}/update`,
+      body,
+      this.config
+    );
+  }
 
-    deleteLikeFromPost(postId) {
-        return axios.post(`${this.url}/api/posts/like/delete/${postId}`);
-    }
+  setLikeToPost(postId) {
+    return axios.post(`${this.url}/api/posts/like/${postId}`);
+  }
 
-    addCommentToSinglePost(id, body) {
-        return axios.post(`${this.url}/api/posts/single-post/${id}/add-comment`, body, this.config);
-    }
+  deleteLikeFromPost(postId) {
+    return axios.post(`${this.url}/api/posts/like/delete/${postId}`);
+  }
 
-    deleteCommentToSinglePost(id, commentId) {
-        return axios.delete(`${this.url}/api/posts/single-post/${id}/delete-comment/${commentId}`);
-    }
+  addCommentToSinglePost(id, body) {
+    return axios.post(
+      `${this.url}/api/posts/single-post/${id}/add-comment`,
+      body,
+      this.config
+    );
+  }
 
-    updateComment(commentId) {
-        return axios.delete(`${this.url}/api/posts/single-post/update-comment/${commentId}`);
-    }
+  deleteCommentToSinglePost(id, commentId) {
+    return axios.delete(
+      `${this.url}/api/posts/single-post/${id}/delete-comment/${commentId}`
+    );
+  }
 
+  updateComment(commentId) {
+    return axios.delete(
+      `${this.url}/api/posts/single-post/update-comment/${commentId}`
+    );
+  }
 }
