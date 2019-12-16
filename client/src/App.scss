@@ -26,7 +26,11 @@ body {
 @import "./components/Home/home.scss";
 @import "./components/Login/login.scss";
 @import "./components/News/news.scss";
-@import "./components/Posts/posts.scss";
+@import "./components/Posts/page-posts.scss";
 @import "./components/Profile/profile.scss";
 @import "./components/Projects/projects.scss";
 @import "./components/Register/register.scss";
+@import "./components/Forgot/forgot.scss";
+
+@import "./components/Single-post/page-single-post.scss";
+@import "./components/Project/project.scss";

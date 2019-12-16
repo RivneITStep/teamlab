@@ -1,0 +1,33 @@
+@import "../../../index";
+
+.main-bg {
+  background-color: $bg-color-primary-4;
+}
+
+.post-text {
+  color: $font-color-primary-2;
+  margin-top: 0;
+  padding: 25px 40px;
+  line-height: 25px;
+  font-family: $font-light;
+  font-size: 14px;
+}
+
+.post-blocks{
+  box-shadow: rgba(0,0,0,0.22) 0px 0px 6px 0px;
+  margin: 30px 0;
+  display: block;
+  border-right: 10px;
+  padding: 15px;
+}
+
+.posts-block-row {
+  margin: 40px 0;
+}
+
+.posts-block {
+  display: flex;
+  text-align: justify;
+  padding-right: 0;
+  margin-bottom: 35px;
+}

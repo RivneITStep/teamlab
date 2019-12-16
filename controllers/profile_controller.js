@@ -13,19 +13,36 @@ const remove_duplicates_es6= require("../midlleware/removeDublicate")
 exports.getAllProfiles = async (req, res) => {
   try {
     const profiles = await Profile.find().sort({ date: -1 });
-    res.status(200).json([MsgsController.Success(), profiles]);
+
+
+    const user_from_user_colections = await User.find().sort({ date: -1 });
+    
+    const pr=profiles.map((profile)=>{
+        let obj={};
+        user_from_user_colections.map((user)=>{
+         if (profile.user_id==user._id)
+         {
+             obj={profile,user_name:user.name}
+         }
+    })
+        return obj})
+    res.status(200).json(pr);
+
   } catch (error) {
-    console.error(error.message);
+
     res.status(500).json(MsgsController.ServerError());
   }
 };
 exports.createProfile=async(req,res)=>{
+    
     try {
         checkValidationErrors(req, res);
         const {
             name,
             id
         } = req.user;
+        console.log('name',name);
+        console.log('_id',id);
         const user_id=id;
        
         const {
@@ -35,10 +52,11 @@ exports.createProfile=async(req,res)=>{
             education,
             social
         } = req.body;
+        console.log("github",githubusername);
         let userProfile_from_profile_colections = await Profile.findOne({user_id});
         if (userProfile_from_profile_colections)
         {
-            return res.status(500).send(MsgsController.AlreadyExist('Profile for this user Alredy exist'));    
+            return res.send(MsgsController.AlreadyExist('Profile for this user Alredy exist'));    
         }
         let skills = {};
         if (req.file) {
@@ -58,8 +76,8 @@ exports.createProfile=async(req,res)=>{
             git = githubusername;
         } else {
             return res
-                .status(400)
-                .json(MsgsController.Fail())
+                .status(404)
+                .json(MsgsController.IncorrectData("no git"))
 
         }
         if (education)
@@ -128,7 +146,7 @@ exports.showProfile = async (req, res) => {
         let user_from_user_colections = await User.findOne({_id: user_id });
         let userProfile_from_profile_colections = await Profile.findOne({user_id});
         if (!userProfile_from_profile_colections) {
-          return res.status(500).send(MsgsController.AlreadyExist('no Profile for this user'));
+          return res.send(MsgsController.AlreadyExist('no Profile for this user'));
         }  
         else {
                 let repository = [];

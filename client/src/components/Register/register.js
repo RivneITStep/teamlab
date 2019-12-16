@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from "react";
+import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { register } from "../../actions/auth";
 import PropTypes from "prop-types";
 
 import "./register.scss";
 
-const Register = ({ register }) => {
+const Register = ({ register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -18,7 +19,7 @@ const Register = ({ register }) => {
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = async e => {
+  const onSubmit = e => {
     e.preventDefault();
     if (password !== repassword) {
       console.log("Passwords do not match");
@@ -27,20 +28,19 @@ const Register = ({ register }) => {
     }
   };
 
+  // Redirect if logged in
+  if (isAuthenticated) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <Fragment>
       <div className="container-fluid">
         <div className="container register-body">
           <section>
-            <div className="row register-top">
-              <div className="register-top-bg">
-                <h4 className="register-text">Register</h4>
-              </div>
-            </div>
-          </section>
-          <section>
             <div className="row register-main">
               <div className="row register-main-bg">
+              <h1 className="register-text">Register</h1>
                 <form className="login-form" onSubmit={e => onSubmit(e)}>
                   <div className="form-group">
                     <label htmlFor="uname">Name:</label>
@@ -121,10 +121,17 @@ const Register = ({ register }) => {
 };
 
 Register.propTypes = {
-  register: PropTypes.func.isRequired
+  register: PropTypes.func.isRequired,
+  isAuthenticated: PropTypes.bool
 };
 
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated
+});
+
 export default connect(
-  null,
+  mapStateToProps,
   { register }
 )(Register);
+

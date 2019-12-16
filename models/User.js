@@ -37,9 +37,9 @@ UserSchema.pre("save", async function(next) {
 UserSchema.methods.getSignedJwtToken = async function(res) {
   const payload = {
     user: {
-      id:this._id,
-      role:this.role,
-      name:this.name
+      id: this._id,
+      role: this.role,
+      name: this.name
     }
   };
 
@@ -49,7 +49,7 @@ UserSchema.methods.getSignedJwtToken = async function(res) {
     { expiresIn: 3600000 },
     (err, token) => {
       if (err) throw err;
-      res.status(200).json([{ token }, MsgsController.Log("in")]);
+      res.status(200).json({ token });
     }
   );
 };
