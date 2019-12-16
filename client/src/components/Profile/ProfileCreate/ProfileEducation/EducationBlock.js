@@ -22,15 +22,9 @@ render()
         </div>
     )
 }}
-
 const mapStateToProps = state => { 
    return { 
-       singlPr: state.allProfile.profile,
        tmp:state.allProfile.tmpPr,
-       userPr:state.auth.user,
-       isAuthenticated: state.auth.isAuthenticated
-
-
    }; 
 }; 
 export default connect(mapStateToProps)(EducationBlock);

@@ -15,7 +15,6 @@ const ProfileSkill=({tmp,addSkill})=>
    }
     const onSubmit = e => {
         e.preventDefault();
-        
         addSkill(skill);
     };
 

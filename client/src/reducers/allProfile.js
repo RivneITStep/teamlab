@@ -37,7 +37,6 @@ export default function (state, action) {
               phone_number:""
           },
           mainimage: "",
-          error:{}
       },
  error: {}
 };
@@ -58,14 +57,13 @@ export default function (state, action) {
               tmpPr:{...state.tmpPr,
                     skills:[...state.tmpPr.skills,payload]},  
               loading: false,
-              editProfile:false
             };     
         break;
       case PROFILE_TO_DB_FAIL:
         return {
               ...state,
-              tmpPr:{...state.tmpPr,
-                    error:payload},  
+              tmpPr:{...state.tmpPr}, 
+              error:payload, 
               loading: false
 
             };     
@@ -90,7 +88,8 @@ export default function (state, action) {
                     },
                       mainimage: ""
                   },
-              loading: false
+              loading: false,
+              editProfile: false,
             };     
         break;
 
