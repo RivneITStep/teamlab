@@ -3,19 +3,19 @@
 @import "../../../../style/mixins/font.scss";
 
 .header-bottom-left {
-    padding: 0;
-    @media screen and (max-width: 768px) {
-      display: flex;
-      justify-content: center;
-  
-    }
-    a {
-      font-size: 35px;
-      color: $font-color-primary-4;
-      font-family: $stardos_stencilbold;
-    }
-  
-    a:hover {
-      text-decoration: none;
-    }
+  padding: 0;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
   }
+  a {
+    font-size: 35px;
+    color: $font-color-primary-4;
+    font-family: $stardos_stencilbold;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $font-color-primary-4;
+  }
+}

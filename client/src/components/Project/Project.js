@@ -44,7 +44,7 @@ const Project = ({
               <div className="sProject-Logo col-xl-4 ">
                 <div className="sProject-title-logo col-xl-12">
                   <img
-                    src={project.project.image}
+                    src={require("../../style/img/people-coffee-tea-meeting.jpg")}
                     alt="project-logo"
                     className="project-logo"
                   />

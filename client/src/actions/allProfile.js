@@ -9,7 +9,10 @@ import {
     CLEAR_TMP_STORE,
     SOCIAL_TO_STORE,
     PROFILE_TO_DB_SUCCESS,
-    PROFILE_TO_DB_FAIL} from './types';
+    PROFILE_TO_DB_FAIL,
+    ADD_SKILL,
+    EDIT_PROFILE}
+     from './types';
 
 export const allProfile = (user_id=false) => async dispatch =>
  {
@@ -80,11 +83,10 @@ export const profileToDb = (data)=>async dispatch=>{
     }
   };
   const body = JSON.stringify(data);
-  console.log(config);
-  console.log(body)
+  
   try {
     const res = await axios.post("http://localhost:5000/api/profile/add",body,config);
-    console.log(res.data)
+    
     dispatch({
       type: PROFILE_TO_DB_SUCCESS,
       payload: res.data
@@ -97,5 +99,42 @@ export const profileToDb = (data)=>async dispatch=>{
     });
   }
 }
+ export const addSkill = (data)=>async dispatch=>{
+  dispatch({
+      type: ADD_SKILL,
+      payload: data
+    });
+}
+export const EditProfile = ()=>async dispatch=>{
+  dispatch({
+      type: EDIT_PROFILE,
+      payload: true
+    });
+}
 
+
+
+export const EditedProfileToDb = (data)=>async dispatch=>{
+  const config = {
+   headers: {
+      "Content-Type": "application/json",
+    }
+  };
+  const body = JSON.stringify(data);
+ 
+  try {
+    const res = await axios.post("http://localhost:5000/api/profile/edit",body,config);
+ 
+    dispatch({
+      type: PROFILE_TO_DB_SUCCESS,
+      payload: res.data
+    });
+  } catch (error) {
+    console.log(error.response);
+    dispatch({
+      type:PROFILE_TO_DB_FAIL,
+      payload: error.response.data.errorMessage
+    });
+  }
+}
 

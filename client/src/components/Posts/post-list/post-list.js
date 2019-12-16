@@ -5,12 +5,12 @@ import PostListItem from "../post-list-item";
 import "./post-list.scss";
 
 const PostList = ({posts}) => {
-    console.log("postList:", posts);
     let cntr = 0;
     let className = "";
+    if (!posts) return (<p>(((</p>);
     return (
-        <div className="container-fluid main-bg">
-            <div className="container user-posts">
+        <div className="container-fluid posts-body">
+            <div className="container post-blocks">
                 {posts.map(post => {
                     ++cntr;
                     if(!cntr%2) className ="row posts-block-row";

@@ -21,7 +21,7 @@ const NavBar = () => {
                     </Link>
                   </li>
                   <li className="item">
-                    <Link to={'/about'} className="link-nav">
+                    <Link to={"/about"} className="link-nav">
                       About
                     </Link>
                   </li>
@@ -50,31 +50,13 @@ const NavBar = () => {
                       Contact
                     </Link>
                   </li>
-                  <li className="item">
-                    <Link to="/login" className="link-nav">
-                      Login
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/register" className="link-nav">
-                      Register
-                    </Link>
-                  </li>
+
                   <li className="item">
                     <Link to="/profile" className="link-nav">
                       Profile
                     </Link>
                   </li>
-                  <li className="item">
-                    <Link to="/single-post" className="link-nav">
-                      SPost
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/single-project" className="link-nav">
-                      SProject
-                    </Link>
-                  </li>
+
                   <li className="item">
                     <Link to="/forgot" className="link-nav">
                       Forgot
@@ -123,31 +105,13 @@ const NavBar = () => {
                 Contact
               </Link>
             </li>
-            <li className="item">
-              <Link to="/login" className="link-nav">
-                Login
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/register" className="link-nav">
-                Register
-              </Link>
-            </li>
+
             <li className="item">
               <Link to="/profile" className="link-nav">
                 Profile
               </Link>
             </li>
-            <li className="item">
-              <Link to="/single-post" className="link-nav">
-                SPost
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/single-project" className="link-nav">
-                SProject
-              </Link>
-            </li>
+
             <li className="item">
               <Link to="/forgot" className="link-nav">
                 Forgot

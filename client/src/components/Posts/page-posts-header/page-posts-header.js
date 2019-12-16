@@ -4,7 +4,7 @@ import "./page-posts-header.scss";
 
 const PagePostsHeader =()=>{
     return(
-        <div className="container- fluid posts-top-bg">
+        <div className="container-fluid posts-top-bg">
             <div className="container posts-body">
                 <section>
                     <div className="row posts-top">
