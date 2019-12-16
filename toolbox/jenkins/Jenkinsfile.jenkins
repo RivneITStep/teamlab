@@ -1,4 +1,4 @@
-#!groovy
+=#!groovy
 //  groovy Jenkinsfile
 properties([disableConcurrentBuilds()])
 
@@ -15,7 +15,7 @@ pipeline  {
             steps {
                 echo 'Creating docker image ...'
                 dir('.'){
-                    sh "docker build -t macnaer/teamlab_back . "
+                    sh "docker build -t macnaer/teamlab . "
                 }
             }
         }
@@ -33,7 +33,7 @@ pipeline  {
             steps {
                 echo " ============== pushing image =================="
                 sh '''
-                docker push macnaer/teamlab_back:latest
+                docker push macnaer/teamlab:latest
                 '''
             }
         }

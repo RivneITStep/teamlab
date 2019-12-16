@@ -1,11 +1,12 @@
 FROM node:latest
 
-MAINTAINER macnaer
+MAINTAINER TeamLab
 
 
 COPY  . /var/www
 WORKDIR /var/www
 
 RUN npm install
+RUN cd client && npm install && cd ..
 
-ENTRYPOINT [ "npm", "run", "server" ]
+ENTRYPOINT [ "npm", "run", "dev" ]
