@@ -26,7 +26,10 @@ router.get('/',
   ProfileController.getAllProfiles
 );
 
+
 router.post('/edit',
+
+
 checkToken,
 ProfileController.updateProfile
   );
