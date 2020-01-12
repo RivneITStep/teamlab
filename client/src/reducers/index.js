@@ -11,6 +11,6 @@ export default combineReducers({
   auth,
   allProfile,
   postList: updatePostList,
-  singlePost:updateSinglePost,
+  singlePost: updateSinglePost,
   project
 });
