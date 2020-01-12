@@ -32,6 +32,7 @@ import store from "./store";
 import {loadUser} from "./actions/auth";
 
 import setAuthToken from "./utils/setAuthToken";
+import AdminPage from "./components/AdminPage/admin-page";
 
 if (localStorage.token) {
     setAuthToken(localStorage.token);
@@ -70,7 +71,7 @@ const App = ({user}) => {
             <Route path="/single-post/:id" exact component={PageSinglePost}/>
             <Route path="/single-project/:id" exact component={SingleProject}/>
             <Route path="/forgot" exact component={Forgot}/>
-            {role === userRoles.admin ? <Route path="/admin-page" exact render={() => <p>ADMIN</p>}/> : null}
+            {role === userRoles.admin ? <Route path="/admin-page" exact component={AdminPage}/> : null}
             <Footer/>
         </Fragment>
     );

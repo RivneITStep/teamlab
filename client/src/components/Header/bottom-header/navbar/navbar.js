@@ -1,127 +1,44 @@
-import React, { Fragment } from "react";
+import React, {Fragment} from "react";
 import "./navbar.scss";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {connect} from "react-redux"
+import DefaultItemList from "./default-item-list";
+import AdminItem from "./admin-item";
+import {userRoles} from "../../../../utils/defaulteConstants";
 
-const NavBar = () => {
-  return (
-    <Fragment>
-      <div className="header-bottom-right col-9">
-        <div className="menu-wrap">
-          <input type="checkbox" className="toggler" />
-          <div className="hamburger">
-            <div></div>
-          </div>
-          <div className="menu">
-            <div>
-              <div>
-                <ul>
-                  <li className="item">
-                    <Link to="/" className="link-nav">
-                      Home
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to={"/about"} className="link-nav">
-                      About
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/projects" className="link-nav">
-                      Projects
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/news" className="link-nav">
-                      News
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/faq" className="link-nav">
-                      FAQ
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/posts" className="link-nav">
-                      Posts
-                    </Link>
-                  </li>
-                  <li className="item">
-                    <Link to="/contact" className="link-nav">
-                      Contact
-                    </Link>
-                  </li>
+const NavBar = ({user}) => {
+    const role = user ? user.role : null;
+    return (
+        <Fragment>
+            <div className="header-bottom-right col-9">
+                <div className="menu-wrap">
+                    <input type="checkbox" className="toggler"/>
+                    <div className="hamburger">
+                        <div></div>
+                    </div>
+                    <div className="menu">
+                        <div>
+                            <ul>
+                                <DefaultItemList/>
+                                {role === userRoles.admin ? <AdminItem/> : null}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-                  <li className="item">
-                    <Link to="/profile" className="link-nav">
-                      Profile
-                    </Link>
-                  </li>
-
-                  <li className="item">
-                    <Link to="/forgot" className="link-nav">
-                      Forgot
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+                <nav className="main-nav">
+                    <ul className="main-nav-list">
+                        <DefaultItemList/>
+                        {role === userRoles.admin ? <AdminItem/> : null}
+                    </ul>
+                </nav>
             </div>
-          </div>
-        </div>
-
-        <nav className="main-nav">
-          <ul className="main-nav-list">
-            <li className="item">
-              <Link to="/" className="link-nav">
-                Home
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/about" className="link-nav">
-                About
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/projects" className="link-nav">
-                Projects
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/news" className="link-nav">
-                News
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/faq" className="link-nav">
-                FAQ
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/posts" className="link-nav">
-                Posts
-              </Link>
-            </li>
-            <li className="item">
-              <Link to="/contact" className="link-nav">
-                Contact
-              </Link>
-            </li>
-
-            <li className="item">
-              <Link to="/profile" className="link-nav">
-                Profile
-              </Link>
-            </li>
-
-            <li className="item">
-              <Link to="/forgot" className="link-nav">
-                Forgot
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </Fragment>
-  );
+        </Fragment>
+    );
 };
 
-export default NavBar;
+const mapStateToProps = ({auth: {user}}) => ({
+    user
+});
+
+export default connect(mapStateToProps)(NavBar);
